@@ -4,6 +4,7 @@
 @include "k.cyc"
 @include "q.cyc"
 @include "u.cyc"
+@include "v.cyc"
 @include "x.cyc"
 @include "y.cyc"
 @include "z.cyc"
