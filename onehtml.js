@@ -17,6 +17,7 @@ function make_onehtml() {
     'use strict';
     var h_bit = false,
         link_text = Object.create(null),
+        nx = /\n|\r\n?/,
         sx = /[!-@\[-\^`{-~]/g,     // special characters & digits
         title = '';
 
@@ -135,8 +136,14 @@ function make_onehtml() {
                 }
             }
         },
+        list: {
+            name: '',
+            link: '',
+            gen: function (text) {
+                return '<ul><li>' + text.split(nx).join('</li><li>') + '</li></ul>';
+            }
+        },
         program: {
-            level: true,
             name: '',
             link: '',
             gen: ["\n<pre>", "</pre>"]
