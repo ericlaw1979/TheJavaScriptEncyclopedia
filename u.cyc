@@ -1,0 +1,31 @@
+@chapter "U"
+
+@specimen "\u"
+See @link <Unicode escape sequence>.
+
+@specimen "undefined"
+@@Blah.
+
+@article "@t(undefined) @link <literal>"
+Blah.
+
+@specimen "Unicode"
+Blah.
+
+@article "Unicode escape sequence"
+Blah.
+
+@specimen "unshift"
+@article "@t(unshift) @link <Array prototype function>"
+Blah.
+
+@specimen "upper case"
+See @link <case>.
+
+@specimen "URIError"
+@article "@t(URIError) @link <global function>"
+Blah.
+
+@specimen "use @reserved@"
+
+See @link<strict>.'
