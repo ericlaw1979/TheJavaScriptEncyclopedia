@@ -1,0 +1,113 @@
+@chapter "D"
+
+@specimen "Date"
+
+@article "@t(Date) @link(global function)"
+
+Blah. Blah. Blah.
+
+@article "@t(Date) @link(Date prototype function)"
+
+@list {
+@link <getYear date prototype function>
+}
+
+Blah.
+
+@specimen "debugger @reserved@"
+
+@article "@t(debugger) @link(statement)"
+
+Blah.
+
+@specimen "decimal @aka(base 10)"
+
+The decimal digits are @t(0), @t(1), @t(2), @t(3), @t(4), @t(5), @t(6), @t(7), 
+@t(8), and @t(9).
+
+Most of humanity represents its numbers in the decimal system.
+
+@specimen "decodeURI"
+
+@article "@t(decodeURI) @link<global function>"
+
+Blah.
+
+@specimen "decodeURIComponent"
+
+@article "@t(decodeURIComponent) @link<global function>"
+
+Blah.
+
+@specimen "default @reserved@"
+
+See @link <switch statement>.
+
+@article "defensive programming"
+
+Blah.
+
+@specimen "defineProperties"
+
+@article "@t(defineProperties) @link(Object function)"
+
+Blah.
+
+@specimen "defineProperty"
+
+@article "@t(defineProperty) @link(Object function)"
+
+Blah.
+
+@specimen "definition, circular"
+
+See @link(circular definition).
+
+@specimen "degrees"
+
+Blah. See radians.
+
+@specimen "delete @reserved@"
+
+@article "@t(delete) @link(prefix operator)"
+
+Blah.
+
+@specimen "disruptive statement"
+
+Usually, after a @link(statement) completes its execution, the next statement 
+executes. This is not the case with a disruptive statement. A disruptive 
+statement alters the flow of a program, so the next statement is not executed. 
+These are the disruptive statements:
+
+@list {
+@link "break statement"
+
+@link "continue statement"
+
+@link "return statement"
+
+@link "throw statement"
+}
+
+@specimen "divide"
+
+See @link</ infix operator>.
+
+@specimen "dividend"
+
+Blah.
+
+@specimen "divisor"
+
+Blah.
+
+@specimen "do @reserved@"
+
+@article "@t(do) @link(statement)"
+
+Blah.
+
+@specimen "dunder"
+
+A property name that begins and ends with two @link<_> characters.
