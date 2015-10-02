@@ -1,3 +1,10 @@
+// make_book.js
+// 2015-10-02
+
+// Make a book as a single HTML file. 
+
+//      node make_book
+
 var RQ = require('./rq.js');
 var cyc = require('./cyc.js');
 var onehtml = require('./onehtml.js');
@@ -33,7 +40,7 @@ RQ.sequence([
         return callback(cyc(value, onehtml));
     },
     function (callback, value) {
-        fs.writeFile('./' + filename + 'y.html', value, function (error) {
+        fs.writeFile('./' + filename + '.html', value, function (error) {
             if (error) {
                 console.log(error);
                 return callback(undefined, error);
