@@ -1,5 +1,5 @@
 // onehtml.js
-// 2015-09-26
+// 2015-09-29
 
 // These Cyc rules produce a single HTML file.
 
@@ -13,11 +13,12 @@
     t, table, toLowerCase, toString, toUpperCase, url
 */
 
-var rules = (function () {
+function make_onehtml() {
     'use strict';
     var h_bit = false,
         link_text = Object.create(null),
-        sx = /[!-@\[-\^`{-~]/g;     // special characters & digits
+        sx = /[!-@\[-\^`{-~]/g,     // special characters & digits
+        title = '';
 
 
     function entityify(text) {
@@ -46,13 +47,14 @@ var rules = (function () {
     }
 
     function stuff_link(text, structure) {
+        text = text.trim();
         structure.link = text;
         return text;
     }
 
     function wrap(tag) {
         return function (text, structure) {
-            return '<' + tag + ' id="' + structure.link + '">' +
+            return '\n<' + tag + ' id="' + structure.link + '">' +
                     text + '</' + tag + '>';
         };
     }
@@ -68,6 +70,13 @@ var rules = (function () {
 
     return {
         '*': ['link', 'name', 'gen'],   // the names of the passes
+        '@': function (product) {
+            return '<html><head>' +
+                    '<link rel="stylesheet" href="encyclopedia.css" type="text/css">' +
+                    '<title>' + title + '</title>' +
+                    '</head><body>' +
+                    product.gen + '</body></html>';
+        },
         $: {                            // the naked text rule
             link: special_encode,
             name: entityify,
@@ -76,7 +85,7 @@ var rules = (function () {
         '': {                           // the default para rule
             link: '',
             name: '',
-            gen: ["<p>", "</p>"]
+            gen: ["\n<p>", "</p>"]
         },
         aka: {
             link: '',
@@ -94,7 +103,11 @@ var rules = (function () {
             gen: ["<b>", "</b>"]
         },
         book: {
-            level: 1
+            level: 1,
+            name: function (text) {
+                title = text;
+            },
+            gen: wrap("h1")
         },
         chapter: {
             level: 2,
@@ -106,7 +119,7 @@ var rules = (function () {
             level: '',
             link: '',
             name: '',
-            gen: ["<div class=es5>", "</div>"]
+            gen: ["\n<div class=es5>", "</div>"]
         },
         i: {
             gen: ["<i>", "</i>"]
@@ -126,7 +139,7 @@ var rules = (function () {
             level: true,
             name: '',
             link: '',
-            gen: ["<pre>", "</pre>"]
+            gen: ["\n<pre>", "</pre>"]
         },
         reserved: {
             name: '',
@@ -166,4 +179,6 @@ var rules = (function () {
         url: {
         }
     };
-}());
+}
+
+module.exports = make_onehtml();
