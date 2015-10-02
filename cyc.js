@@ -22,7 +22,6 @@ var cyc = (function () {
 
 
     function error(message) {
-        alert(message);
         debugger;
         throw message;
     }
