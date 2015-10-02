@@ -1,5 +1,5 @@
 // cyc.js
-// 2015-09-26
+// 2015-09-30
 
 /*jslint devel: true */
 
@@ -237,9 +237,9 @@ var cyc = (function () {
         }
     }
 
-    return function cyclopede(text, rules) {
+    return function (text, rules) {
 
-// The cyclopede function takes a set of rules and a text and returns a
+// The cyc function takes a set of rules and a text and returns a
 // transformation. The transformation is determined by the rules. Ultimately,
 // each of the methods of the rules will be passed a toolkit that will help
 // them to do their work.
@@ -258,9 +258,13 @@ var cyc = (function () {
 // There is a rule for each @name, containing an object with a method for each
 // pass, and possibly a level.
 
+// The optional rule named '@' is a function that receives the products and
+// returns the final result.
+
         var course,         // The current meta nesting.
             course_level,   // The associated level numbering.
             pass,           // The current pass from rules['*'].
+            product,        // The product of the passes.
             stack,          // The current nesting.
             structure = parse(text, rules);
 
@@ -330,7 +334,7 @@ var cyc = (function () {
                 level = rules[name].level;
             }
 
-// If the rule is a level number, then update the course and course_level.
+// If the rule has a level number, then update the course and course_level.
 // Encountering a low numbered level will cause higher levels to be dropped.
 
             if (typeof level === 'number') {
@@ -422,13 +426,23 @@ var cyc = (function () {
             return result;
         }
 
+// Process the passes, accumulating the results in product.
 
-        return rules['*'].map(function (which) {
+        product = Object.create(null);
+        rules['*'].forEach(function (which) {
             pass = which;
             course = [];
             course_level = [];
             stack = [];
-            return process(structure);
-        }).pop();
+            product[pass] = process(structure);
+        });
+
+// If there is an @ rule, then return its result. Otherwise, return the product.
+
+        return rules['@'] !== undefined
+            ? rules['@'](product)
+            : product;
     };
 }());
+
+module.exports = cyc;
