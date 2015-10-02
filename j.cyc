@@ -1,0 +1,31 @@
+@chapter "J"
+
+@specimen "Java"
+
+Blah.
+
+@specimen "JavaScript"
+
+Blah.
+
+@specimen "join"
+
+@article (@t "join" @link(array protoype function))
+
+Blah.
+
+@specimen "JScript"
+
+Blah.
+
+@specimen "JSLint"
+
+Blah. @url<http://www.JSLint.com/>
+
+@specimen "JSON"
+
+Blah. @url<http://www.JSON.org/>
+
+@article (@t "JSON" @link (global object))
+
+Blah.

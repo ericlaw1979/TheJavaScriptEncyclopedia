@@ -1,0 +1,14 @@
+@chapter "X"
+
+@specimen "x"
+
+Blah. See @link 'hexadecimal'.
+
+@specimen "XML"
+
+XML @aka 'Extensible Markup Language', is a document format based on SGML. 
+It is often misused as a data format. See @url<http://www.w3.org/TR/REC-xml>.
+
+@specimen "xor @aka(exclusive or)"
+
+Blah. See @link(^ infix operator) and @link(^= assignment operator).
