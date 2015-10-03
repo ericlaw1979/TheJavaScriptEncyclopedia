@@ -65,7 +65,7 @@ See @link(circular definition).
 
 @specimen "degrees"
 
-Blah. See radians.
+Blah. See @link(radians).
 
 @specimen "delete @reserved@"
 
