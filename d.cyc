@@ -82,11 +82,8 @@ These are the disruptive statements:
 
 @list {
 @link "break statement"
-
 @link "continue statement"
-
 @link "return statement"
-
 @link "throw statement"
 }
 
@@ -111,3 +108,7 @@ Blah.
 @specimen "dunder"
 
 A property name that begins and ends with two @link<_> characters.
+
+Example:
+
+@program{__pathetic__}

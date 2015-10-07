@@ -1,5 +1,7 @@
 @book "The JavaScript Encyclopedia"
 
+@include "special.cyc"
+@include "a.cyc"
 @include "d.cyc"
 @include "h.cyc"
 @include "j.cyc"

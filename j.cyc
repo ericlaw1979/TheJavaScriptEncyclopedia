@@ -10,7 +10,7 @@ Blah.
 
 @specimen "join"
 
-@article (@t "join" @link(array protoype function))
+@article (@t "join" @link(array prototype function))
 
 Blah.
 
