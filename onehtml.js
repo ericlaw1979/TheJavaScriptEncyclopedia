@@ -1,5 +1,5 @@
 // onehtml.js
-// 2015-09-29
+// 2015-10-05
 
 // These Cyc rules produce a single HTML file.
 
@@ -36,14 +36,16 @@ function make_onehtml() {
 // with pairs of hex digits. This makes special character sequences safe for
 // use as filenames and urls. Alpha hex characters will be upper case.
 
-        return text.toLowerCase().replace(sx, function (a) {
-            return a.charCodeAt(0).toString(16).toUpperCase();
-        });
+        if (typeof text === 'string') {
+            return text.toLowerCase().replace(sx, function (a) {
+                return a.charCodeAt(0).toString(16).toUpperCase();
+            });
+        }
     }
 
     function stuff_name(text, structure) {
         structure.name = text;
-        link_text[structure.link] = text;
+        link_text[structure.link.toLowerCase()] = text;
         return text;
     }
 
@@ -55,8 +57,8 @@ function make_onehtml() {
 
     function wrap(tag) {
         return function (text, structure) {
-            return '\n<' + tag + ' id="' + structure.link + '">' +
-                    text + '</' + tag + '>';
+            return '\n<' + tag + ' id="' + special_encode(structure.link) + 
+                    '">' + text + '</' + tag + '>';
         };
     }
 
@@ -74,12 +76,10 @@ function make_onehtml() {
         '@': function (product) {
             return '<html><head>' +
                     '<link rel="stylesheet" href="encyclopedia.css" type="text/css">' +
-                    '<title>' + title + '</title>' +
-                    '</head><body>' +
-                    product.gen + '</body></html>';
+                    '<title>' + entityify(title) + '</title>' +
+                    '</head><body>' + product.gen + '</body></html>';
         },
         $: {                            // the naked text rule
-            link: special_encode,
             name: entityify,
             gen: entityify
         },
@@ -90,7 +90,7 @@ function make_onehtml() {
         },
         aka: {
             link: '',
-            name: '',
+            name: ["<dfn>", "</dfn>"],
             gen: ["<dfn>", "</dfn>"]
         },
         appendix: 'chapter',
@@ -128,9 +128,10 @@ function make_onehtml() {
         link: {
             link: stuff_link,
             gen: function (ignore, structure) {
-                if (link_text[structure.link]) {
-                    return "<a href=\"#" + structure.link + "\">" +
-                            link_text[structure.link] + "</a>";
+                var name = link_text[structure.link.toLowerCase()];
+                if (name !== undefined) {
+                    return "<a href=\"#" + special_encode(structure.link) + 
+                            "\">" + name + "</a>";
                 } else {
                     return structure.link + " <strong>MISSING LINK</strong>";
                 }
@@ -165,6 +166,14 @@ function make_onehtml() {
             name: stuff_name,
             gen: wrap("h2")
         },
+        sub: {
+            name: ["<sub>", "</sub>"],
+            gen: ["<sub>", "</sub>"]
+        },
+        super: {
+            name: ["<sup>", "</sup>"],
+            gen: ["<sup>", "</sup>"]
+        },
         t: {
             name: ["<tt>", "</tt>"],
             gen: ["<tt>", "</tt>"]
@@ -184,6 +193,9 @@ function make_onehtml() {
             end: at_underbar
         },
         url: {
+            gen: function (text) {
+                return '<a href="' + text + '">' + text + '</a>';
+            }
         }
     };
 }
