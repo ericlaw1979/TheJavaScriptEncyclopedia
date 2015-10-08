@@ -1,5 +1,5 @@
 // cyc.js
-// 2015-09-30
+// 2015-10-05
 
 /*jslint devel: true */
 
@@ -22,7 +22,6 @@ var cyc = (function () {
 
 
     function error(message) {
-        debugger;
         throw message;
     }
 
@@ -158,7 +157,7 @@ var cyc = (function () {
 
 // If there is not a rule for this name, then there is an error.
 
-                    return error("Not a name: " + name);
+                    return error("Not a name: @" + name);
                 }
                 break;
 
@@ -226,7 +225,8 @@ var cyc = (function () {
                     structure = stack.pop();
                     deposit(temp);
                     if (stack.length && typeof rules[temp[0]].level === 'number') {
-                        return error("Misplaced @" + temp[0]);
+                        debugger;
+                        return error("Misplaced @" + temp.join(''));
                     }
                 }
                 break;
