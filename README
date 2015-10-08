@@ -29,10 +29,15 @@ developed in Cyc, a simple language that was inspired by Brian Reid's Scribe.
 Cyc is described in the prototype preface.
 
 cyc.js              A simple Cyc processor
-onehtml.js          Rules for outputing a single HTML file
 include.js          A simple @include preprocessor
+onehtml.js          Rules for outputing a single HTML file
+make_book.js        Make a book as a single HTML file
 
 Since ES3 is obsolete and should be extinct by the time this processor is
 finished, ES3 notices will be dropped in favor of ES5 notices.
 
 es5.png             The ES5 flag
+
+You can make a single page encyclopedia with
+
+    node make_book
