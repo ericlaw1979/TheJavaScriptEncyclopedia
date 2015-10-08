@@ -2,6 +2,8 @@
 
 @include "special.cyc"
 @include "a.cyc"
+@include "b.cyc"
+@include "c.cyc"
 @include "d.cyc"
 @include "h.cyc"
 @include "j.cyc"

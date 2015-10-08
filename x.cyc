@@ -12,3 +12,7 @@ It is often misused as a data format. See @url<http://www.w3.org/TR/REC-xml>.
 @specimen "xor @aka(exclusive or)"
 
 Blah. See @link(^ infix operator) and @link(^= assignment operator).
+
+@specimen(XSS @aka(Cross Site Scripting Attack))
+
+Blah.
