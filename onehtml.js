@@ -74,7 +74,7 @@ function make_onehtml() {
     return {
         '*': ['link', 'name', 'gen'],   // the names of the passes
         '@': function (product) {
-            return '<html><head>' +
+            return '<!DOCTYPE html><html><head><meta charset="utf-8">' +
                     '<link rel="stylesheet" href="encyclopedia.css" type="text/css">' +
                     '<title>' + entityify(title) + '</title>' +
                     '</head><body>' + product.gen + '</body></html>';
