@@ -1,5 +1,9 @@
 @chapter "B"
 
+@specimen "binary operator"
+
+Blah.
+
 @specimen "bind"
 
 @article(@t(bind) @link(Function prototype function))

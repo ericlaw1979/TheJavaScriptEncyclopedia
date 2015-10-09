@@ -301,7 +301,7 @@ Math.cos = (function () {
 
 See @link(Math function).
 
-@specimen(cr)
+@specimen(cr @aka(carriage return))
 
 See @link(line terminator).
 

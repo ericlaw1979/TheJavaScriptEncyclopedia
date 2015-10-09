@@ -1,6 +1,8 @@
-@chapter "Special Characters"  ! " $ % & ' ( ) * + , - . / : ; < = > ? [ \ ] ^ _ { | } ~ 
+@chapter "Special Characters"  
 
-@specimen "! @aka(exclamation point)"
+! " $ % & ' ( ) * + , - . / : ; < = > ? [ \ ] ^ _ { | } ~ 
+
+@specimen "@t(!) @aka(exclamation point)"
 
 @article "@t(!) @link(prefix operator) @aka(not)"
 
@@ -59,11 +61,11 @@ null !== undefined           // true
 NaN !== NaN                  // true
 "
 
-@specimen (" @aka(double quotation mark))
+@specimen (@t(") @aka(double quotation mark))
 
 See @link(string literal).
 
-@specimen ($ @aka(dollar sign))
+@specimen (@t($) @aka(dollar sign))
  
 @article(@t($) @link(identifier character))
 
@@ -74,7 +76,7 @@ with programs produced by humans. Unfortunately, the developer community ignored
 the intention of @t($) and used it to create ugly, cryptic identifiers that 
 collide with each other.
 
-@specimen (% @aka(percent sign))
+@specimen (@t(%) @aka(percent sign))
 
 @article(@t(%) @link(infix operator) @aka(remainder))
 
@@ -156,7 +158,7 @@ is a streamlined equivalent of
 left = left % divisor;
 }
 
-@specimen (& @aka(ampersand))
+@specimen (@t(&) @aka(ampersand))
 
 @article(@t(&) @link(infix operator) @aka(bitwise and))
 
@@ -232,13 +234,13 @@ Blah.
 
 Blah.
 
-@specimen (' @aka(single quotation mark))
+@specimen (@t(') @aka(single quotation mark))
 
 ' string delimiter
 
 See @link(string literal).
 
-@specimen "( @aka(left parenthesis)"
+@specimen "@t[(] @aka(left parenthesis)"
 
 Parentheses have many uses. In operand position, they provide grouping for 
 overriding operator precedence or to make the meaning of complicated expressions 
@@ -285,11 +287,11 @@ Parentheses are used in statements. See
 
 Blah.
 
-@specimen "& @aka(right parenthesis)"
+@specimen "@t[)] @aka(right parenthesis)"
 
 See @link "( left parenthesis".
 
-@specimen (* @aka(asterisk))
+@specimen (@t(*) @aka(asterisk))
 
 @article(@t(*) @link(infix operator) @aka(multiply))
 
@@ -307,7 +309,7 @@ See @link(/*).
 
 Blah.
 
-@specimen (+ @aka(plus sign))
+@specimen (@t(+) @aka(plus sign))
 
 @article(@t(+) @link(infix operator) @aka(add or concatenate))
 
@@ -377,7 +379,7 @@ Blah.
 
 Blah.
 
-@specimen (, @aka(comma))
+@specimen (@t(,) @aka(comma))
 
 @article(@t(,) @link(infix operator))
 
@@ -394,7 +396,7 @@ The comma is used to separate operands in the object literal, the array literal,
 the argument list. The comma is used to separate identifiers in the the 
 parameter list and the var statement.
 
-@specimen (- @aka(minus sign))
+@specimen (@t(-) @aka(minus sign))
 
 @article(@t(-) @link(infix operator) @aka(subtract))
 
@@ -416,7 +418,7 @@ Blah.
 
 Blah.
 
-@specimen (. @aka(decimal point))
+@specimen (@t(.) @aka(decimal point))
 
 Blah.
 
@@ -424,7 +426,7 @@ Blah.
 
 Blah.
 
-@specimen (/ @aka(slash))
+@specimen (@t(/) @aka(slash))
 
 The / slash character is also known as the solidus and as the virgule. It is 
 used as the division operator, and it is used to form comments and regexp 
@@ -450,29 +452,21 @@ Blah.
 
 Blah.
 
-@specimen (: @aka(colon))
+@specimen (@t(:) @aka(colon))
 
 Blah.
 
-@article(@t(:) @aka(pair separator))
+See:
+@list {
+@link(? ternary operator).
+@link(object literal)
+@link(statement label)
+@link(switch statement)
+}
 
-See @link(object literal).
+@specimen (@t(;) @aka(semicolon))
 
-@article(@t(:) @aka(label))
-
-See @link(label).
-
-@article(@t(:) @link(switch statement) @link(case terminator))
-
-See @link(switch statement).
-
-@article(@t(:) @link(ternary operator))
-
-See @link(? ternary operator).
-
-@specimen (; @aka(semicolon))
-
-The ; is used to terminate a statement. It is required on these statements:
+The @link(;) is used to terminate a statement. It is required on these statements:
 
 @list {
 @link(break statement)
@@ -492,9 +486,9 @@ some inherent problems and should not be relied upon.
 
 Semicolon is also used to separate the control clauses in a @link(for statement).
 
-@specimen (< @aka(left angle bracket))
+@specimen (@t(<) @aka(left angle bracket))
 
-@article(@t(<) @link(infix operator less than))
+@article(@t(<) @link(infix operator) @aka(less than))
 
 Blah.
 
@@ -508,13 +502,13 @@ Blah.
 
 @article(@t(<=) @link(infix operator) @aka(less than or equal))
  
-@specimen (= @aka(equal sign))
+@specimen (@t(=) @aka(equal sign))
 
 @article(@t(=) @link(assignment infix operator))
 
 Blah.
 
-@article(@t(==) @link(infix operator) @link(coercing equal))
+@article(@t(==) @link(infix operator) @aka(coercing equal))
 
 The @t(==) operator determines if two operands are equal. If the operands have different types it may attempt to coerce the types of the operands before comparing them. It produces the opposite of the != infix operator.
 
@@ -629,7 +623,7 @@ NaN === NaN               // false
 0.1 + 0.2 === 0.3         // false
 @end(program)
 
-@specimen (> @aka(right angle bracket))
+@specimen (@t(>) @aka(right angle bracket))
 
 @article(@t(>) @link(infix operator) @aka(greater than))
 
@@ -655,7 +649,7 @@ Blah.
 
 Blah.
 
-@specimen ( @aka(question mark))
+@specimen (@t(?) @aka(question mark))
 
 @article(@t(?) @link(ternary operator))
 
@@ -684,7 +678,7 @@ function signum(number) {
 }
 "
 
-@specimen ([ @aka(left bracket))
+@specimen (@t([) @aka(left bracket))
 
 @article(@t([ ]) @link(array literal))
 
@@ -694,7 +688,7 @@ See array literal.
 
 Blah.
 
-@specimen (\ @aka(backslash))
+@specimen (@t(\) @aka(backslash))
 
 @article(@t(\) @link(identifier escapement))
 
@@ -704,11 +698,11 @@ Blah.
 
 Blah.
 
-@specimen (] @aka(right bracket))
+@specimen (@t(]) @aka(right bracket))
 
 See @link([).
 
-@specimen (^ @aka(caret))
+@specimen (@t(^) @aka(caret))
 
 @article(@t(^) @link(infix operator) @aka(bitwise exclusive or))
 
@@ -718,7 +712,7 @@ Blah.
 
 Blah.
 
-@specimen (_ @aka(underbar))
+@specimen (@t(_) @aka(underbar))
 
 In a name, the @link(_) character is treated as a letter. The @link(_) is 
 used to improve the readability of names, especially when the name contains 
@@ -733,7 +727,7 @@ since a name cannot contain a space or hyphen. Another convention is to use @lin
 Some implementations use leading or trailing @link(_) for internal or dangerous 
 properties, so it is best to avoid such names.
 
-@specimen ({ @aka(left curly brace))
+@specimen (@t({) @aka(left curly brace))
 
 @article(@t({ }) @link(block statement))
 
@@ -747,7 +741,7 @@ See function.
 
 See object literal.
 
-@specimen (| @aka(vertical bar))
+@specimen (@t(|) @aka(vertical bar))
 
 @article(@t(|) @link(infix operator) @aka(bitwise or))
 
@@ -816,11 +810,11 @@ Blah.
 
 Blah.
 
-@specimen (} @aka(right curly brace))
+@specimen (@t(}) @aka(right curly brace))
 
 See @link({).
 
-@specimen (~ @aka(tilde))
+@specimen (@t(~) @aka(tilde))
 
 @article(@t(~) @link(prefix operator) @aka(bitwise not))
 
