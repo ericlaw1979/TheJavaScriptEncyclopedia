@@ -1,0 +1,175 @@
+@chapter "G"
+
+@specimen "get"
+
+See @link(object) and @link(object literal).
+
+@specimen "getDate"
+
+@article(@t(getDate) @link(date prototype function))
+
+Blah.
+
+@specimen "getFullYear"
+
+@article(@t(getFullYear) @link(date prototype function))
+
+Blah.
+
+@specimen "getHours"
+
+@article(@t(getHours) @link(date prototype function))
+
+Blah.
+
+@specimen "getMilliseconds"
+
+@article(@t(getMilliseconds) @link(date prototype function))
+
+Blah.
+
+@specimen "getMinutes"
+
+@article(@t(getMinutes) @link(date prototype function))
+
+Blah.
+
+@specimen "getMonth"
+
+@article(@t(getMonth) @link(date prototype function))
+
+Blah.
+
+@specimen "getOwnProperties"
+
+@article(@t(getOwnProperties) @link(Object function))
+
+Blah.
+
+@specimen "getOwnPropertyDescriptor"
+
+@article(@t(getOwnPropertyDescriptor) @link(Object function))
+
+Blah.
+
+@specimen "getPrototypeOf"
+
+@article(@t(getPrototypeOf) @link(Object function))
+
+Blah.
+
+@specimen "getSeconds"
+
+@article(@t(getSeconds) @link(date prototype function))
+
+Blah.
+
+@specimen "getTime"
+
+@article(@t(getTime) @link(date prototype function))
+
+Blah.
+
+@specimen "getUTCDate"
+
+@article(@t(getUTCDate) @link(date prototype function))
+
+Blah.
+
+@specimen "getUTCFullYear"
+
+@article(@t(getUTCFullYear) @link(date prototype function))
+
+Blah.
+
+@specimen "getUTCHours"
+
+@article(@t(getUTCHours) @link(date prototype function))
+
+Blah.
+
+@specimen "getUTCMilliseconds"
+
+@article(@t(getUTCMilliseconds) @link(date prototype function))
+
+Blah.
+
+@specimen "getUTCMinutes"
+
+@article(@t(getUTCMinutes) @link(date prototype function))
+
+Blah.
+
+@specimen "getUTCMonth"
+
+@article(@t(getUTCMonth) @link(date prototype function))
+
+Blah.
+
+@specimen "getYear"
+
+@article(@t(getYear) @link(date prototype function))
+
+Blah.
+
+@specimen "global"
+
+
+A program runs in a context, which is sometimes called the global context or the global object. The global context is like other objects in that it is a container of key/value pairs. The keys are the names of global variables, and the values are the values of those variables. The global context is initialized with global functions, the global objects JSON and Math, and the global variables Infinity, NaN, and undefined before the first compilation unit gets its turn.
+
+Some environments, such as web browsers, can have many global objects, one for each frame or window. The browser adds its own variables to the global context, including document, navigator, and window.
+
+Global variables can be created in a compilation unit with the var statement or the function statement. Within a function body, if a
+
+@article(global function)
+
+These functions are available in the global context. An implementation is allowed to add additional global functions.
+
+@list {
+@link(Array global function)
+@link(Boolean global function)
+@link(Date global function)
+@link(decodeURI global function)
+@link(decodeURIComponent global function)
+@link(encodeURI global function)
+@link(encodeURIComponent global function)
+@link(Error global function)
+@link(eval global function)
+@link(Function global function)
+@link(isFinite global function)
+@link(isNaN global function)
+@link(Number global function)
+@link(Object global function)
+@link(parseFloat global function)
+@link(parseInt global function)
+@link(RangeError global function)
+@link(ReferenceError global function)
+@link(RegExp global function)
+@link(String global function)
+@link(SyntaxError global function)
+@link(TypeError global function)
+@link(URIError global function)
+}
+
+@article(global object)
+
+The global context contains these objects:
+
+@list {
+@link(JSON global object)
+@link(Math global object)
+}
+
+Blah.
+
+@specimen "Good Parts"
+
+Blah.
+
+@specimen "grammar"
+
+Blah.
+
+@specimen "grouping parentheses"
+
+See @link[( ) grouping].
