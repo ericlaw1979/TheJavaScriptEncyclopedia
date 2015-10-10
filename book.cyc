@@ -6,6 +6,7 @@
 @include "c.cyc"
 @include "d.cyc"
 @include "e.cyc"
+@include "f.cyc"
 @include "h.cyc"
 @include "j.cyc"
 @include "k.cyc"

@@ -51,6 +51,10 @@ The empty statement is a statement consisting of nothing but a @link(;).
 It does not do anything. Its principle use is to mask syntax errors. 
 The empty statement should be avoided.
 
+@specimen "empty string"
+
+Blah.
+
 @specimen "encodeURI"
 
 @article(@t(encodeURI) @link(global function))

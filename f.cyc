@@ -1,0 +1,109 @@
+@chapter "F"
+
+@specimen(false @reserved@)
+
+The @link(false) value is one of the two immutable boolean values. The @link(false) value is @link(falsy).
+
+The @link(false) value can be produced by a @link(relational operator).
+
+@article(@t(@link(false)) @link(literal))
+
+The @link(false) @link(literal) is a convenient way to access the @link(false) value.
+
+@program{var found = false;}
+
+@specimen(falsy)
+
+Every value is either @link(truthy) or @link(falsy). These are the only values that are @link(falsy):
+
+@list{
+@link(empty string)
+@link(false)
+@link(NaN)
+@link(null)
+@link(undefined)
+@link(zero)
+}
+
+All other values, including empty objects and empty arrays, are @link(truthy).
+
+A @link(falsy) value can have consequences:
+
+@list {
+in the condition part of an @link(if statement), the @link(else) branch is taken
+in the condition part of a @link(loop statement), @link(break) out of the loop
+in the first operand of the @link(&& infix operator), the result is the @link(falsy) value of the first operand
+in the first operand of the @link(|| infix operator), the result is the value of the second operand
+in the first operand of the @link(? ternary operator), the result is the value of the third operand
+in a @link(bitwise operator), a @link(falsy) operand is treated the same as @link(zero)
+}
+
+@specimen(filter)
+
+@article(@t(filter) @link(array prototype function))
+
+Blah.
+
+@specimen(finally @reserved@)
+
+See @link(try statement).
+
+@specimen(floor)
+
+@article(@t(floor) @link(Math function))
+
+Blah.
+
+@specimen(for @reserved@)
+
+@article(for in @link(statement))
+
+Blah.
+
+@article(for @link(statement))
+
+Blah.
+
+@specimen(forEach)
+
+@article(@t(forEach) @link(array prototype function))
+
+Blah.
+
+Example:
+
+@specimen(free variable)
+
+Blah.
+
+@specimen(freeze)
+
+@article(@t(freeze) @link(Object function))
+
+Blah.
+
+@specimen(fromCharCode)
+
+@article(@t(fromCharCode) @link(String function))
+
+Blah.
+
+@specimen(function @reserved@)
+
+Blah.
+
+@article(function body)
+
+Blah.
+
+@article(@t(Function) @link(global function))
+
+Blah.
+
+@article(function literal)
+
+Blah.
+
+@article(function @link(statement))
+
+Blah.
