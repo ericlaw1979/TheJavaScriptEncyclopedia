@@ -100,10 +100,10 @@ Blah.
 
 Blah.
 
-@article(function literal)
+@article(@t(function) literal)
 
 Blah.
 
-@article(function @link(statement))
+@article(@t(function) @link(statement))
 
 Blah.
