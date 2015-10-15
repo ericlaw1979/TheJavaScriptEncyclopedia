@@ -287,6 +287,10 @@ Parentheses are used in statements. See
 
 Blah.
 
+@article(@t[(.Y.)])
+
+Look! A pair of boobs!
+
 @specimen "@t[)] @aka(right parenthesis)"
 
 See @link "( left parenthesis".
@@ -381,20 +385,22 @@ Blah.
 
 @specimen (@t(,) @aka(comma))
 
-@article(@t(,) @link(infix operator))
+@article(@t(,) @link(infix operator) @aka(comma))
 
-The @t(,) infix operator takes two operands, evalutes them both, and returns the 
-value of only the second operand. This operator may not be used in places where 
-a comma separator can appear, such as in an argument list, in a var statement, 
-or in an object literal or array literal unless the operand it forms is wrapped 
-in grouping parentheses. This operator is invites misuse of the for statement 
-when initializing or incrementing multiple induction variables.
+The @t(,) @link(infix operator) takes two operands, evalutes them both, 
+and returns the value of only the second operand. This operator may not be used 
+in places where a @link(comma) separator can appear, such as in an @link(argument list), 
+in a @link(var statement), or in an @link(object literal) or @link(array literal) 
+unless the operand it forms is wrapped in @link[( ) grouping]. 
+This @link(operator) invites misuse of the @link(for statement)
+when initializing or incrementing multiple induction variables. 
+The @link(, infix operator) should not be used.
 
 @article(@t(,) @aka(separator))
 
 The comma is used to separate operands in the object literal, the array literal, 
 the argument list. The comma is used to separate identifiers in the the 
-parameter list and the var statement.
+@link(parameter list) and the @link(var statement).
 
 @specimen (@t(-) @aka(minus sign))
 
@@ -684,7 +690,7 @@ function signum(number) {
 
 See array literal.
 
-@article(@t([ ]) @link(suffix operator subscript))
+@article(@t([ ]) @link(suffix operator) @aka(subscript))
 
 Blah.
 

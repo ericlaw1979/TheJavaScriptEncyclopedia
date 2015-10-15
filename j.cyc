@@ -24,8 +24,15 @@ Blah. @url<http://www.JSLint.com/>
 
 @specimen "JSON"
 
+The world's best loved data interchange format.
+
 Blah. @url<http://www.JSON.org/>
 
 @article (@t "JSON" @link (global object))
+
+@list{
+@link(parse JSON function)
+@link(stringify JSON function)
+}
 
 Blah.

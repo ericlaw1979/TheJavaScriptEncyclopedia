@@ -311,6 +311,10 @@ See @link(line terminator).
 
 Blah.
 
+@specimen(crlf @aka(carriage return linefeed))
+
+See @link(line terminator).
+
 @specimen(CSS)
 
 See @link(Cascading Style Sheets). 

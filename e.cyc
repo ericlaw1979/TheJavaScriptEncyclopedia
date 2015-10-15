@@ -124,6 +124,10 @@ Blah.
 
 ECMAScript Programming Language Standard, Third Edition [1999].
 
+@specimen "ES4"
+
+There is no @link(es4).
+
 @specimen "ES5"
 
 ECMAScript Programming Language Standard, Fifth Edition [2009].
@@ -158,9 +162,13 @@ Blah.
 
 Blah.
 
+@specimen "evil"
+
+Evil is bad. Don't do evil things or use things for evil purposes.
+
 @specimen "exceptions"
 
-Blah.
+Blah. See @link(try statement).
 
 @specimen "exec"
 

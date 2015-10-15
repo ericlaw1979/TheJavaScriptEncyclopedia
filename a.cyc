@@ -202,31 +202,6 @@ The Array function contains an isArray Array function that determines if a value
 
 The Array function contains these methods in Array.prototype:
 
-@article(@t(Array) @link(prototype function))
-
-@list {
-@link(concat array prototype function)
-@link(every array prototype function)
-@link(filter array prototype function)
-@link(forEach array prototype function)
-@link(indexOf array prototype function)
-@link(join array prototype function)
-@link(lastIndexOf array prototype function)
-@link(map array prototype function)
-@link(pop array prototype function)
-@link(push array prototype function)
-@link(reduce array prototype function)
-@link(reduceRight array prototype function)
-@link(reverse array prototype function)
-@link(shift array prototype function)
-@link(slice array prototype function)
-@link(some array prototype function)
-@link(splice array prototype function)
-@link(toLocaleString array prototype function)
-@link(toString array prototype function)
-@link(unshift array prototype function)
-}
-
 @article(@t(array) @link(literal))
 
 An array literal is an expression that produces an array value. An array literal starts with @link([) and ends with @link(]). Between the brackets are zero or more expressions, separated by , comma. Each expression contributes one element to the array. An empty array is created by []. Every time an array literal is evaluated, it produces a new array, so
@@ -282,20 +257,66 @@ var roman = (function () {
 
 @article(@t(Array) @link(prototype))
 
+@article(@t(Array) @link(prototype function))
+
+@list {
+@link(concat array prototype function)
+@link(every array prototype function)
+@link(filter array prototype function)
+@link(forEach array prototype function)
+@link(indexOf array prototype function)
+@link(join array prototype function)
+@link(lastIndexOf array prototype function)
+@link(map array prototype function)
+@link(pop array prototype function)
+@link(push array prototype function)
+@link(reduce array prototype function)
+@link(reduceRight array prototype function)
+@link(reverse array prototype function)
+@link(shift array prototype function)
+@link(slice array prototype function)
+@link(some array prototype function)
+@link(splice array prototype function)
+@link(toLocaleString array prototype function)
+@link(toString array prototype function)
+@link(unshift array prototype function)
+}
+
+@article(@t(Array) @link(prototype number))
+
+@list {
+@link(length array prorotype number)
+}
+
 @specimen "ASCII"
 
-American Standard Code for Information Interchange is a seven bit character set designed for use with teletype machines. The set of 128 characters includes 26 uppercase letters, 26 lowercase letters, 10 decimal digits, 1 space, 32 special characters, and 33 control codes. Most of the control codes are obsolete, although a few of them, tab, lf line feed, and cr carriage return, have significance in JavaScript as whitespace. All of the special characters used by JavaScript are in the ASCII set. The first 128 characters in the UNICODE set are the ASCII set.
+American Standard Code for Information Interchange is a seven bit character set 
+designed for use with teletype machines. The set of 128 characters includes 26 
+uppercase letters, 26 lowercase letters, 10 decimal digits, 1 space, 32 special 
+characters, and 33 control codes. Most of the control codes are obsolete, 
+although a few of them have significance in JavaScript as @link(whitespace). 
+
+@list {
+@link(cr)
+@link(lf)
+@link(tab)
+}
+
+All of the special characters used by JavaScript are in the ASCII set. The first 128 characters in the UNICODE set are the ASCII set.
 
 The letter A is 41 in hexadecimal.
-hex 	0 	1 	2 	3 	4 	5 	6 	7 	8 	9 	A 	B 	C 	D 	E 	F
-0 	nul 	soh 	stx 	etx 	eot 	enq 	ack 	bel 	bs 	tab 	lf 	vt 	ff 	cr 	so 	si
-1 	dle 	dc1 	dc2 	dc3 	dc4 	nak 	syn 	etb 	can 	em 	sub 	esc 	fs 	gs 	rs 	us
-2 	space 	! 	" 	# 	$ 	% 	& 	' 	( 	) 	* 	+ 	, 	- 	. 	/
-3 	0 	1 	2 	3 	4 	5 	6 	7 	8 	9 	: 	; 	< 	= 	> 	?
-4 	@@ 	A 	B 	C 	D 	E 	F 	G 	H 	I 	J 	K 	L 	M 	N 	O
-5 	P 	Q 	R 	S 	T 	U 	V 	W 	X 	Y 	Z 	[ 	\ 	] 	^ 	_
-6 	` 	a 	b 	c 	d 	e 	f 	g 	h 	i 	j 	k 	l 	m 	n 	o
-7 	p 	q 	r 	s 	t 	u 	v 	w 	x 	y 	z 	{ 	| 	} 	~ 	del
+
+@begin(table)
+@!hex@|@!0@|@!1@|@!2@|@!3@|@!4@|@!5@|@!6@|@!7@|@!8@|@!9@|@!A@|@!B@|@!C@|@!D@|@!E@|@!F
+@_@!0@|nul@|soh@|stx@|etx@|eot@|enq@|ack@|bel@|bs@|tab@|lf@|vt@|ff@|cr@|so@|si
+@_@!1@|dle@|dc1@|dc2@|dc3@|dc4@|nak@|syn@|etb@|can@|em@|sub@|esc@|fs@|gs@|rs@|us
+@_@!2@|space@|!@|"@|#@|$@|%@|&@|'@|(@|)@|*@|+@|,@|-@|.@|/
+@_@!3@|0@|1@|2@|3@|4@|5@|6@|7@|8@|9@|:@|;@|<@|=@|>@|?
+@_@!4@|@@@|A@|B@|C@|D@|E@|F@|G@|H@|I@|J@|K@|L@|M@|N@|O
+@_@!5@|P@|Q@|R@|S@|T@|U@|V@|W@|X@|Y@|Z@|[@|\@|]@|^@|_
+@_@!6@|`@|a@|b@|c@|d@|e@|f@|g@|h@|i@|j@|k@|l@|m@|n@|o
+@_@!7@|p@|q@|r@|s@|t@|u@|v@|w@|x@|y@|z@|{@||@|}@|~@|del
+@end(table)
 
 @specimen "asin"
 

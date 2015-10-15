@@ -378,7 +378,7 @@ The @link(infix operator) is placed between its two operands.
 @link(instanceof infix operator)
 }
 
-Also see @link(operator precedence) and @link(assignment operator).
+Also see @link(operator precedence) and @link(assignment infix operator).
 
 @specimen "inheritance"
 

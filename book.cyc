@@ -1,5 +1,10 @@
 @book "The JavaScript Encyclopedia"
 
+This is a work in progress. The source of this book can be found at
+@url<https://github.com/douglascrockford/TheJavaScriptEncyclopedia>.
+
+@link "Public Domain"
+
 @include "special.cyc"
 @include "a.cyc"
 @include "b.cyc"
@@ -12,6 +17,7 @@
 @include "i.cyc"
 @include "j.cyc"
 @include "k.cyc"
+@include "l.cyc"
 @include "p.cyc"
 @include "q.cyc"
 @include "u.cyc"
