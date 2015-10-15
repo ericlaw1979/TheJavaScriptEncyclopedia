@@ -18,6 +18,7 @@ This is a work in progress. The source of this book can be found at
 @include "j.cyc"
 @include "k.cyc"
 @include "l.cyc"
+@include "m.cyc"
 @include "p.cyc"
 @include "q.cyc"
 @include "u.cyc"

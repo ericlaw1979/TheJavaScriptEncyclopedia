@@ -283,7 +283,7 @@ function exp10(x) {
 
 @specimen "LN2"
 
-@article(@t(LN2) @link(Math number) @link(natural logarithm of 2))
+@article(@t(LN2) @link(Math number) @aka(natural logarithm of 2))
 
 Math.LN2 contains a number that is approximately 0.6931471805599453. It could be implemented as
 
