@@ -1,5 +1,5 @@
 // cyc.js
-// 2015-10-05
+// 2015-10-15
 
 /*jslint devel: true */
 
@@ -18,14 +18,15 @@ var cyc = (function () {
             '@': '@'
         },
         lx = /\n|\r\n?/g,                           // line end
-        tx = /@[*#@_!\|]?|["'{}()<>\[\]]|[^@"'{}()<>\[\]]+/g;  // text or some special
+        tx = /@[!#-&*-/:;=?@\\^_`\|~]?|["'{}()<>\[\]]|[^@"'{}()<>\[\]]+/g;  // text or some special
 
 
     function error(message) {
+        console.error(message);
+        debugger;
         throw message;
     }
-
-
+    
     function parse(text, rules) {
 
 // We take a cyclopede text and produce this structure:
@@ -100,11 +101,12 @@ var cyc = (function () {
             }
         }
 
-
 // Start by busting the text into lines and then into tokens. A token is one of
-//      @  '  "  (  )  [  ]  {  }  <  >
-//      @|  @_  @!
-// or a string containing none of those.
+//      @   '   "   (   )   [   ]   {   }   <   >
+//      @!  @#  @$  @%  @*  @+  @,  @-  @.  @/  @:  
+//      @;  @=  @?  @@  @\  @^  @_  @`  @|  @~
+// or a string containing none of those. Of the @ digraphs, only @@ is known
+// here. The others may be defined in rules.
 
         lines = text.split(lx).map(function (value) {
             return value.match(tx) || '';
@@ -120,6 +122,18 @@ var cyc = (function () {
         while (true) {
             token = next_token();
             switch (token) {
+                
+// null means we have reached the end of tokens. The stack had better be empty.
+
+            case null:
+                if (stack.length > 0) {
+                    top = stack[stack.length - 1];
+                    return error(typeof top === 'string'
+                        ? "Missing " + top + " to close @" + structure[0]
+                        : "Missing @end(" + structure[0] + ")");
+                }
+                return structure;
+
             case '@@':
                 deposit('@');
                 break;
@@ -130,12 +144,6 @@ var cyc = (function () {
                 token = next_token();
                 name = token.trim();
 
-// If the rule for this name is a string, then it is an alias.
-
-                if (typeof rules[name] === 'string') {
-                    name = rules[name];
-                }
-
 // If there is a rule for this name, then get the next token, which should be
 // an opener. Find its closer. Push the current structure and the closer on the
 // stack. Make a new structure with the name as the first element.
@@ -145,7 +153,7 @@ var cyc = (function () {
                     token = next_token();
                     closer = pair[token];
                     if (typeof closer !== 'string') {
-                        return error("Bad opener " + token);
+                        return error("Bad opener @" + name + ' ' + token);
                     }
                     if (closer === '@') {
                         deposit([name]);
@@ -160,17 +168,6 @@ var cyc = (function () {
                     return error("Not a name: @" + name);
                 }
                 break;
-
-// null means we have reached the end of tokens. The stack had better be empty.
-
-            case null:
-                if (stack.length > 0) {
-                    top = stack[stack.length - 1];
-                    return error(typeof top === 'string'
-                        ? "Missing " + top + " to close @" + structure[0]
-                        : "Missing @end(" + structure[0] + ")");
-                }
-                return structure;
 
 // If the token matches the closer at the top of stack, then we have
 // completed a structure. If it was a begin or end, do some special
@@ -188,9 +185,6 @@ var cyc = (function () {
                         return error('bad begin');
                     }
                     name = structure[1][0].trim();
-                    if (typeof rules[name] === 'string') {
-                        name = rules[name];
-                    }
                     if (typeof rules[name] !== 'object') {
                         return error('bad @begin(' + name + ')');
                     }
@@ -210,6 +204,9 @@ var cyc = (function () {
                     }
                     if (name === temp[0]) {
                         structure = stack.pop();
+                        if (rules[name].parse !== undefined) {
+                            temp = rules[name].parse(temp);
+                        }
                         deposit(temp);
                         break;
                     } else {
@@ -223,15 +220,26 @@ var cyc = (function () {
                 default:
                     temp = structure;
                     structure = stack.pop();
+                    name = temp[0];
+                    if (rules[name].parse !== undefined) {
+                        temp = rules[name].parse(temp);
+                    }
                     deposit(temp);
-                    if (stack.length && typeof rules[temp[0]].level === 'number') {
-                        debugger;
-                        return error("Misplaced @" + temp.join(''));
+                    if (stack.length && typeof rules[name].level === 'number') {
+                        return error("Misplaced @" + temp.join(' '));
                     }
                 }
                 break;
             default:
-                deposit(token);
+                if (token[0] === '@') {
+                    if (rules[structure[0]] !== undefined) {
+                        deposit([token]);
+                    } else {
+                        return error("Unexpected @" + temp.join(' '));
+                    }
+                } else {
+                    deposit(token);
+                }
             }
         }
     }
@@ -316,22 +324,14 @@ var cyc = (function () {
 
 // The process function takes a structure. It will walk through the structure.
 
-            var actual,
-                level,
+            var level,
                 name = structure[0],
                 para_result = '',
-                result = '';
+                result = '',
+                rule = rules[name];
 
-            level = rules[name].level;
+            level = rule.level;
             stack.push(name);
-            if (typeof level === 'string') {
-
-// A rule can be an alias, so that it acts like another rule.
-
-                actual = name;
-                name = level;
-                level = rules[name].level;
-            }
 
 // If the rule has a level number, then update the course and course_level.
 // Encountering a low numbered level will cause higher levels to be dropped.
@@ -343,9 +343,6 @@ var cyc = (function () {
                 para_result += uncourse(level);
                 course.push(name);
                 course_level.push(level);
-            }
-            if (typeof rules[name].begin === 'function') {
-                para_result = rules[name].begin('');
             }
 
 // Walk through the structure visiting all of the things in it. Things that are
@@ -368,24 +365,22 @@ var cyc = (function () {
                 } else {
                     row.forEach(function (thing) {
                         if (typeof thing === 'string') {
-                            if (thing.length === 2 && thing.charAt(0) === '@') {
-                                if (typeof rules[name][thing] === 'function') {
-                                    thing = rules[name][thing](result);
-                                    if (typeof thing === 'string') {
-                                        para_result += thing;
-                                        result = '';
-                                    }
-                                    thing = '';
-                                }
-                            } else {
-                                thing = apply('$', thing, structure);
-                            }
+                            thing = apply('$', thing, structure);
 
 // Otherwise, process the thing. If the thing has a level, and if this is an
 // unnamed level, then first accumulate another paragraph.
 
                         } else {
-                            if (!name && rules[thing[0]].level !== undefined) {
+                            var rule = rules[thing[0]];
+                            if (rule === undefined) {
+                                rule = rules[stack[stack.length - 1]][thing[0]];
+                                if (typeof rule !== 'function') {
+                                    return error("Unrecognized " + thing[0]);
+                                }
+                                result = rule(result);
+                                return;
+                            } 
+                            if (!name && rule.level !== undefined) {
                                 if (result) {
                                     para_result += apply('', result, structure);
                                     result = '';
@@ -406,10 +401,6 @@ var cyc = (function () {
                     result += '\n';
                 }
             });
-            if (typeof rules[name].end === 'function') {
-                result = para_result + rules[name].end(result);
-                para_result = '';
-            }
             result = para_result + apply(name, result, structure);
 
 // The result is returned, which may first be transformed or replaced by the
@@ -418,9 +409,6 @@ var cyc = (function () {
             stack.pop();
             if (stack.length === 0) {
                 result += uncourse(0);
-            }
-            if (typeof actual === 'string') {
-                result = apply(actual, result, structure);
             }
             return result;
         }

@@ -62,15 +62,6 @@ function make_onehtml() {
         };
     }
 
-    function at_underbar(text) {
-        text = h_bit
-            ? "<th>" + text + "</th>"
-            : "<td>" + text + "</td>";
-        h_bit = false;
-        return text;
-    }
-
-
     return {
         '*': ['link', 'name', 'gen'],   // the names of the passes
         '@': function (product) {
@@ -93,7 +84,12 @@ function make_onehtml() {
             name: ["<dfn>", "</dfn>"],
             gen: ["<dfn>", "</dfn>"]
         },
-        appendix: 'chapter',
+        appendix: {
+            level: 2,
+            link: stuff_link,
+            name: stuff_name,
+            gen: wrap("h1")
+        },
         article: {
             level: 4,
             link: stuff_link,
@@ -116,8 +112,12 @@ function make_onehtml() {
             name: stuff_name,
             gen: wrap("h1")
         },
+        comment: {
+            link: '',
+            name: '',
+            gen: ''
+        },
         es5: {
-            level: '',
             link: '',
             name: '',
             gen: ["\n<div class=es5>", "</div>"]
@@ -179,18 +179,63 @@ function make_onehtml() {
             gen: ["<tt>", "</tt>"]
         },
         table: {
-            level: true,
             link: '',
             name: '',
-            gen: ["<table><tbody><tr>", "</tr></tbody></table>"],
-            '@!': function (ignore) {
-                h_bit = true;
+            gen: ["<table><tbody>", "</tbody></table>"],
+            parse: function (structure) {
+                var itemcont = [],
+                    item = ['-td', itemcont],
+                    rowcont = [item],
+                    row = ['-tr', rowcont],
+                    tablecont = [row],
+                    table = ['table', tablecont];
+                structure.slice(1).forEach(function (rowrow) {
+                    rowrow.forEach(function (thing) {
+                        if (Array.isArray(thing)) {
+                            switch (thing[0]) {
+                            case '@!':
+                                item[0] = '-th';
+                                break;
+                            case '@|':
+                                itemcont = [];
+                                item = ['-td', itemcont];
+                                rowcont.push(item);
+                                break;
+                            case '@_':
+                                itemcont = [];
+                                item = ['-td', itemcont];
+                                rowcont = [item];
+                                row = ['-tr', rowcont];
+                                tablecont.push(row);
+                                break;
+                            default:
+                                itemcont.push(thing);
+                            }
+                        } else {
+                            itemcont.push(thing);
+                        }
+                    });
+                });
+                return table;
             },
-            '@_': at_underbar,
-            '@|': function (text) {
-                return at_underbar(text) + "</tr><tr>";
-            },
-            end: at_underbar
+            '@!': true,
+            '@_': true,
+            '@|': true
+        },
+        '-td': {
+            link: '',
+            name: '',
+            gen: ["<td>", "</td>"]
+        },
+        '-th': {
+            link: '',
+            name: '',
+            gen: ["<th>", "</th>"]
+        },
+        '-tr': {
+            link: '',
+            name: '',
+            gen: ["<tr>", "</tr>"]
         },
         url: {
             gen: function (text) {
