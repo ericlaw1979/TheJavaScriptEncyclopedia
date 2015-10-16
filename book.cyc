@@ -25,6 +25,8 @@ this book can be found at
 @include "k.cyc"
 @include "l.cyc"
 @include "m.cyc"
+@include "n.cyc"
+@include "o.cyc"
 @include "p.cyc"
 @include "q.cyc"
 @include "u.cyc"
