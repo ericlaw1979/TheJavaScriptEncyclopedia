@@ -255,7 +255,7 @@ A literal is a sequence of one or more tokens that creates a value within a prog
 }
 
 @link(Infinity), @link(NaN), and @link(undefined) are not formally literals.
-Each is a @link(global variable).
+Each is a @link(primordial variable).
 
 @specimen "LN10"
 

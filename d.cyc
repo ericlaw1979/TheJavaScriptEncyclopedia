@@ -1,12 +1,12 @@
 @chapter "D"
 
-@specimen "Date"
+@specimen "date"
 
-@article "@t(Date) @link(global function)"
+@article "@t(Date) @link(primordial function)"
 
 Blah. Blah. Blah.
 
-@article "@t(Date) @link(Date prototype function)"
+@article "@t(Date) @link(prototype function)"
 
 @list {
 @link <getYear date prototype function>
@@ -29,13 +29,13 @@ Most of humanity represents its numbers in the decimal system.
 
 @specimen "decodeURI"
 
-@article "@t(decodeURI) @link<global function>"
+@article "@t(decodeURI) @link<primordial function>"
 
 Blah.
 
 @specimen "decodeURIComponent"
 
-@article "@t(decodeURIComponent) @link<global function>"
+@article "@t(decodeURIComponent) @link<primordial function>"
 
 Blah.
 

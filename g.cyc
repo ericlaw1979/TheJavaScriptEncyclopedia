@@ -121,47 +121,6 @@ Some environments, such as web browsers, can have many global objects, one for e
 
 Global variables can be created in a compilation unit with the var statement or the function statement. Within a function body, if a
 
-@article(global function)
-
-These functions are available in the global context. An implementation is allowed to add additional global functions.
-
-@list {
-@link(Array global function)
-@link(Boolean global function)
-@link(Date global function)
-@link(decodeURI global function)
-@link(decodeURIComponent global function)
-@link(encodeURI global function)
-@link(encodeURIComponent global function)
-@link(Error global function)
-@link(eval global function)
-@link(Function global function)
-@link(isFinite global function)
-@link(isNaN global function)
-@link(Number global function)
-@link(Object global function)
-@link(parseFloat global function)
-@link(parseInt global function)
-@link(RangeError global function)
-@link(ReferenceError global function)
-@link(RegExp global function)
-@link(String global function)
-@link(SyntaxError global function)
-@link(TypeError global function)
-@link(URIError global function)
-}
-
-@article(global object)
-
-The global context contains these objects:
-
-@list {
-@link(JSON global object)
-@link(Math global object)
-}
-
-Blah.
-
 @specimen "Good Parts"
 
 Blah.

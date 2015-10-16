@@ -72,7 +72,7 @@ See @link(+ infix operator).
 
 @specimen "alert"
 
-@article(@t(alert) @link(global function))
+@article(@t(alert) @link(primordial function))
 
 The alert function is not formally a part of the language. It is a function provided by the browser and other platforms. The alert function can take zero or more arguments. Each argument is converted to a string. All of those strings are concatenated together and shown to the user. It suspends execution of the program. Once the message is dismissed by the user, execution can resume.
 
@@ -194,9 +194,9 @@ function eratosthenes(n) {
 }
 @end(program)
 
-@article(@t(Array) @link(global function))
+@article(@t(Array) @link(primordial function))
 
-The Array global function is the constructor of arrays. The [] array literal form is perfered. Blah.
+The Array primordial function is the constructor of arrays. The [] array literal form is perfered. Blah.
 
 The Array function contains an isArray Array function that determines if a value is an array.
 

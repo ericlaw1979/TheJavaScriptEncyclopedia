@@ -57,13 +57,13 @@ Blah.
 
 @specimen "encodeURI"
 
-@article(@t(encodeURI) @link(global function))
+@article(@t(encodeURI) @link(primordial function))
 
 Blah.
 
 @specimen "encodeURIComponent"
 
-@article(@t(encodeURIComponent) @link(global function))
+@article(@t(encodeURIComponent) @link(primordial function))
 
 Blah.
 
@@ -116,7 +116,7 @@ Epsilon is a measure of the limits of the accuracy of number.
 
 @specimen "error"
 
-@article(@t(Error) @link(global function))
+@article(@t(Error) @link(primordial function))
 
 Blah.
 
@@ -142,13 +142,13 @@ Blah.
 
 @specimen "eval"
 
-@article(@t(eval) @link(global function))
+@article(@t(eval) @link(primordial function))
 
 Blah.
 
 @specimen "EvalError"
 
-@article(@t(EvalError) @link(global function))
+@article(@t(EvalError) @link(primordial function))
 
 Blah.
 

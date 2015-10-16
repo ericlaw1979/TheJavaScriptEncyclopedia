@@ -453,7 +453,7 @@ var deroman = (function () {
 
 @specimen "octal @aka(base 8)"
 
-See @link(number literal), @link(parseInt global function), and @link(toString Number prototype function).
+See @link(number literal), @link(parseInt primordial function), and @link(toString Number prototype function).
 
 @specimen "operand"
 

@@ -183,9 +183,9 @@ See @link(function body).
 The boolean type contains exactly two values: true and false. The typeof prefix operator returns 'boolean' when its operand is a boolean. A boolean value is produced by a relational operator.
 The boolean type is named after the mathematician George Boole. 
 
-@article(@t(Boolean) @link(global function))
+@article(@t(Boolean) @link(primordial function))
 
-The Boolean(value) global function, when called as function, evaluates its parameter. If the value was truthy, it returns true. If the value was falsy, it returns false.
+The Boolean(value) primordial function, when called as function, evaluates its parameter. If the value was truthy, it returns true. If the value was falsy, it returns false.
 
 @article(boolean literal)
 

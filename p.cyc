@@ -39,13 +39,13 @@ Blah.
 
 @specimen "parseFloat"
 
-@article(@t(parseFloat) @link(global function))
+@article(@t(parseFloat) @link(primordial function))
 
 Blah.
 
 @specimen "parseInt"
 
-@article(@t(parseInt) @link(global function))
+@article(@t(parseInt) @link(primordial function))
 
 Blah.
 
@@ -547,6 +547,50 @@ Also see assignment prefix operator.
 @specimen "preventExtensions"
 
 @article(@t(preventExtensions) @link(Object function))
+
+Blah.
+
+@specimen "primordial"
+
+@article "primordial function"
+
+These functions are available in the primordial context. 
+An implementation is allowed to add additional primordial functions.
+
+@list {
+@link(Array primordial function)
+@link(Boolean primordial function)
+@link(Date primordial function)
+@link(decodeURI primordial function)
+@link(decodeURIComponent primordial function)
+@link(encodeURI primordial function)
+@link(encodeURIComponent primordial function)
+@link(Error primordial function)
+@link(eval primordial function)
+@link(Function primordial function)
+@link(isFinite primordial function)
+@link(isNaN primordial function)
+@link(Number primordial function)
+@link(Object primordial function)
+@link(parseFloat primordial function)
+@link(parseInt primordial function)
+@link(RangeError primordial function)
+@link(ReferenceError primordial function)
+@link(RegExp primordial function)
+@link(String primordial function)
+@link(SyntaxError primordial function)
+@link(TypeError primordial function)
+@link(URIError primordial function)
+}
+
+@article "primordial object"
+
+The primordial context contains these objects:
+
+@list {
+@link(JSON primordial object)
+@link(Math primordial object)
+}
 
 Blah.
 

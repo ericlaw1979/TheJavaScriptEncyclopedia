@@ -19,7 +19,7 @@ programming was closer to the machine so a format that was trivially convertable
 to binary was highly desirable. Today, hexadecimal is mainly used to encode a 
 code value in a @link[Unicode escape sequence] and to encode colors in @link(CSS).
 
-Also see @link(number literal), @link(parseInt global function), and 
+Also see @link(number literal), @link(parseInt primordial function), and 
 @link(toString Number prototype function).
 
 @specimen "higher order function"

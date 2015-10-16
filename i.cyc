@@ -338,7 +338,7 @@ for (;;) {}    // This is not a bug. It is much worse.
 
 @article(@t(Infinity) @link(literal))
 
-The infinity value is a number that represents all numbers that are larger than Number.MAX_VALUE. It is available as a global variable, and as Number.POSITIVE_INFINITY. Negative infinity is available as -Infinity and as Number.NEGATIVE_INFINITY.
+The infinity value is a number that represents all numbers that are larger than Number.MAX_VALUE. It is available as a primordial variable, and as Number.POSITIVE_INFINITY. Negative infinity is available as -Infinity and as Number.NEGATIVE_INFINITY.
 
 Infinity + Infinity    // Infinity
 Infinity - Infinity    // NaN
@@ -502,7 +502,7 @@ Blah.
 
 @specimen "isFinite"
 
-@article(@t(isFinite) @link(global function))
+@article(@t(isFinite) @link(primordial function))
 
 Blah.
 
@@ -514,7 +514,7 @@ Blah.
 
 @specimen "isNaN"
 
-@article(@t(isNaN) @link(global function))
+@article(@t(isNaN) @link(primordial function))
 
 Blah.
 

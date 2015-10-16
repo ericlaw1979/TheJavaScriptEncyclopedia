@@ -126,7 +126,7 @@ fails because @t(NaN === NaN) produces @link(false). It is possible to use
 to test for NaN because only NaN is not equal to itself, but it looks 
 mathematically ridiculous, and one hopes for a better future in which logic 
 and good engineering are highly valued when this must fail. Another approach 
-is to use the @link(isNaN global function). Unfortunately, it can produce a 
+is to use the @link(isNaN primordial function). Unfortunately, it can produce a 
 @link(false positive) if an operand is a type other than number, so if it is 
 possible that the operand is a string, then it should be guarded with the @link(typeof prefix operator).
 
@@ -145,7 +145,7 @@ There are many of ways to test for NaN, and they are all absurd.
 @article(@t(NaN) @link(literal))
 
 The literal symbol for NaN is NaN. NaN is not actually a literal. 
-It is a @link(global variable) that holds a NaN value.
+It is a @link(primordial variable) that holds a NaN value.
 
 Blah.
 
@@ -240,9 +240,9 @@ A number value acts as an immutable object. A number value has methods that it i
 
 Using the typeof prefix operator with a number value always produces the string 'number', even when the number is one of the non finite values NaN, Infinity, and -Infinity.
 
-@article(@t(Number) @link(global function))
+@article(@t(Number) @link(primordial function))
 
-The global function Number can produce number values.
+The primordial function Number can produce number values.
 
 Blah.
 
@@ -290,7 +290,7 @@ Blah.
 
 @article(@t(Number) number)
 
-The @link(Number global function) is also the container of a set of constants.
+The @link(Number primordial function) is also the container of a set of constants.
 
 @list {
 @link(MAX_VALUE Number number)

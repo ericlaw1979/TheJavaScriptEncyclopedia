@@ -432,7 +432,8 @@ First, when invoked as a function, it takes any operand and produces a string va
 Second, when invoked as a constructor with the new prefix operator, takes an operand and produces an object whose valueOf method produces a string value.
 
 Third, it has a prototype property that holds the methods that are inherited by all strings.
-string literal
+
+@article(string @link(literal))
 
 A @link(string literal) is used to include a string value in a program. There are two forms of string literal: single quote string literal and double quote string literal. They differ only in the character used to wrap the characters.
 

@@ -63,7 +63,7 @@ function shuffle(deck) {
 
 @specimen "RangeError"
 
-@article(@t(RangeError) @link(global function))
+@article(@t(RangeError) @link(primordial function))
 
 Blah.
 
@@ -262,7 +262,7 @@ Blah.
 
 @specimen "ReferenceError"
 
-@article(@t(ReferenceError) @link(global function))
+@article(@t(ReferenceError) @link(primordial function))
 
 Blah.
 

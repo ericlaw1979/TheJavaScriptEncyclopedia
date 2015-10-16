@@ -28,7 +28,7 @@ The world's best loved data interchange format.
 
 Blah. @url<http://www.JSON.org/>
 
-@article (@t "JSON" @link (global object))
+@article (@t "JSON" @link (primordial object))
 
 @list{
 @link(parse JSON function)

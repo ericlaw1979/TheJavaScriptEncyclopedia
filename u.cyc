@@ -23,7 +23,7 @@ Blah.
 See @link <case>.
 
 @specimen "URIError"
-@article "@t(URIError) @link <global function>"
+@article "@t(URIError) @link <primordial function>"
 Blah.
 
 @specimen "use @reserved@"

@@ -87,13 +87,13 @@ Math.max(...) and Math.min(...) can take many arguments. The table shows the cas
 
 Math.atan2(y, x) and Math.pow(x, y) each take two arguments. Math.random() takes no arguments.
 
-@article(@t(Math) @link(global object))
+@article(@t(Math) @link(primordial object))
 
 Blah.
 
 @article(@t(Math) @link(number))
 
-The Math global object is the container for these numeric properties:
+The Math primordial object is the container for these numeric properties:
 
 @list {
 @link(E Math number)
