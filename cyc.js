@@ -26,7 +26,7 @@ var cyc = (function () {
         debugger;
         throw message;
     }
-    
+
     function parse(text, rules) {
 
 // We take a cyclopede text and produce this structure:
@@ -103,7 +103,7 @@ var cyc = (function () {
 
 // Start by busting the text into lines and then into tokens. A token is one of
 //      @   '   "   (   )   [   ]   {   }   <   >
-//      @!  @#  @$  @%  @*  @+  @,  @-  @.  @/  @:  
+//      @!  @#  @$  @%  @*  @+  @,  @-  @.  @/  @:
 //      @;  @=  @?  @@  @\  @^  @_  @`  @|  @~
 // or a string containing none of those. Of the @ digraphs, only @@ is known
 // here. The others may be defined in rules.
@@ -122,7 +122,7 @@ var cyc = (function () {
         while (true) {
             token = next_token();
             switch (token) {
-                
+
 // null means we have reached the end of tokens. The stack had better be empty.
 
             case null:
@@ -379,7 +379,7 @@ var cyc = (function () {
                                 }
                                 result = rule(result);
                                 return;
-                            } 
+                            }
                             if (!name && rule.level !== undefined) {
                                 if (result) {
                                     para_result += apply('', result, structure);
