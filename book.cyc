@@ -29,6 +29,8 @@ this book can be found at
 @include "o.cyc"
 @include "p.cyc"
 @include "q.cyc"
+@include "r.cyc"
+@include "s.cyc"
 @include "u.cyc"
 @include "v.cyc"
 @include "x.cyc"
