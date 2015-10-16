@@ -1,5 +1,5 @@
 // onehtml.js
-// 2015-10-05
+// 2015-10-15
 
 // These Cyc rules produce a single HTML file.
 
@@ -231,6 +231,18 @@ function make_onehtml() {
             link: '',
             name: '',
             gen: ["<th>", "</th>"]
+        },
+        together: {
+            gen: function (text) {
+                return text;
+            },
+            parse: function (structure) {
+                var stuff = structure[1];
+                structure.slice(2).forEach(function (row) {
+                    stuff = stuff.concat(' ', row);
+                });
+                return ['together', stuff];
+            }
         },
         '-tr': {
             link: '',
