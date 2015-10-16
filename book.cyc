@@ -11,6 +11,7 @@ this book can be found at
 @link "Public Domain"
 
 @include "preface.cyc"
+@include "introduction.cyc"
 @include "special.cyc"
 @include "a.cyc"
 @include "b.cyc"
@@ -38,3 +39,4 @@ this book can be found at
 @include "x.cyc"
 @include "y.cyc"
 @include "z.cyc"
+@include "contributors.cyc"

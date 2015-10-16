@@ -652,6 +652,10 @@ Blah.
 
 @specimen "public @reserved@"
 
+@specimen "public domain"
+
+Blah.
+
 @specimen "punctuator"
 
 A punctuator is a symbol composed of one or more special characters that is used as a separator or operator.

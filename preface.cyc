@@ -44,6 +44,7 @@ content. The environments are
 @t(@@es5)
 @t(@@table)
 @t(@@list)
+@t(@@together)
 @t(@@link)
 @t(@@url)
 @t(@@b)
@@ -106,3 +107,5 @@ function foo() {
 @end[program]
 
 Contributions may be submitted at @url(https://github.com/douglascrockford/TheJavaScriptEncyclopedia).
+
+Eventually, this preface will be modified to pertain to the book and not the making of the book.
