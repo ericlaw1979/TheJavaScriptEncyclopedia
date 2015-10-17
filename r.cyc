@@ -270,11 +270,11 @@ Blah.
 
 Blah.
 
-@article(@t(RegExp) @link(function))
+@article(regexp flag)
 
 Blah.
 
-@article(@t(RegExp) @link(prototype function))
+@article(@t(RegExp) @link(function))
 
 Blah.
 
@@ -283,6 +283,10 @@ Blah.
 Blah. 7.8.5
 
 @article(regexp operator)
+
+Blah.
+
+@article(@t(RegExp) @link(prototype function))
 
 Blah.
 

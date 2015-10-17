@@ -191,6 +191,8 @@ The Boolean(value) primordial function, when called as function, evaluates its p
 
 There are two boolean literals, representing the two boolean values: @link(true) and @link(false).
 
+@article(@t(Boolean) @link(prototype function))
+
 @specimen "boolish"
 
 Every value in JavaScript is boolish in that it is either @link(truthy) or @link(falsy). 
