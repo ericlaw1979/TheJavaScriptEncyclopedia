@@ -39,7 +39,7 @@ A variable is declared with the @link(var statement) or the
 @specimen "variadic"
 
 A variadic function is a function that takes a variable number of arguments. 
-See @link(arguments parameter) and the @link(... rest operator).
+See @link(arguments parameter) and the @link(... prefix operator).
 
 @specimen "void @reserved@"
 

@@ -432,6 +432,16 @@ Blah.
 
 Blah.
 
+@article(@t(...) @link(prefix operator) @aka(ellipsis))
+
+@section "rest"
+
+@es5(Blah.)
+
+@section "spread"
+
+@es5(Blah.)
+
 @specimen (@t(/) @aka(slash))
 
 The / slash character is also known as the solidus and as the virgule. It is 
