@@ -137,18 +137,9 @@ li p {
 	text-indent: 0;
 }
 
-.es3 {  /* ES3 warning */
-    background-image: url(es3.gif);
-    background-repeat: no-repeat;
-    font-size: 90%;
-    margin-left: -0.5in;
-    padding-left: 0.5in;
-}
-
 .es5 {  /* ES5 warning */
     background-image: url(es5.gif);
     background-repeat: no-repeat;
-    font-size: 90%;
     margin-left: -0.5in;
     padding-left: 0.5in;
 }
