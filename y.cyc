@@ -21,7 +21,9 @@ function y(e) {
 
 var factorial = y(function (recur) {
     return function (n) {
-        return n <= 2 ? n : n * recur(n - 1);
+        return (n <= 2) 
+            ? n 
+            : n * recur(n - 1);
     };
 });
 

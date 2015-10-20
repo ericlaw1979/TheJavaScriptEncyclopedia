@@ -265,8 +265,15 @@ String.prototype.indexOf = (function () {
             s = String(this);   // this converted to a string
 
         search_string = String(search_string);
-        position = Math.min(Math.max(
-            position === undefined ? 0 : Math.floor(position), 0), s.length);
+        position = Math.min(
+            Math.max(
+                (position === undefined)
+                    ? 0
+                    : Math.floor(position),
+                0
+            ),
+            s.length
+        );
 
 // If the search_string is the empty string, then we are done.
 
@@ -358,7 +365,7 @@ isFinite(Infinity)     // false
 
 @specimen "infix @link(operator)"
 
-An @link(infix operator) is an @link(operator) that takes two operands. 
+An @link(infix operator) is an @link(operator) that takes two operands.
 The @link(infix operator) is placed between its two operands.
 
 @list {
@@ -442,8 +449,8 @@ JavaScript is lacking a @link(trunc Math function) that rounds toward @link(zero
 @program "
 function trunc(number) {
     return Math[
-        (number >= 0) 
-            ? 'floor' 
+        (number >= 0)
+            ? 'floor'
             : 'ceil'
     ](number);
 }

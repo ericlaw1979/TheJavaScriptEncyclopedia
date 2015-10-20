@@ -440,8 +440,8 @@ Math.pow = function (x, y) {
         return NaN;
     }
 
-    abs_x = x < 0 
-        ? -x 
+    abs_x = (x < 0)
+        ? -x
         : x;
     y_is_integer = Math.floor(y) === y;
     y_is_odd_integer = y_is_integer && Math.floor(y / 2) * 2 !== y;
@@ -449,34 +449,34 @@ Math.pow = function (x, y) {
 // y is Infinity...
 
     if (y === Infinity) {
-        return abs_x > 1 
-            ? Infinity 
-            : abs_x === 1 
-                ? NaN 
+        return (abs_x > 1)
+            ? Infinity
+            : (abs_x === 1)
+                ? NaN
                 : 0;
     }
     if (y === -Infinity) {
-        return abs_x > 1 
-            ? 0 
-            : abs_x === 1 
-                ? NaN 
+        return (abs_x > 1)
+            ? 0
+            : (abs_x === 1)
+                ? NaN
                 : Infinity;
     }
 
 // x is Infinity...
 
     if (x === Infinity) {
-        return y > 0 
-            ? Infinity 
+        return (y > 0)
+            ? Infinity
             : 0;
     }
     if (x === -Infinity) {
-        return y > 0 
-            ? y_is_odd_integer 
-                ? -Infinity 
-                : Infinity 
-            : y_is_odd_integer 
-                ? -0 
+        return (y > 0)
+            ? (y_is_odd_integer)
+                ? -Infinity
+                : Infinity
+            : (y_is_odd_integer)
+                ? -0
                 : 0;
     }
 
@@ -484,19 +484,19 @@ Math.pow = function (x, y) {
 
     if (x === 0) {
         if (1 / x > 0) {
-            return y > 0 
-                ? 0 
+            return (y > 0)
+                ? 0
                 : Infinity;
 
 // x is -0...
 
         } else {
-            return y > 0 
-                ? y_is_odd_integer 
-                    ? -0 
-                    : 0 
-                : y_is_odd_integer 
-                    ? -Infinity 
+            return (y > 0)
+                ? (y_is_odd_integer)
+                    ? -0
+                    : 0
+                : (y_is_odd_integer)
+                    ? -Infinity
                     : Infinity;
         }
     }
@@ -531,8 +531,8 @@ See @link(operator precedence).
 
 @specimen "prefix operator"
 
-A prefix operator is a @link(unary operator) that is placed before its operand. 
-A prefix operators are higher in precedence than any @link(binary operator), but 
+A prefix operator is a @link(unary operator) that is placed before its operand.
+A prefix operators are higher in precedence than any @link(binary operator), but
 lower in precedence than an @link(suffix operator).
 
 @list {
@@ -558,7 +558,7 @@ Blah.
 
 @article "primordial function"
 
-These functions are available in the primordial context. 
+These functions are available in the primordial context.
 An implementation is allowed to add additional primordial functions.
 
 @list {

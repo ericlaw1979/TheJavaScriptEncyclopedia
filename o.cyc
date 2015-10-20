@@ -233,11 +233,11 @@ function get(object, key) {    // object[key]
     do {
         property_descriptor = Object.getOwnPropertyDescriptor(prototype, key);
         if (property_descriptor) {
-            return property_descriptor.get ?
-                property_descriptor.get.call(object) :
-                property_descriptor.set ?
-                    undefined :
-                    property_descriptor.value;
+            return (property_descriptor.get) 
+                ? property_descriptor.get.call(object) 
+                : (property_descriptor.set)
+                    ? undefined 
+                    : property_descriptor.value;
         }
         prototype = Object.getPrototypeOf(prototype);
     } while (prototype);

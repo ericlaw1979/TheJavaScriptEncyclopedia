@@ -429,8 +429,9 @@ The Math.round(number) function takes a number argument and returns the nearest 
 @begin(program)
 Math.number = function (number) {
     var value = +number;
-    return (value < 0 && value >= -0.5) || (value === 0 && 1 / value < 0) ? -0 :
-           Math.floor(+value + 0.5);
+    return ((value < 0 && value >= -0.5) || (value === 0 && 1 / value < 0))
+        ? -0
+        : Math.floor(+value + 0.5);
 };
 @end(program)
 

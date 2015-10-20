@@ -4,16 +4,16 @@
 
 @article(@t(abs) @link(Math function) @aka(absolute value))
 
-The Math.abs(number) function returns the absolute value of its number parameter. 
+The Math.abs(number) function returns the absolute value of its number parameter.
 It could be implemented with this function:
 
 @begin(program)
 Math.abs = function (number) {
     var result = +number;
-    return result === 0 
-        ? 0 
-        : result > 0 
-            ? result 
+    return (result === 0)
+        ? 0
+        : (result > 0)
+            ? result
             : -result;
 };
 @end(program)
@@ -34,8 +34,8 @@ Also see @link(zero).
 
 @article(@t(acos) @link(Math function) @aka(arc cosine))
 
-The Math.acos(x) function is the inverse cosine function, also known as 
-arc cosine and cos-1. Its argument x should be a number in the range -1 to 1. 
+The Math.acos(x) function is the inverse cosine function, also known as
+arc cosine and cos-1. Its argument x should be a number in the range -1 to 1.
 The result will be an angle in radians in the range 0...Math.PI.
 
 Example:
@@ -301,11 +301,11 @@ var roman = (function () {
 
 @specimen "ASCII"
 
-American Standard Code for Information Interchange is a seven bit character set 
-designed for use with teletype machines. The set of 128 characters includes 26 
-uppercase letters, 26 lowercase letters, 10 decimal digits, 1 space, 32 special 
-characters, and 33 control codes. Most of the control codes are obsolete, 
-although a few of them have significance in JavaScript as @link(whitespace). 
+American Standard Code for Information Interchange is a seven bit character set
+designed for use with teletype machines. The set of 128 characters includes 26
+uppercase letters, 26 lowercase letters, 10 decimal digits, 1 space, 32 special
+characters, and 33 control codes. Most of the control codes are obsolete,
+although a few of them have significance in JavaScript as @link(whitespace).
 
 @list {
 @link(cr)
@@ -313,7 +313,7 @@ although a few of them have significance in JavaScript as @link(whitespace).
 @link(tab)
 }
 
-All of the special characters used by JavaScript are in the ASCII set. 
+All of the special characters used by JavaScript are in the ASCII set.
 The first 128 characters in the @link(UNICODE) set are the ASCII set.
 
 The letter A is 41 in hexadecimal.
@@ -362,10 +362,10 @@ Math.asin = function asin(x) {
 
 @article(assignment @link(infix operator))
 
-An assignment infix operator replaces the contents of a variable or parameter 
-or a member of an object or an element of an array with a new value. The left 
-operand must be an @link(lvalue). The right operand can be any @link(expression). 
-The simplest assignment infix operator is @link(= assignment infix operator), 
+An assignment infix operator replaces the contents of a variable or parameter
+or a member of an object or an element of an array with a new value. The left
+operand must be an @link(lvalue). The right operand can be any @link(expression).
+The simplest assignment infix operator is @link(= assignment infix operator),
 which stores the value of the right operand to the left operand.
 
 @begin(program)
@@ -465,25 +465,25 @@ See @link(object).
 
 The Math.atan(x) function is the inverse tangent function, also known as arc tangent and tan@super(-1). Its argument x should be a number. The result will be an angle in radians in the range (Math.PI / -2)...(Math.PI / 2).
 
-The Math.atan(x) function converts the ratio of two sides of a right triangle 
-into the angle of the hypotenuse. This is useful when converting cartesian 
-coordinates to polar coordinates. But there are two problems to watch out for. 
-If one of the cartesian coordinates is zero, then the computation of the ratio 
+The Math.atan(x) function converts the ratio of two sides of a right triangle
+into the angle of the hypotenuse. This is useful when converting cartesian
+coordinates to polar coordinates. But there are two problems to watch out for.
+If one of the cartesian coordinates is zero, then the computation of the ratio
 could result in a division by zero, which is something to be avoided.
 
-The other problem is the selection of the quadrant. The two components of the 
-ratio each has its own sign. Those two signs together identify one of the four 
-quadrants. The ratio has only one sign, so the result may be in the wrong 
+The other problem is the selection of the quadrant. The two components of the
+ratio each has its own sign. Those two signs together identify one of the four
+quadrants. The ratio has only one sign, so the result may be in the wrong
 quadrant. This must be corrected.
 
 @begin(program)
 function polar(point) {
     var radians;
     if (point.x === 0) {
-        radians = point.y === 0 
-            ? 0 
-            : point.y > 0 
-                ? Math.PI / 2 
+        radians = (point.y === 0)
+            ? 0
+            : (point.y > 0)
+                ? Math.PI / 2
                 : Math.PI / -2;
     } else {
         radians = Math.atan(point.y / point.x);

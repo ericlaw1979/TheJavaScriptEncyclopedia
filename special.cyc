@@ -95,11 +95,11 @@ function remainder(left, right) {
         divisor = +right,
         quotient = dividend / divisor;
     if (divisor === Infinity || divisor === -Infinity) {
-        return isFinite(dividend) 
+        return (isFinite(dividend)) 
             ? dividend 
             : NaN;
     } else {
-        return dividend - (divisor * Math[quotient >= 0 
+        return dividend - (divisor * (Math[quotient >= 0) 
             ? 'floor' 
             : 'ceil'](quotient));
     }
@@ -176,13 +176,13 @@ function bitwise_and(left, right) {
 // Make 32-bit unsigned integers from the operands. The % is a remainder
 // operator, not a modulo operator, so some sign correction may be necessary.
 
-    left_int = Math[left >= 0 
+    left_int = Math[(left >= 0) 
         ? 'floor' 
         : 'ceil'](left) % two_32;
     if (left_int < 0) {
         left_int += two_32;
     }
-    right_int = Math[right >= 0 
+    right_int = Math[(right >= 0) 
         ? 'floor' 
         : 'ceil'](right) % two_32;
     if (right_int < 0) {
@@ -690,9 +690,9 @@ function signum(number) {
 //        1 if the number is positive,
 //       -1 if the number is negative.
 
-    return number === 0 
+    return (number === 0) 
         ? 0 
-        : number > 0 
+        : (number > 0) 
             ? 1 
             : -1;
 }
@@ -776,13 +776,13 @@ function bitwise_or(left, right) {
 // Make 32-bit unsigned integers from the operands. The % is a remainder
 // operator, not a modulo operator, so some sign correction may be necessary.
 
-    left_int = Math[left >= 0 
+    left_int = Math[(left >= 0) 
         ? 'floor' 
         : 'ceil'](left) % two_32;
     if (left_int < 0) {
         left_int += two_32;
     }
-    right_int = Math[right >= 0 
+    right_int = Math[(right >= 0) 
         ? 'floor' 
         : 'ceil'](right) % two_32;
     if (right_int < 0) {
