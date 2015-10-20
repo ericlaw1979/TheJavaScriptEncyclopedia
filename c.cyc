@@ -55,6 +55,10 @@ var statusHolder = (function () {
 }());
 @end(program)
 
+@specimen "camelCase"
+
+Blah.
+
 @specimen "cascade"
 
 An object's methods return the same object... Blah.

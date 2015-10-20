@@ -4,7 +4,8 @@
 
 @article(@t(abs) @link(Math function) @aka(absolute value))
 
-The Math.abs(number) function returns the absolute value of its number parameter. It could be implemented with this function:
+The Math.abs(number) function returns the absolute value of its number parameter. 
+It could be implemented with this function:
 
 @begin(program)
 Math.abs = function (number) {
@@ -17,7 +18,7 @@ Math.abs = function (number) {
 };
 @end(program)
 
-The result is a non-negative number, or NaN if the argument cannot be converted to a valid number.
+The result is a non-negative number, or @link(NaN) if the argument cannot be converted to a valid number.
 
 @begin(program)
 math.abs(-40)          // 40
@@ -33,7 +34,9 @@ Also see @link(zero).
 
 @article(@t(acos) @link(Math function) @aka(arc cosine))
 
-The Math.acos(x) function is the inverse cosine function, also known as arc cosine and cos-1. Its argument x should be a number in the range -1 to 1. The result will be an angle in radians in the range 0...Math.PI.
+The Math.acos(x) function is the inverse cosine function, also known as 
+arc cosine and cos-1. Its argument x should be a number in the range -1 to 1. 
+The result will be an angle in radians in the range 0...Math.PI.
 
 Example:
 
@@ -82,7 +85,7 @@ The alert function is often used in debugging to display the partial results of 
 
 Blah.
 
-See & infix operator bitwise and and && infix operator and.
+See @link(& infix operator) and @link(&& infix operator).
 
 @specimen "angle"
 
@@ -90,7 +93,7 @@ See @link(radians).
 
 @specimen "apply"
 
-@article(@t(apply @link(function prototype function)))
+@article(@t(apply) @link(function prototype function))
 
 Functions inherit the apply(thisArg, arguments) function from Function.prototype. The apply function takes two parameters: The thisArg parameter determines what value will be bound to the function's this parameter. The arguments parameter is an array containing the arguments to be passed to the function.
 
@@ -100,11 +103,15 @@ blah.
 
 An argument is the value of an expression that is passed to a function as part of its invocation. Each argument is bound to a parameter.
 
+@article "argument list"
+
+Blah.
+
 @specimen "arguments"
 
 @article(@t(arguments) @link(parameter))
 
-The arguments array is an extra parameter that is made available to every function that not have an arguments parameter or arguments variable. It contains all of the actual arguments that were supplied with the invocation of the function, independent of the mapping of arguments to parameters. This makes it possible to make a function that can take a variable number of arguments. Such a function is a variadic or vararg function.
+The @t(arguments) array is an implicit parameter that is made available to every function that not have an arguments parameter or arguments variable. It contains all of the actual arguments that were supplied with the invocation of the function, independent of the mapping of arguments to parameters. This makes it possible to make a function that can take a variable number of arguments. Such a function is a variadic or vararg function.
 
 @begin(program)
 function sum() {
@@ -285,7 +292,7 @@ var roman = (function () {
 @article(@t(Array) @link(prototype number))
 
 @list {
-@link(length array prorotype number)
+@link(length array prototype number)
 }
 
 @specimen "ASCII"
@@ -302,7 +309,8 @@ although a few of them have significance in JavaScript as @link(whitespace).
 @link(tab)
 }
 
-All of the special characters used by JavaScript are in the ASCII set. The first 128 characters in the UNICODE set are the ASCII set.
+All of the special characters used by JavaScript are in the ASCII set. 
+The first 128 characters in the @link(UNICODE) set are the ASCII set.
 
 The letter A is 41 in hexadecimal.
 

@@ -270,6 +270,10 @@ Blah.
 
 Blah.
 
+@article(regexp delimiter)
+
+Blah.
+
 @article(regexp flag)
 
 Blah.

@@ -25,6 +25,10 @@ function () {
 
 Blah.
 
+@article "parameter list"
+
+Blah.
+
 @specimen "parenthesis"
 
 Also known as parens.
@@ -639,6 +643,10 @@ Every object can inherit properties from a prototype object. When fetching a nam
 Every function contains a @t(prototype) @link(property) that property is usually an object. That object
 
 @article(prototype function)
+
+Blah.
+
+@article(prototype number)
 
 Blah.
 

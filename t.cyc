@@ -1,5 +1,9 @@
 @chapter "T"
 
+@specimen "tab @aka(tabulation)"
+
+Blah.
+
 @specimen "tan"
 
 @article(@t(tan) @link(Math function) @aka(tangent))
@@ -103,6 +107,10 @@ Blah.
 Blah.
 
 @specimen "toLocaleString"
+
+@article(@t(toLocaleString) @link(array prototype function))
+
+Blah.
 
 @article(@t(toLocaleString) @link(object prototype function))
 

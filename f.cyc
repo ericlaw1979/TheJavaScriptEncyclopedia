@@ -104,6 +104,10 @@ Blah.
 
 Blah.
 
+@article(@t(Function) @link(prototype function))
+
+Blah.
+
 @article(@t(function) @link(statement))
 
 Blah.

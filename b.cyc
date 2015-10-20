@@ -167,6 +167,14 @@ var raw_base64 = (function (alphabet) {
 }());
 @end(program)
 
+@article "bitwise and"
+
+Blah.
+
+@article "bitwise or"
+
+Blah.
+
 @specimen "block"
 
 A block is a compound statement that can occur anywhere that a statement can occur. 

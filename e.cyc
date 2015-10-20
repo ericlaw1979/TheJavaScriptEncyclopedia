@@ -172,7 +172,7 @@ Blah. See @link(try statement).
 
 @specimen "exec"
 
-@article(@t(exec) @link(RexExp prototype function))
+@article(@t(exec) @link(RegExp prototype function))
 
 Blah.
 

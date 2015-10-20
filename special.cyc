@@ -1,12 +1,10 @@
 @chapter "Special Characters"  
 
-! " $ % & ' ( ) * + , - . / : ; < = > ? [ \ ] ^ _ { | } ~ 
-
 @specimen "@t(!) @aka(exclamation point)"
 
 @article "@t(!) @link(prefix operator) @aka(not)"
 
-The @t(!) operator produces @link(false) if its operand is truthy, and @link(true) if its operand is falsy.
+The @t(!) operator produces @link(false) if its operand is @link(truthy), and @link(true) if its operand is @link(falsy).
 
 @program {
 ! true        // false
@@ -236,8 +234,7 @@ Blah.
 
 @specimen (@t(') @aka(single quotation mark))
 
-' string delimiter
-
+See @link(string literal).
 See @link(string literal).
 
 @specimen "@t[(] @aka(left parenthesis)"
@@ -293,7 +290,7 @@ Look! A pair of boobs!
 
 @specimen "@t[)] @aka(right parenthesis)"
 
-See @link "( left parenthesis".
+See @link "(".
 
 @specimen (@t(*) @aka(asterisk))
 
@@ -301,7 +298,7 @@ See @link "( left parenthesis".
 
 The @t(*) operator multiplies its operands together. If the operands are not 
 numbers, it attempts to coerce them to numbers. If either operand cannot be 
-coerced to a number or is NaN, then the result will be @link(NaN).
+coerced to a number or is @link(NaN), then the result will be @link(NaN).
 
 @program {3 * 4    // 7}
 
@@ -389,7 +386,7 @@ Blah.
 
 The @t(,) @link(infix operator) takes two operands, evalutes them both, 
 and returns the value of only the second operand. This operator may not be used 
-in places where a @link(comma) separator can appear, such as in an @link(argument list), 
+in places where a @link(,) can appear, such as in an @link(argument list), 
 in a @link(var statement), or in an @link(object literal) or @link(array literal) 
 unless the operand it forms is wrapped in @link[( ) grouping]. 
 This @link(operator) invites misuse of the @link(for statement)
@@ -445,8 +442,8 @@ Blah.
 @specimen (@t(/) @aka(slash))
 
 The / slash character is also known as the solidus and as the virgule. It is 
-used as the division operator, and it is used to form comments and regexp 
-literals. Be careful to not confuse it with \ backslash.
+used as the division operator, and it is used to form a @link(comment) or 
+@link(regexp literals). Be careful to not confuse it with @link(\).
 
 @article(@t(/) @link(infix operator) @aka(divide))
 
@@ -612,7 +609,7 @@ For example, suppose you need a function that tests that a function returns the 
 Special handling is required for the case where the expected value is @link(NaN). 
 Simply using === to compare the expected value and the result will do the wrong 
 thing when the expected value is @link(NaN), so much more complicated 
-comparisons are required using the @link(typeof prefix operator) and the @link(isNaN global function). 
+comparisons are required using the @link(typeof prefix operator) and the @link(isNaN primordial function). 
 
 Two numbers that are only approximately equal may produce a @link(false) result.
 
@@ -669,9 +666,11 @@ Blah.
 
 @article(@t(?) @link(ternary operator))
 
-The ? operator takes three operands which are separated by the ? and a :.
+The ? operator takes three operands which are separated by the @link(?) and a @link(:).
 
-@program{@i(condition) ? @i(then) : @i(else)}
+@program{@i(condition) 
+    ? @i(then) 
+    : @i(else)}
 
 It is a short-circuiting operator: only one of the branches will be evaluated. 
 If the @i(condition) operand is @link(truthy) then the @i(then) operand will be 

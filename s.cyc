@@ -193,6 +193,10 @@ Blah.
 
 Blah.
 
+@specimen "sign"
+
+Blah.
+
 @specimen "sin"
 
 @article(@t(sin) @link(Math function) @aka(sine))
@@ -383,6 +387,10 @@ These are the kinds of statements:
 }
 
 Also see @link(;), @link(conditional statement), @link(disruptive statement), and @link(loop statement).
+
+@article "statement label"
+
+See @link(label).
 
 @specimen "static @reserved@"
 
