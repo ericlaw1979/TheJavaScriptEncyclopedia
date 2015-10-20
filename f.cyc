@@ -60,11 +60,11 @@ Blah.
 
 @specimen(for @reserved@)
 
-@article(for in @link(statement))
+@article(@t(for) @t(in) @link(statement))
 
 Blah.
 
-@article(for @link(statement))
+@article(@t(for) @link(statement))
 
 Blah.
 
@@ -95,6 +95,11 @@ Blah.
 @specimen(function @reserved@)
 
 Blah.
+
+@article(@t(function) @t(*))
+
+@es5(There is a special form of function that returns an object instead of a function.
+Blah.)
 
 @article(function body)
 
