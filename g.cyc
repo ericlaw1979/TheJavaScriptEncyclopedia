@@ -1,5 +1,9 @@
 @chapter "G"
 
+@specimen "g"
+
+@article "@t(g) @link(regexp flag)"
+
 @specimen "get"
 
 See @link(object) and @link(object literal).

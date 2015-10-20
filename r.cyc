@@ -280,6 +280,15 @@ Blah.
 
 @article(regexp flag)
 
+The regexp flags are
+
+@list {
+    @link(g regexp flag)
+    @link(i regexp flag)
+    @link(m regexp flag)
+    @link(y regexp flag)
+}
+
 Blah.
 
 @article(@t(RegExp) @link(function))

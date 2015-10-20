@@ -1,5 +1,9 @@
 @chapter "M"
 
+@specimen "m"
+
+@article "@t(m) @link(regexp flag)"
+
 @specimen "map"
 
 @article(@t(map) @link(Array prototype function))
@@ -36,8 +40,8 @@ Blah.
 
 @article(@t(Math) @link(function))
 
-The standard does not require implementations to compute the most accurate 
-result from these functions. Implementors are allowed to trade off accuracy 
+The standard does not require implementations to compute the most accurate
+result from these functions. Implementors are allowed to trade off accuracy
 for speed or other considerations. Blah.
 
 @list {
@@ -61,7 +65,7 @@ for speed or other considerations. Blah.
 @link(tan Math function)
 }
 
-Most of the functions can take one parameter. 
+Most of the functions can take one parameter.
 These are the results of those functions for some particular arguments:
 
 @table {
@@ -182,7 +186,7 @@ var fibonacci = memoizer([0, 1], function (recur, n) {
 
 @specimen "method"
 
-A method is @link(property) whose value is a @link(function). 
+A method is @link(property) whose value is a @link(function).
 A method can get access to the object with the @link(this parameter). See @link(invocation).
 
 All values except @link(null) and @link(undefined) can have methods.
