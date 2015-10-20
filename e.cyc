@@ -31,7 +31,9 @@ The ECMAScript for XML (E4X) Specification [ECMA-357 Second Edition / December 2
 
 @specimen "Ecma International"
 
-Ecma International (fna European Computer Manufacturers Association) is the standards body that is responsible for the ECMAScript Programming Language Standard. It was founded in 1961 and is based in Geneva. See http://www.ecma-international.org/.
+Ecma International (fna European Computer Manufacturers Association) is the 
+standards body that is responsible for the ECMAScript Programming Language 
+Standard. It was founded in 1961 and is based in Geneva. See @url(http://www.ecma-international.org/).
 
 @specimen "ECMAScript"
 
@@ -89,13 +91,23 @@ Blah.
 
 @article "enumeration object"
 
-An enumeration object is an object that is used to map names or mnemonics to codes in the form of numbers or other values. Programs often make use of codes or constant values, but it is generally bad to scatter them thoughout a program because that can make the program difficult to read and modify. So instead we can collect the codes and constants into an object, giving descriptive keys to each one. The descriptive keys help make the program self documenting, and gives us a single place to change in the program should they need to be changed.
+An enumeration object is an object that is used to map names or mnemonics to 
+codes in the form of numbers or other values. Programs often make use of codes 
+or constant values, but it is generally bad to scatter them thoughout a program 
+because that can make the program difficult to read and modify. So instead we 
+can collect the codes and constants into an object, giving descriptive keys to 
+each one. The descriptive keys help make the program self documenting, and 
+gives us a single place to change in the program should they need to be changed.
 
-In some languages, there is an enum statement or operator that provides such mapping. In this language, simply use an object.
+In some languages, there is an enum statement or operator that provides such 
+mapping. In this language, simply use an object.
 
 @specimen "epsilon"
 
-Epsilon is the smallest positive number that can be added to 1 giving a result that is larger than 1. Positive numbers that are smaller than epsilon will underflow when added to 1. The value for epsilon is approximately 2.220446049250313e-16. It can be computed with this immediate function:
+Epsilon is the smallest positive number that can be added to 1 giving a result 
+that is larger than 1. Positive numbers that are smaller than epsilon will 
+underflow when added to 1. The value for epsilon is approximately 
+2.220446049250313e-16. It can be computed with this immediate function:
 
 @begin(program)
 var epsilon = (function () {
@@ -136,6 +148,10 @@ ECMAScript Programming Language Standard, Fifth Edition [2009].
 
 ECMAScript Programming Language Standard, Sixth Edition [2015].
 
+@specimen "escapement"
+
+Blah.
+
 @specimen "eteration"
 
 Blah.
@@ -166,7 +182,7 @@ Blah.
 
 Evil is bad. Don't do evil things or use things for evil purposes.
 
-@specimen "exceptions"
+@specimen "exception"
 
 Blah. See @link(try statement).
 

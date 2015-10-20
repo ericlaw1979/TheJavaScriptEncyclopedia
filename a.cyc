@@ -99,6 +99,8 @@ Functions inherit the apply(thisArg, arguments) function from Function.prototype
 
 blah.
 
+@article(apply @link(invocation))
+
 @specimen "argument"
 
 An argument is the value of an expression that is passed to a function as part of its invocation. Each argument is bound to a parameter.
@@ -205,9 +207,11 @@ function eratosthenes(n) {
 
 The Array primordial function is the constructor of arrays. The [] array literal form is perfered. Blah.
 
-The Array function contains an isArray Array function that determines if a value is an array.
-
 The Array function contains these methods in Array.prototype:
+
+@article(@t(array) @link(function))
+
+The Array function contains an @link(isArray Array function) that determines if a value is an array.
 
 @article(@t(array) @link(literal))
 

@@ -235,7 +235,6 @@ Blah.
 @specimen (@t(') @aka(single quotation mark))
 
 See @link(string literal).
-See @link(string literal).
 
 @specimen "@t[(] @aka(left parenthesis)"
 
@@ -314,7 +313,11 @@ Blah.
 
 @article(@t(+) @link(infix operator) @aka(add or concatenate))
 
-The + operator can either add or concatenate, depending of the types of its operands. If either operand is a string, then it converts both operands to strings and concatenates then, producing a new string with all of the characters from both operands. Otherwise, it converts both operands to numbers and then attempts to add them. It produces the same result as this function:
+The + operator can either add or concatenate, depending of the types of its 
+operands. If either operand is a string, then it converts both operands to 
+strings and concatenates then, producing a new string with all of the characters 
+from both operands. Otherwise, it converts both operands to numbers and then 
+attempts to add them. It produces the same result as this function:
 
 @begin(program)
 function add_or_concatenate(left, right) {
@@ -332,6 +335,8 @@ function add_or_concatenate(left, right) {
 @end(program)
 
 The + operator is the only arithmetic operator with this type confusion.
+Addition is commutative. Concatenation is not. It is really weird having an
+operator that is commutative and noncommutative at the same time.
 
 Examples:
 
@@ -443,7 +448,7 @@ Blah.
 
 The / slash character is also known as the solidus and as the virgule. It is 
 used as the division operator, and it is used to form a @link(comment) or 
-@link(regexp literals). Be careful to not confuse it with @link(\).
+@link(regexp literal). Be careful to not confuse it with @link(\).
 
 @article(@t(/) @link(infix operator) @aka(divide))
 

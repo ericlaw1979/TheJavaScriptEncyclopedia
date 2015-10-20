@@ -535,7 +535,7 @@ A prefix operator is a @link(unary operator) that is placed before its operand.
 A prefix operators are higher in precedence than any @link(binary operator), but 
 lower in precedence than an @link(suffix operator).
 
-@link {
+@list {
 @link(! prefix operator)
 @link(+ prefix operator)
 @link(- prefix operator)
@@ -598,6 +598,14 @@ The primordial context contains these objects:
 
 Blah.
 
+@article "primordial variable"
+
+@list {
+@link(Infinity)
+@link(NaN)
+@link(undefined)
+}
+
 @specimen "private @reserved@"
 
 @specimen "program"
@@ -646,11 +654,19 @@ Every function contains a @t(prototype) @link(property) that property is usually
 
 Blah.
 
+@article(prototype object)
+
+Blah.
+
 @article(prototype number)
 
 Blah.
 
 @article(@t(prototype) @link(Function prototype object))
+
+Blah.
+
+@specimen "ps @aka[paragraph separator]"
 
 Blah.
 

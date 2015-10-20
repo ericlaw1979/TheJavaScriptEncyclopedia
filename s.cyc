@@ -63,7 +63,7 @@ a = b + c(d + e).print();
 
 which might be quite different than the intention. It is not wise to rely on semicolon insertion. It can mask errors and it can cause errors.
 
-These @link(statements) should always end in @link(;):
+These should always end in @link(;):
 
 @list {
 @link(break statement)
@@ -76,9 +76,15 @@ These @link(statements) should always end in @link(;):
 @link(var statement)
 }
 
-Fortunately, it is a short list and is not difficult to remember. The situation is made more complicated because some of the other statements, such as if statement and while statement, are compound statements that take a block or another statement, and that other statement might also end in @link(;). That confusion is easily avoided by always using a block.
+Fortunately, it is a short list and is not difficult to remember.
+The situation is made more complicated because some of the other statements,
+such as @link(if statement) and @link(while statement), are compound statements
+that take a @link(block statement) or other @link(statement), and that other
+statement might also end in @link(;). That confusion is easily avoided by always
+using a block.
 
-When assigning a function literal using @link(= assignment infix operator) in an @link(expression statement) or var statement, the statement should end with a @link(;). So this statement should end with @link(;):
+When assigning a function literal using @link(= assignment infix operator) in an 
+@link(expression statement) or @link(var statement), the statement should end with a @link(;). So this statement should end with @link(;):
 
 @begin(program)
 var double = function (number) {
@@ -95,7 +101,7 @@ Blah.
 
 @specimen "set"
 
-See object.
+See @link(object).
 
 @specimen "setDate"
 
@@ -252,6 +258,12 @@ Math.sin = (function () {
 }());
 @end(program)
 
+@specimen "sizeof"
+
+@article(@t(sizeof) @link(prefix operator))
+
+Blah.
+
 @specimen "slice"
 
 @article(@t(slice) @link(Array prototype function))
@@ -261,6 +273,8 @@ Blah.
 @article(@t(slice) @link(String prototype function))
 
 Blah.
+
+@specimen "sloppy mode"
 
 @specimen "some"
 
@@ -392,9 +406,13 @@ Also see @link(;), @link(conditional statement), @link(disruptive statement), an
 
 See @link(label).
 
+@article "statement punctuator"
+
+See @link<(>, @link<)>, @link(;).
+
 @specimen "static @reserved@"
 
-@specimen "strict"
+@specimen "strict mode"
 
 The ES5/strict dialect removes or modifies a few of the language’s most problematic features. It requires source-level opt-in in order to not break compatibility. It is recommended that strict mode always be requested.
 
@@ -431,15 +449,9 @@ A string can contain any kind of textual material, including programs.
 
 There is no separate character type. A single character is represented as a string with a length of 1.
 
+@article(@t(String) @link(escapement))
+
 @article(@t(String) @link(function))
-
-String is a global function that serves three purposes.
-
-First, when invoked as a function, it takes any operand and produces a string value.
-
-Second, when invoked as a constructor with the new prefix operator, takes an operand and produces an object whose valueOf method produces a string value.
-
-Third, it has a prototype property that holds the methods that are inherited by all strings.
 
 @article(string @link(literal))
 
@@ -503,6 +515,16 @@ Because there are two forms of string literal, there is confusion about which to
     Use the ' form for symbols, character constants, and internal strings such as property names.
     Use the " form for strings that will be exported from the program, such as HTML fragments, URLs, or messages to the user.
 
+@article(@t(String) @link(primordial function))
+
+@t(String) is a global function that serves three purposes.
+
+First, when invoked as a function, it takes any operand and produces a string value.
+
+Second, when invoked as a constructor with the new prefix operator, takes an operand and produces an object whose valueOf method produces a string value.
+
+Third, it has a prototype property that holds the methods that are inherited by all strings.
+
 @article(@t(String) @link(prototype function))
 
 @list{
@@ -527,6 +549,10 @@ Because there are two forms of string literal, there is confusion about which to
 @link(trim String prototype function)
 @link(valueOf String prototype function)
 }
+
+@article(@t(String) @link(prototype number))
+
+@link(length)
 
 @specimen "stringify"
 
@@ -572,6 +598,6 @@ Blah.
 
 @specimen "SyntaxError"
 
-@article(@t(SyntaxError) @link(function))
+@article(@t(SyntaxError) @link(primordial function))
 
 Blah.

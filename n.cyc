@@ -71,8 +71,8 @@ way of evading security filters. It is generally safest to stick with the
 
 Names are case sensitive, so @t(cat) and @t(Cat) and @t(CAT) are three different 
 names. It is recommended that all names start with a lowercase character, with 
-the exception that a @link(constructor) function should start with an uppercase 
-letter, and a @link(global variable) should be all upper case.
+the exception that a @link(constructor) function should start with an Uppercase 
+Letter, and a @link(global) variable should be all UPPER_CASE.
 
 A name cannot contain a @link(whitespace) character, but sometimes a name should 
 incorporate two or more words. There are two conventions for doing this. One is 
@@ -86,12 +86,12 @@ The other is to use @link(camelCase), where the first letter of each word is cap
 
 @specimen "NaN @aka(not a number)"
 
-There is a special number value called NaN, which stands for Not a Number, 
+There is a special number value called @link(NaN), which stands for Not a Number, 
 despite the fact that
 
 @program (typeof NaN            // 'number')
 
-NaN is a falsy value. NaN is produced by
+@link(NaN) is a falsy value. @link(NaN) is produced by
 
 @program {
 0 / 0                 // NaN
@@ -109,13 +109,13 @@ parseInt("oops")      // NaN
 0 * NaN               // NaN
 }
 
-Generally, any arithmetic operation with NaN or @link(undefined) as an input 
-will have NaN as an output. If a sequence of computations produces NaN, then 
+Generally, any arithmetic operation with @link(NaN) or @link(undefined) as an input 
+will have @link(NaN) as an output. If a sequence of computations produces @link(NaN), then 
 there must have been at least one bad input or at least one bad operation. 
 No clues are provided as to what went wrong. In bitwise operations, 
-NaN is treated as 0.
+@link(NaN) is treated as 0.
 
-There are many techniques for detecting NaN, but none of them are pleasant. The most likely test,
+There are many techniques for detecting @link(NaN), but none of them are pleasant. The most likely test,
 
 @program <x === NaN    // false, even when x is NaN!>
 
@@ -123,7 +123,7 @@ fails because @t(NaN === NaN) produces @link(false). It is possible to use
 
 @program <x !== x      // true only if x is NaN>
 
-to test for NaN because only NaN is not equal to itself, but it looks 
+to test for @link(NaN) because only @link(NaN) is not equal to itself, but it looks 
 mathematically ridiculous, and one hopes for a better future in which logic 
 and good engineering are highly valued when this must fail. Another approach 
 is to use the @link(isNaN primordial function). Unfortunately, it can produce a 
@@ -138,20 +138,20 @@ typeof x === 'number' && isNaN(x)     // false
 
 @t(String(x) === 'NaN') has only one @link(false positive), the case where x is the string 'NaN'. So,
 
-String(x) === 'NaN' && x !== 'NaN'
+@program <String(x) === 'NaN' && x !== 'NaN'>
 
-There are many of ways to test for NaN, and they are all absurd.
+There are many of ways to test for @link(NaN), and they are all absurd.
 
 @article(@t(NaN) @link(literal))
 
-The literal symbol for NaN is NaN. NaN is not actually a literal. 
-It is a @link(primordial variable) that holds a NaN value.
+The literal symbol for @link(NaN) is @link(NaN). @link(NaN) is not actually a literal. 
+It is a @link(primordial variable) that holds a @link(NaN) value.
 
 Blah.
 
 @article(@t(NaN) @link(Number number))
 
-Number.NaN contains the NaN value.
+Number.NaN contains the @link(NaN) value.
 
 @specimen "native object"
 
@@ -238,7 +238,7 @@ Fortunately, integers (whole numbers) can be accurately represented as long as t
 
 A number value acts as an immutable object. A number value has methods that it inherits from Number.protoype (see Number prototype function).
 
-Using the typeof prefix operator with a number value always produces the string 'number', even when the number is one of the non finite values NaN, Infinity, and -Infinity.
+Using the typeof prefix operator with a number value always produces the string 'number', even when the number is one of the non finite values @link(NaN), Infinity, and -Infinity.
 
 @article(@t(Number) @link(primordial function))
 

@@ -87,7 +87,13 @@ language treats I @aka(dotless) and İ @aka(dotted) @t(\u0130) as distinct lette
 paired with distinct lower case letters ı @aka(dotless) @t(\u0131) and i @aka(dotted). 
 So in order to correctly change the case of a letter, a program must know the language of the text.
 
-@link(toLowerCase String prototype function) produces a string in which all of the upper case letters are replaced with their lower case equivalents, so 'VISA'.toLowercase() produces 'visa'. The toLocaleLowerCase String prototype function produces a string in which all of the upper case letters are replaced with their lower case equivalents using the local convention, so for programs in a Turkish environment, 'VISA'.toLocaleLowerCase() might produce 'vısa'.
+@link(toLowerCase String prototype function) produces a string in which all of 
+the upper case letters are replaced with their lower case equivalents, 
+so @t<'VISA'.toLowercase()> produces @t('visa'). 
+The @link(toLocaleLowerCase String prototype function) produces a string in 
+which all of the upper case letters are replaced with their lower case 
+equivalents using the local convention, so for programs in a Turkish 
+environment, @t<'VISA'.toLocaleLowerCase()> might produce @t<'vısa'>.
 
 These functions are aware of case:
 
@@ -99,14 +105,23 @@ These functions are aware of case:
 @link(toUpperCase String prototype function)
 }
 
-In regexp pattern matching, the matching of letters is case sensitive. The regexp flag i makes the matching of letters case insensitive.
+In regexp pattern matching, the matching of letters is @link(case sensitive). 
+The @link(i regexp flag) makes the matching of letters @link(case insensitive).
 
 @begin(program)
 /v/.test('VISA')     // false
 /v/i.test('VISA')    // true
 @end(program)
 
-@link(case) is used for a completely unrelated purpose in the switch statement.
+@link(case) is used for a completely unrelated purpose in the @link(switch statement).
+
+@article "case insensitive"
+
+Blah.
+
+@article "case sensitive"
+
+Blah.
 
 @specimen "catch @reserved@"
 
@@ -165,9 +180,15 @@ A comment is text in a compilation unit that is ignored by the compiler. A comme
 
 It is important to document programs to help a reader (perhaps future you) understand how the program works. It is even more important to keep comments uptodate. Incorrect comments are worse than no comments.
 
+@specimen(compareLocale)
+
+@article(@t(compareLocale) @link(String prototype function))
+
+Blah.
+
 @specimen(compilation unit)
 
-A program is delivered as one or more compilation units. In an HTML application, each <script> tag delivers one compilation unit. Scripts are compiled and executed immediately. The result of the execution could be to output a solution. More commonly, however, the result of execution is to create and modify objects in the global environment, setting up callback functions that will execute later in response to user actions and other events. For example, in a web browser, each compilation unit will be attaching event handlers to DOM nodes and installing global objects and functions that will provide services to the event handlers. The program does not stop when the compilation units have finished running. From the user’s perspective, that is when the program starts.
+A program is delivered as one or more compilation units. In an HTML application, each @t(<script>) tag delivers one compilation unit. Scripts are compiled and executed immediately. The result of the execution could be to output a solution. More commonly, however, the result of execution is to create and modify objects in the global environment, setting up callback functions that will execute later in response to user actions and other events. For example, in a web browser, each compilation unit will be attaching event handlers to DOM nodes and installing global objects and functions that will provide services to the event handlers. The program does not stop when the compilation units have finished running. From the user’s perspective, that is when the program starts.
 
 A compilation unit contains a sequence of zero or more statements. The statements are executed sequentially. After a statement has finished executing, the next statement is executed. After executing the last statement, the compilation unit's turn is finished, at which time another compilation unit might be exececuted, or an event might be fired.
 
@@ -213,6 +234,13 @@ A constant is a name with a fixed value. Each of these names can be used as an o
 @link(true)
 @link(undefined)
 }
+
+@specimen "constructor"
+
+Generally, a constructer is any function that returns an object. But constructors
+is usually means a function that returns an object using @link(prototypal inheritance) using the @link(new prefix operator).
+
+@article "constructor @link(invocation)"
 
 @specimen(continuation)
 

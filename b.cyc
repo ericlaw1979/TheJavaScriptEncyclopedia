@@ -175,7 +175,7 @@ Blah.
 
 Blah.
 
-@specimen "block"
+@specimen "block statement"
 
 A block is a compound statement that can occur anywhere that a statement can occur. 
 It begins with a @link({) and ends with a @link(}), and between the two curly braces there are zero or more statements. Blocks are commonly used as parts of other statements, such as if statement and while statement.

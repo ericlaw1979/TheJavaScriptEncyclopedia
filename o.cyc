@@ -351,21 +351,6 @@ Blah.
 @link(seal Object function)
 }
 
-@article(@t(Object) @link(prototype function))
-
-The object function has prototype object, Object.prototype, which is delegated to by most objects, including every object literal. Object.prototype contains these methods:
-
-@list {
-@link(hasOwnProperty Object prototype function)
-@link(isPrototypeOf Object prototype function)
-@link(propertyIsEnumerable Object prototype function)
-@link(toLocaleString Object prototype function)
-@link(toString Object prototype function)
-@link(valueOf Object prototype function)
-}
-
-It is possible to add additional methods to Object.prototype, subject to these recommendations: The enumerable attribute should be false. Otherwise, the additional method will appear in the keys produced by the for in statement, which could cause poorly written programs to fail. Also, Object.prototype is shared by all compilation units. Failure could occur if competing compilation units make incompatible changes to Object.prototype. Also, future editions of the language might have new methods in Object.prototype. Also, implementations are allowed to add properties to Object.prototype. Such additions should not cause failures now or in the future.
-
 @article(object @link(literal))
 
 An object literal is an expression that produces an object value. An object literal starts with { left curly brace and ends with } right curly brace. Between the braces are zero or more pairs, separated by , comma. Each expression contributes one property to the object. An empty object is created by {}. There are two kinds of pairs.
@@ -450,6 +435,25 @@ var deroman = (function () {
 
 }());
 @end(program)
+
+@article(@t(Object) @link(primordial function))
+
+Blah.
+
+@article(@t(Object) @link(prototype function))
+
+The @link(object primordial function) has a @link(prototype) property object, Object.prototype, which is delegated to by most objects, including every object literal. Object.prototype contains these methods:
+
+@list {
+@link(hasOwnProperty Object prototype function)
+@link(isPrototypeOf Object prototype function)
+@link(propertyIsEnumerable Object prototype function)
+@link(toLocaleString Object prototype function)
+@link(toString Object prototype function)
+@link(valueOf Object prototype function)
+}
+
+It is possible to add additional methods to Object.prototype, subject to these recommendations: The enumerable attribute should be false. Otherwise, the additional method will appear in the keys produced by the for in statement, which could cause poorly written programs to fail. Also, Object.prototype is shared by all compilation units. Failure could occur if competing compilation units make incompatible changes to Object.prototype. Also, future editions of the language might have new methods in Object.prototype. Also, implementations are allowed to add properties to Object.prototype. Such additions should not cause failures now or in the future.
 
 @specimen "octal @aka(base 8)"
 

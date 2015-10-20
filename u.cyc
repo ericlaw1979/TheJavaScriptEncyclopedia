@@ -3,6 +3,10 @@
 @specimen "\u"
 See @link <Unicode escape sequence>.
 
+@specimen "unary @link(operator)"
+
+An operator that takes one operand. See @link(prefix operator) and @link(suffix operator).
+
 @specimen "undefined"
 @@Blah.
 
@@ -27,5 +31,7 @@ See @link <case>.
 Blah.
 
 @specimen "use @reserved@"
+
+@article "use strict"
 
 See @link<strict>.

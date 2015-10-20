@@ -4,6 +4,8 @@
 
 Blah.
 
+@specimen "tail recursion"
+
 @specimen "tan"
 
 @article(@t(tan) @link(Math function) @aka(tangent))
@@ -34,6 +36,8 @@ Blah.
 @specimen "this @reserved@"
 
 @article(@t(this) @link(parameter))
+
+Using @t(this) is like pair programming with Abbott & Costello.
 
 Blah.
 
@@ -109,6 +113,10 @@ Blah.
 @specimen "toLocaleString"
 
 @article(@t(toLocaleString) @link(array prototype function))
+
+Blah.
+
+@article(@t(toLocaleString) @link(number prototype function))
 
 Blah.
 
@@ -189,6 +197,12 @@ Blah.
 
 Blah.
 
+@specimen (trunc)
+
+@article(@t(trunc) @link(Math function) @aka(truncate))
+
+There is no @t(trunc) function. See @link(integer).
+
 @specimen "try @reserved@"
 
 @article(@t(try) @link(statement))
@@ -241,7 +255,7 @@ An implementation or environment may add additional types.
 
 @specimen "TypeError"
 
-@article(@t(TypeError) @link(function))
+@article(@t(TypeError) @link(primordial function))
 
 Blah.
 

@@ -8,20 +8,20 @@ Because of trademark problems, the standard for the @link(JavaScript) language
 is called @link(ECMAScript). JavaScript is a trademark of Oracle Corporation.
 
 @es5[Paragraphs marked with the @link(es5) icon in the left margin indicate 
-concerns for users of The Fifth Edition. The Sixth Edition significantly 
-enlarged the language, creating hazards for users of The Fifth Edition. 
+concerns for users of The Fifth Edition. @link(es6), The Sixth Edition, significantly 
+enlarged the language, creating hazards for users of @link(es5). 
 Programmers who must honor compatibility commitments should pay close attention to the @link(ES5) warnings.]
 
-The Fifth Edition (ES5) describes two dialects, the @link(strict) dialect 
-and the sloppy dialect. Stick with the @link(strict) dialect.
+@link(ES5) describes two dialects, the @link(strict mode) dialect 
+and the @link(sloppy mode) dialect. Stick with the @link(strict mode) dialect.
+
+The @link(use strict) pragma is written as a @link(string literal) so that it will not cause 
+a syntax error when processed by an @link(ES3) system.
 
 @program <"use strict";>
 
-The use strict pragma is written as a string literal so that it will not cause 
-a syntax error when processed by an ES3 system.
-
 Most of the material in this encyclopedia is organized into 27 chapters 
-(one for each letter and the special characters). Each chapter lists several 
+(one for each letter and the @link "Special Characters"). Each chapter lists several 
 specimens, where a specimen is an element of syntax or a concept. The specimens 
 are ordered alphabetically. A specimen marked with @reserved@ indicates that 
 the word is reserved and cannot be used as a parameter or variable name. 

@@ -1,8 +1,18 @@
 @chapter "I"
 
+@specimen(i)
+
+@article(@t(i) @link(regexp flag))
+
 @specimen "identifier"
 
 See @link(name).
+
+@article "identifier character"
+
+See @link(name).
+
+@specimen "identifier escapement"
 
 @specimen(if @reserved@)
 
@@ -12,7 +22,7 @@ Blah.
 
 @specimen "ignoreCase"
 
-@article(@t(ignoreCase) @link(RexExp boolean))
+@article(@t(ignoreCase) @link(RegExp boolean))
 
 Blah.
 
@@ -417,19 +427,25 @@ var max_int = (function () {
 }());
 @end(program)
 
-The @link(/ infix operator division) can produce a non-integer result even if both of its operands are integers. For example, 1 / 2 produces 0.5, a non-integer result.
+The @link(/ infix operator) can produce a non-integer result even if both of its operands are integers. For example, 1 / 2 produces 0.5, a non-integer result.
 
 These functions can be used to convert non-integers to integers:
 
-    ceil Math function
-    floor Math function
-    round Math function
+@list {
+    @link(ceil Math function)
+    @link(floor Math function)
+    @link(round Math function)
+}
 
-JavaScript is lacking a trunc truncate function that rounds toward zero. Such a function would round down for positive numbers and round up for negative numbers.
+JavaScript is lacking a @link(trunc Math function) that rounds toward @link(zero). Such a function would round down for positive numbers and round up for negative numbers.
 
 @program "
 function trunc(number) {
-    return Math[number >= 0 ? 'floor' : 'ceil'](number);
+    return Math[
+        (number >= 0) 
+            ? 'floor' 
+            : 'ceil'
+    ](number);
 }
 "
 

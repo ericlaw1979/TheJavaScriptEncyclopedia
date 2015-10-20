@@ -12,6 +12,10 @@ The @link(false) @link(literal) is a convenient way to access the @link(false) v
 
 @program{var found = false;}
 
+@article "false positive"
+
+Blah.
+
 @specimen(falsy)
 
 Every value is either @link(truthy) or @link(falsy). These are the only values that are @link(falsy):
@@ -96,7 +100,7 @@ Blah.
 
 Blah.
 
-@article(@t(Function) @link(primordial function))
+@article(@t(function) @link(invocation))
 
 Blah.
 
@@ -104,7 +108,15 @@ Blah.
 
 Blah.
 
+@article(@t(Function) @link(primordial function))
+
+Blah.
+
 @article(@t(Function) @link(prototype function))
+
+Blah.
+
+@article(@t(Function) @link(prototype object))
 
 Blah.
 

@@ -110,7 +110,7 @@ The Math primordial object is the container for these numeric properties:
 
 @article(@t(max) @link(Math function) @aka(maximum))
 
-The Math.max(...) function returns the largest number from its arguments. It can take a variable number of arguments. If there are no arguments, it returns -Infinity. If there is one argument, it returns the numeric value of that argument. Otherwise, it compares each of the arguments and returns the greatest. If any of the arguments is NaN or converts to NaN, then the result is NaN. Unlike the > infix operator, Math.max(...) sees -0 as being less than 0 (see zero).
+The Math.max(...) function returns the largest number from its arguments. It can take a variable number of arguments. If there are no arguments, it returns -Infinity. If there is one argument, it returns the numeric value of that argument. Otherwise, it compares each of the arguments and returns the greatest. If any of the arguments is @link(NaN) or converts to @link(NaN), then the result is @link(NaN). Unlike the > infix operator, Math.max(...) sees -0 as being less than 0 (see @link(zero)).
 
 It could be implemented like this:
 
@@ -186,15 +186,22 @@ A method is @link(property) whose value is a @link(function).
 A method can get access to the object with the @link(this parameter). See @link(invocation).
 
 All values except @link(null) and @link(undefined) can have methods.
-method chaining
 
-See @link(cascading).
+@article(method chaining)
+
+When a function returns @link(this).
+
+See @link(cascade).
+
+@article "method @link(invocation)"
+
+Blah.
 
 @specimen "min"
 
 @article(@t(min) @link(Math function) @aka(minimum))
 
-The Math.min(...) function returns the smallest number from its arguments. It can take a variable number of arguments. If there are no arguments, it returns Infinity. If there is one arguments, it returns the numeric value of that argument. Otherwise, it compares each of the arguments and returns the lowest. If any of the arguments is NaN or converts to NaN, then the result is NaN. Unlike the < infix operator, Math.min(...) sees -0 as being less than 0 (see zero). It could be implemented like this:
+The Math.min(...) function returns the smallest number from its arguments. It can take a variable number of arguments. If there are no arguments, it returns Infinity. If there is one arguments, it returns the numeric value of that argument. Otherwise, it compares each of the arguments and returns the lowest. If any of the arguments is @link(NaN) or converts to @link(NaN), then the result is @link(NaN). Unlike the < infix operator, Math.min(...) sees -0 as being less than 0 (see @link(zero)). It could be implemented like this:
 
 @begin(program)
 Math.min = function () {
@@ -249,7 +256,7 @@ Blah.
 
 @specimen "multiline"
 
-@article(@t(multiline) @link(RegExp instance boolean))
+@article(@t(multiline) @link(regexp boolean))
 
 Blah.
 

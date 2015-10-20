@@ -2,6 +2,10 @@
 
 @specimen "date"
 
+@article "@t(Date) @link(function)"
+
+Blah. Blah. Blah.
+
 @article "@t(Date) @link(primordial function)"
 
 Blah. Blah. Blah.
@@ -89,13 +93,19 @@ These are the disruptive statements:
 
 @specimen "divide"
 
-See @link</ infix operator>.
+See @link</ infix operator> and @link</= assignment infix operator>.
+
+Also see @link(remainder).
 
 @specimen "dividend"
 
 Blah.
 
 @specimen "divisor"
+
+Blah.
+
+@specimen "division"
 
 Blah.
 
