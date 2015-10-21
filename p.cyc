@@ -598,29 +598,43 @@ The primordial context contains these objects:
 
 Blah.
 
-@article "primordial variable"
+@article "primordial @link(variable)"
 
 @list {
-@link(Infinity)
-@link(NaN)
-@link(undefined)
+@link(Infinity literal)
+@link(NaN literal)
+@link(undefined literal)
 }
 
 @specimen "private @reserved@"
 
 @specimen "program"
 
-A program is a complex set of instructions that control the operation of a computer. In this language, a program is delivered to the execution site in a textual form (or as source code or as script) which is then compiled and immediately executed. See compilation unit.
+A program is a complex set of instructions that control the operation of a
+computer. In this language, a program is delivered to the execution site in a textual form (or as source code or as script) which is then compiled and immediately executed. See compilation unit.
 
 @specimen "promise"
 
 A promise is an object that represents a value that may be unknown at the present time but which might become known in the future. A promise allows us to act on the future value now, remembering our intentions until the promise is ultimately kept or broken. The resolution of a promise might depend in a result that will be determined on the other side of the network or in a different process.
 
-Also see callback.
+Also see @link(callback).
 
 @specimen "property"
 
-A property is a component of an object that is associated with a key string. There are two kinds of properties: data properties and accessor properties. A data property holds a value that can be get or set. An accessor property instead holds one or two functions that will be called when an attempt is made to get or set the property. A property can be inherited, or it can be the object’s own property. See object. Also see . suffix operator select and [ ] suffix operator subscript.
+A property is a component of an @link(object) that is associated with a
+@link(key string). There are two kinds of property:
+@list {
+@link(data property)
+@link(accessor property)
+}
+
+A @link(data property) holds a value that can be @link(get) or @link(set).
+An @link(accessor property) instead holds one or two functions that will be
+called when an attempt is made to @link(get) or @link(set) the property.
+A property can be inherited, or it can be the object’s @link(own property).
+
+See @link(object). Also see @link(. suffix operator) and
+@link([ ] suffix operator).
 
 @specimen "propertyIsEnumerable"
 

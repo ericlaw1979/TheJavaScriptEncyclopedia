@@ -355,7 +355,11 @@ for (;;) {}    // This is not a bug. It is much worse.
 
 @article(@t(Infinity) @link(literal))
 
-The infinity value is a number that represents all numbers that are larger than Number.MAX_VALUE. It is available as a primordial variable, and as Number.POSITIVE_INFINITY. Negative infinity is available as -Infinity and as Number.NEGATIVE_INFINITY.
+The infinity value is a number that represents all numbers that are larger than
+@link(MAX_VALUE Number number). It is available as the @t(Infinity)
+@link(primordial variable), and as @link(POSITIVE_INFINITY Number number).
+Negative infinity is available as @t(-Infinity) and as
+@link(NEGATIVE_INFINITY Number number).
 
 Infinity + Infinity    // Infinity
 Infinity - Infinity    // NaN

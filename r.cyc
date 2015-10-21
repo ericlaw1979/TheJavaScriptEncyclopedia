@@ -358,7 +358,9 @@ Blah.
 
 @specimen "reserved word"
 
-A reserved word is an identifier that is reserved for the exclusive use of the language itself. A reserved word may be used as a statement, operator, or a future feature of tomorrow. The reserved words are
+A reserved word is an identifier that is reserved for the exclusive use of the
+language itself. A reserved word may be used as a @link(statement),
+@link(operator), or a future feature of tomorrow. The reserved words are
 
 @list {@link(break)
 @link(case)
@@ -403,18 +405,23 @@ A reserved word is an identifier that is reserved for the exclusive use of the l
 @link(yield)
 }
 
-A reserved word may not be used as the name of a function, variable, parameter, or label. Some of the reserved words are not actually used in any edition of the language.
+A reserved word may not be used as the name of a @link(function),
+@link(variable), @link(parameter), or @link(statement label). Some of the
+reserved words are not actually used in any edition of the language.
 
 @program {
 var break;        // syntax error
 var breaky;       // ok
 }
 
-The constants false, null, and true are not formally reserved words, but they have the same restrictions. The constants Infinity, NaN, and undefined do not have these restrictions.
+The constants @link(false literal), @link(null literal), and @link(true literal)
+are not formally reserved words, but they have the same restrictions. The
+constants @link(Infinity literal), @link(NaN literal), and
+@link(undefined literal) do not have these restrictions, which is weird.
 
 @program {
 var null;         // syntax error
-var undefined;    // ok
+var undefined;    // ok but also very wrong
 }
 
 @specimen "return @reserved@"

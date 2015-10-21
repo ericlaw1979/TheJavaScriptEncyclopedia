@@ -1,4 +1,4 @@
-@chapter "Special Characters"  
+@chapter "Special Characters"
 
 @specimen "@t(!) @aka(exclamation point)"
 
@@ -12,7 +12,7 @@ The @t(!) operator produces @link(false) if its operand is @link(truthy), and @l
 ! 'false'     // false
 ! 0           // true
 ! 42          // false
-!! 42         // true 
+!! 42         // true
 }
 
 @article(@t(!=) @link(infix operator) @aka(coercing not equal))
@@ -31,11 +31,11 @@ Avoid this operator. Always use the @link(!== infix operator) instead.
 
 @article(@t(!==) @link(infix operator) @aka(not equal))
 
-The @t(!==) operator determines if two operands are not equal. It produces the 
-opposite of the @link(=== infix operator). The result can be @link(false) only 
+The @t(!==) operator determines if two operands are not equal. It produces the
+opposite of the @link(=== infix operator). The result can be @link(false) only
 if the operands are the same type.
 
-If the operands are objects, the result is @link(false) only if the operands are 
+If the operands are objects, the result is @link(false) only if the operands are
 the same object. If the operands are similar objects, the result is @link(true).
 
 The @link(!== infix operator) produces the same result as this function:
@@ -46,7 +46,7 @@ function not_equal(left, right) {
 }
 "
 
-The expression @t(x !== x) will always result in @link(false) except when the 
+The expression @t(x !== x) will always result in @link(false) except when the
 value of @t(x) is @link(NaN). This bizarre behavior is intentional.
 
 @program "
@@ -64,26 +64,26 @@ NaN !== NaN                  // true
 See @link(string literal).
 
 @specimen (@t($) @aka(dollar sign))
- 
+
 @article(@t($) @link(identifier character))
 
-The @t($) character is treated as a letter in an identifier. It was added to the 
-language specifically for the use of code generators and macro processors so 
-that they could generate identifiers with confidence that they would not collide 
-with programs produced by humans. Unfortunately, the developer community ignored 
-the intention of @t($) and used it to create ugly, cryptic identifiers that 
+The @t($) character is treated as a letter in an identifier. It was added to the
+language specifically for the use of code generators and macro processors so
+that they could generate identifiers with confidence that they would not collide
+with programs produced by humans. Unfortunately, the developer community ignored
+the intention of @t($) and used it to create ugly, cryptic identifiers that
 collide with each other.
 
 @specimen (@t(%) @aka(percent sign))
 
 @article(@t(%) @link(infix operator) @aka(remainder))
 
-The @t(%) operator computes the @link(remainder) produced by the @link(division) 
-of two operands, a @link(dividend) and a @link(divisor). If the operands are not 
-numbers, @t(%) attempts to coerce them to numbers. If either operand cannot be 
-coerced to a number or is @link(NaN), or if the dividend is an @link(Infinity), 
-or if the @link(divisor) is a @link(zero), then the result is @link(NaN). 
-Otherwise, if the @link(divisor) is an @link(Infinity), the result is the 
+The @t(%) operator computes the @link(remainder) produced by the @link(division)
+of two operands, a @link(dividend) and a @link(divisor). If the operands are not
+numbers, @t(%) attempts to coerce them to numbers. If either operand cannot be
+coerced to a number or is @link(NaN), or if the dividend is an @link(Infinity),
+or if the @link(divisor) is a @link(zero), then the result is @link(NaN).
+Otherwise, if the @link(divisor) is an @link(Infinity), the result is the
 @link(dividend).
 
 The @t(%) operator produces the same result as this function:
@@ -95,23 +95,23 @@ function remainder(left, right) {
         divisor = +right,
         quotient = dividend / divisor;
     if (divisor === Infinity || divisor === -Infinity) {
-        return (isFinite(dividend)) 
-            ? dividend 
+        return (isFinite(dividend))
+            ? dividend
             : NaN;
     } else {
-        return dividend - (divisor * (Math[quotient >= 0) 
-            ? 'floor' 
+        return dividend - (divisor * (Math[quotient >= 0)
+            ? 'floor'
             : 'ceil'](quotient));
     }
 }
 @end(program)
 "
 
-The @link(sign) of the remainder will be the @link(sign) of the @link(dividend), 
-not the @link(divisor). This differs from the @link(modulo) operator found in 
-some other languages, where the result has the @link(sign) of the 
-@link(divisor). The @link(modulo) function can be computed with this function, 
-which adds the @link(divisor) to the @link(remainder) if the @link(remainder) 
+The @link(sign) of the remainder will be the @link(sign) of the @link(dividend),
+not the @link(divisor). This differs from the @link(modulo) operator found in
+some other languages, where the result has the @link(sign) of the
+@link(divisor). The @link(modulo) function can be computed with this function,
+which adds the @link(divisor) to the @link(remainder) if the @link(remainder)
 has the wrong @link(sign):
 
 @begin(program)
@@ -143,7 +143,7 @@ Infinity % Infinity // NaN
 
 @article(@t(%=) @link(assignment infix operator) @aka(remainder))
 
-The @t(%=) operator replaces the left value with the remainder of the left value 
+The @t(%=) operator replaces the left value with the remainder of the left value
 divided by the right value. So
 
 @program {
@@ -160,11 +160,11 @@ left = left % divisor;
 
 @article(@t(&) @link(infix operator) @aka(bitwise and))
 
-The @t(&) infix operator performs the @link(bitwise and) operation. The 
-@link(bitwise and) operation uses 32 bits from each operand. If two 
-corresponding bits are 1, then the corresponding result bit is 1. Otherwise, 
-the corresponding result bit is 0. The operands are converted from a number 
-(64 bit floating point) to a 32-bit integer. It produces the same result as this 
+The @t(&) infix operator performs the @link(bitwise and) operation. The
+@link(bitwise and) operation uses 32 bits from each operand. If two
+corresponding bits are 1, then the corresponding result bit is 1. Otherwise,
+the corresponding result bit is 0. The operands are converted from a number
+(64 bit floating point) to a 32-bit integer. It produces the same result as this
 function:
 
 @begin(program)
@@ -176,14 +176,14 @@ function bitwise_and(left, right) {
 // Make 32-bit unsigned integers from the operands. The % is a remainder
 // operator, not a modulo operator, so some sign correction may be necessary.
 
-    left_int = Math[(left >= 0) 
-        ? 'floor' 
+    left_int = Math[(left >= 0)
+        ? 'floor'
         : 'ceil'](left) % two_32;
     if (left_int < 0) {
         left_int += two_32;
     }
-    right_int = Math[(right >= 0) 
-        ? 'floor' 
+    right_int = Math[(right >= 0)
+        ? 'floor'
         : 'ceil'](right) % two_32;
     if (right_int < 0) {
         right_int += two_32;
@@ -238,23 +238,23 @@ See @link(string literal).
 
 @specimen "@t[(] @aka(left parenthesis)"
 
-Parentheses have many uses. In operand position, they provide grouping for 
-overriding operator precedence or to make the meaning of complicated expressions 
-clearer. In suffix position, they cause the invocation of functions. In function 
-definitions and catch blocks they define parameters and exception variables. 
-In statement position, they can disambiguate function literal from function 
-statement. In a statement they denote a conditional expression or a special 
+Parentheses have many uses. In operand position, they provide grouping for
+overriding operator precedence or to make the meaning of complicated expressions
+clearer. In suffix position, they cause the invocation of functions. In function
+definitions and catch blocks they define parameters and exception variables.
+In statement position, they can disambiguate function literal from function
+statement. In a statement they denote a conditional expression or a special
 variable.
 
 @article(@t[( )] grouping)
 
-In expressions, parentheses can be used to override the precedence of operators, 
+In expressions, parentheses can be used to override the precedence of operators,
 or to break up complicated expressions to make them easier to read.
 
 @program {
 3 + 4 * 5      // 23
 3 + (4 * 5)    // 23
-(3 + 4) * 5    // 35 
+(3 + 4) * 5    // 35
 }
 
 Parentheses can also be used to improve the readability of an immediate function.
@@ -295,8 +295,8 @@ See @link "(".
 
 @article(@t(*) @link(infix operator) @aka(multiply))
 
-The @t(*) operator multiplies its operands together. If the operands are not 
-numbers, it attempts to coerce them to numbers. If either operand cannot be 
+The @t(*) operator multiplies its operands together. If the operands are not
+numbers, it attempts to coerce them to numbers. If either operand cannot be
 coerced to a number or is @link(NaN), then the result will be @link(NaN).
 
 @program {3 * 4    // 7}
@@ -313,10 +313,10 @@ Blah.
 
 @article(@t(+) @link(infix operator) @aka(add or concatenate))
 
-The + operator can either add or concatenate, depending of the types of its 
-operands. If either operand is a string, then it converts both operands to 
-strings and concatenates then, producing a new string with all of the characters 
-from both operands. Otherwise, it converts both operands to numbers and then 
+The + operator can either add or concatenate, depending of the types of its
+operands. If either operand is a string, then it converts both operands to
+strings and concatenates then, producing a new string with all of the characters
+from both operands. Otherwise, it converts both operands to numbers and then
 attempts to add them. It produces the same result as this function:
 
 @begin(program)
@@ -389,19 +389,19 @@ Blah.
 
 @article(@t(,) @link(infix operator) @aka(comma))
 
-The @t(,) @link(infix operator) takes two operands, evalutes them both, 
-and returns the value of only the second operand. This operator may not be used 
-in places where a @link(,) can appear, such as in an @link(argument list), 
-in a @link(var statement), or in an @link(object literal) or @link(array literal) 
-unless the operand it forms is wrapped in @link[( ) grouping]. 
+The @t(,) @link(infix operator) takes two operands, evalutes them both,
+and returns the value of only the second operand. This operator may not be used
+in places where a @link(,) can appear, such as in an @link(argument list),
+in a @link(var statement), or in an @link(object literal) or @link(array literal)
+unless the operand it forms is wrapped in @link[( ) grouping].
 This @link(operator) invites misuse of the @link(for statement)
-when initializing or incrementing multiple induction variables. 
+when initializing or incrementing multiple induction variables.
 The @link(, infix operator) should not be used.
 
 @article(@t(,) @aka(separator))
 
-The comma is used to separate operands in the object literal, the array literal, 
-the argument list. The comma is used to separate identifiers in the the 
+The comma is used to separate operands in the object literal, the array literal,
+the argument list. The comma is used to separate identifiers in the the
 @link(parameter list) and the @link(var statement).
 
 @specimen (@t(-) @aka(minus sign))
@@ -446,8 +446,8 @@ Blah.
 
 @specimen (@t(/) @aka(slash))
 
-The / slash character is also known as the solidus and as the virgule. It is 
-used as the division operator, and it is used to form a @link(comment) or 
+The / slash character is also known as the solidus and as the virgule. It is
+used as the division operator, and it is used to form a @link(comment) or
 @link(regexp literal). Be careful to not confuse it with @link(\).
 
 @article(@t(/) @link(infix operator) @aka(divide))
@@ -498,8 +498,8 @@ The @link(;) is used to terminate a statement. It is required on these statement
 @link(var statement)
 }
 
-In some cases a mechanism called automatic semicolon insertion allows for 
-leaving off the terminating semicolon. Unfortunately, semicolon insertion has 
+In some cases a mechanism called automatic semicolon insertion allows for
+leaving off the terminating semicolon. Unfortunately, semicolon insertion has
 some inherent problems and should not be relied upon.
 
 Semicolon is also used to separate the control clauses in a @link(for statement).
@@ -519,7 +519,7 @@ Blah.
 Blah.
 
 @article(@t(<=) @link(infix operator) @aka(less than or equal))
- 
+
 @specimen (@t(=) @aka(equal sign))
 
 @article(@t(=) @link(assignment infix operator))
@@ -555,10 +555,10 @@ function coercing_equal(left, right) {
     if (typeof right === 'boolean') {
         return coercing_equal(left, +right);
     }
-    if 
+    if
         (typeof left === 'object' &&
         (
-            left.constructor === Number || 
+            left.constructor === Number ||
             left.constructor === String ||
             left.constructor === Boolean
         ) &&
@@ -570,7 +570,7 @@ function coercing_equal(left, right) {
         (typeof left === 'string' || typeof left === 'number') &&
         typeof right === 'object' &&
         (
-            right.constructor === Number || 
+            right.constructor === Number ||
             right.constructor === String ||
             right.constructor === Boolean
         )
@@ -607,14 +607,14 @@ NaN == NaN               // false
 
 The === operator compares two values, producing @link(true) if they are equal and @link(false) if they are not. Two strings are considered equal if they have the same length and contain exactly the same code points in the same sequence. To references to the same object or array are considered equal. Two similar objects or two similar arrays are not considered equal.
 
-The expression x === x will always result in @link(true) except when the value of x is @link(NaN). 
-Surprisingly, there exist mathematicians that think this was a good idea. 
-It presents an obvious programming hazard. 
-For example, suppose you need a function that tests that a function returns the correct value. 
-Special handling is required for the case where the expected value is @link(NaN). 
-Simply using === to compare the expected value and the result will do the wrong 
-thing when the expected value is @link(NaN), so much more complicated 
-comparisons are required using the @link(typeof prefix operator) and the @link(isNaN primordial function). 
+The expression x === x will always result in @link(true) except when the value of x is @link(NaN).
+Surprisingly, there exist mathematicians that think this was a good idea.
+It presents an obvious programming hazard.
+For example, suppose you need a function that tests that a function returns the correct value.
+Special handling is required for the case where the expected value is @link(NaN).
+Simply using === to compare the expected value and the result will do the wrong
+thing when the expected value is @link(NaN), so much more complicated
+comparisons are required using the @link(typeof prefix operator) and the @link(isNaN primordial function).
 
 Two numbers that are only approximately equal may produce a @link(false) result.
 
@@ -673,14 +673,14 @@ Blah.
 
 The ? operator takes three operands which are separated by the @link(?) and a @link(:).
 
-@program{@i(condition) 
-    ? @i(then) 
+@program{@i(condition)
+    ? @i(then)
     : @i(else)}
 
-It is a short-circuiting operator: only one of the branches will be evaluated. 
-If the @i(condition) operand is @link(truthy) then the @i(then) operand will be 
-evaluated and its value will be the value of the expression. If the 
-@i(condition) operand is falsy then the @i(else) operand will be evaluated and 
+It is a short-circuiting operator: only one of the branches will be evaluated.
+If the @i(condition) operand is @link(truthy) then the @i(then) operand will be
+evaluated and its value will be the value of the expression. If the
+@i(condition) operand is falsy then the @i(else) operand will be evaluated and
 its value will be the value of the expression.
 
 @program "
@@ -690,10 +690,10 @@ function signum(number) {
 //        1 if the number is positive,
 //       -1 if the number is negative.
 
-    return (number === 0) 
-        ? 0 
-        : (number > 0) 
-            ? 1 
+    return (number === 0)
+        ? 0
+        : (number > 0)
+            ? 1
             : -1;
 }
 "
@@ -734,8 +734,8 @@ Blah.
 
 @specimen (@t(_) @aka(underbar))
 
-In a name, the @link(_) character is treated as a letter. The @link(_) is 
-used to improve the readability of names, especially when the name contains 
+In a name, the @link(_) character is treated as a letter. The @link(_) is
+used to improve the readability of names, especially when the name contains
 several words, which as
 
 @program(calculate_the_total)
@@ -744,7 +744,7 @@ since a name cannot contain a space or hyphen. Another convention is to use @lin
 
 @program(calculateTheTotal)
 
-Some implementations use leading or trailing @link(_) for internal or dangerous 
+Some implementations use leading or trailing @link(_) for internal or dangerous
 properties, so it is best to avoid such names.
 
 @specimen (@t({) @aka(left curly brace))
@@ -776,14 +776,14 @@ function bitwise_or(left, right) {
 // Make 32-bit unsigned integers from the operands. The % is a remainder
 // operator, not a modulo operator, so some sign correction may be necessary.
 
-    left_int = Math[(left >= 0) 
-        ? 'floor' 
+    left_int = Math[(left >= 0)
+        ? 'floor'
         : 'ceil'](left) % two_32;
     if (left_int < 0) {
         left_int += two_32;
     }
-    right_int = Math[(right >= 0) 
-        ? 'floor' 
+    right_int = Math[(right >= 0)
+        ? 'floor'
         : 'ceil'](right) % two_32;
     if (right_int < 0) {
         right_int += two_32;
@@ -838,4 +838,4 @@ See @link({).
 
 @article(@t(~) @link(prefix operator) @aka(bitwise not))
 
- 
+

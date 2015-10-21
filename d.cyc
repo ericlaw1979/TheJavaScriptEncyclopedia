@@ -1,5 +1,9 @@
 @chapter "D"
 
+@specimen "data property"
+
+Blah.
+
 @specimen "date"
 
 @article "@t(Date) @link(function)"
@@ -26,7 +30,7 @@ Blah.
 
 @specimen "decimal @aka(base 10)"
 
-The decimal digits are @t(0), @t(1), @t(2), @t(3), @t(4), @t(5), @t(6), @t(7), 
+The decimal digits are @t(0), @t(1), @t(2), @t(3), @t(4), @t(5), @t(6), @t(7),
 @t(8), and @t(9).
 
 Most of humanity represents its numbers in the decimal system.
@@ -79,9 +83,9 @@ Blah.
 
 @specimen "disruptive statement"
 
-Usually, after a @link(statement) completes its execution, the next statement 
-executes. This is not the case with a disruptive statement. A disruptive 
-statement alters the flow of a program, so the next statement is not executed. 
+Usually, after a @link(statement) completes its execution, the next statement
+executes. This is not the case with a disruptive statement. A disruptive
+statement alters the flow of a program, so the next statement is not executed.
 These are the disruptive statements:
 
 @list {

@@ -30,6 +30,10 @@ Math.abs("LOL")        // NaN
 
 Also see @link(zero).
 
+@specimen "accessor property"
+
+Blah. See @link(object).
+
 @specimen "acos"
 
 @article(@t(acos) @link(Math function) @aka(arc cosine))
@@ -330,11 +334,17 @@ The letter A is 41 in hexadecimal.
 @_@!7@|p@|q@|r@|s@|t@|u@|v@|w@|x@|y@|z@|{@||@|}@|~@|del
 @end(table)
 
+@specimen "asi @aka 'automatic semicolon insertion'"
+
+See @link(semicolon insertion).
+
 @specimen "asin"
 
 @article(@t(asin) @link(Math function) @aka(arc sine))
 
-The Math.asin(x) function is the inverse sine function, also known as arc sine and sin-1. Its argument x should be a number in the range -1...1. The result will be an angle in radians in the range (Math.PI / -2)...(Math.PI / 2).
+The Math.asin(x) function is the inverse sine function, also known as
+arc sine and sin-1. Its argument x should be a number in the range -1...1.
+The result will be an angle in radians in the range (Math.PI / -2)...(Math.PI / 2).
 
 This is an approximate implemention of Math.asin:
 
