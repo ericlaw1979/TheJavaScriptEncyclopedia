@@ -31,8 +31,8 @@ The ECMAScript for XML (E4X) Specification [ECMA-357 Second Edition / December 2
 
 @specimen "Ecma International"
 
-Ecma International (fna European Computer Manufacturers Association) is the 
-standards body that is responsible for the ECMAScript Programming Language 
+Ecma International (fna European Computer Manufacturers Association) is the
+standards body that is responsible for the ECMAScript Programming Language
 Standard. It was founded in 1961 and is based in Geneva. See @url(http://www.ecma-international.org/).
 
 @specimen "ECMAScript"
@@ -49,8 +49,8 @@ See @link(if statement).
 
 @specimen "empty statement"
 
-The empty statement is a statement consisting of nothing but a @link(;). 
-It does not do anything. Its principle use is to mask syntax errors. 
+The empty statement is a statement consisting of nothing but a @link(;).
+It does not do anything. Its principle use is to mask syntax errors.
 The empty statement should be avoided.
 
 @specimen "empty string"
@@ -71,10 +71,10 @@ Blah.
 
 @specimen "entity"
 
-An entity in HTML is a character sequence that represents a single character. 
-It is HTML's alternative to escapement as used in a string literal. 
-An entity begins with @link(&) and ends with @link(;), 
-and between them there may be a cryptic word or a number. 
+An entity in HTML is a character sequence that represents a single character.
+It is HTML's alternative to escapement as used in a string literal.
+An entity begins with @link(&) and ends with @link(;),
+and between them there may be a cryptic word or a number.
 JavaScript tolerates HTML entities in strings, but has no knowledge of them.
 
 @program {'&amp;'.length    // 5}
@@ -91,22 +91,22 @@ Blah.
 
 @article "enumeration object"
 
-An enumeration object is an object that is used to map names or mnemonics to 
-codes in the form of numbers or other values. Programs often make use of codes 
-or constant values, but it is generally bad to scatter them thoughout a program 
-because that can make the program difficult to read and modify. So instead we 
-can collect the codes and constants into an object, giving descriptive keys to 
-each one. The descriptive keys help make the program self documenting, and 
+An enumeration object is an object that is used to map names or mnemonics to
+codes in the form of numbers or other values. Programs often make use of codes
+or constant values, but it is generally bad to scatter them thoughout a program
+because that can make the program difficult to read and modify. So instead we
+can collect the codes and constants into an object, giving descriptive keys to
+each one. The descriptive keys help make the program self documenting, and
 gives us a single place to change in the program should they need to be changed.
 
-In some languages, there is an enum statement or operator that provides such 
+In some languages, there is an enum statement or operator that provides such
 mapping. In this language, simply use an object.
 
 @specimen "epsilon"
 
-Epsilon is the smallest positive number that can be added to 1 giving a result 
-that is larger than 1. Positive numbers that are smaller than epsilon will 
-underflow when added to 1. The value for epsilon is approximately 
+Epsilon is the smallest positive number that can be added to 1 giving a result
+that is larger than 1. Positive numbers that are smaller than epsilon will
+underflow when added to 1. The value for epsilon is approximately
 2.220446049250313e-16. It can be computed with this immediate function:
 
 @begin(program)
@@ -123,7 +123,7 @@ Epsilon is a measure of the limits of the accuracy of number.
 
 @begin(program)
 1 + epsilon    // 1.0000000000000002 (approximately)
-2 + epsilon    // 2 (exactly)  
+2 + epsilon    // 2 (exactly)
 @end(program)
 
 @specimen "error"
@@ -131,6 +131,12 @@ Epsilon is a measure of the limits of the accuracy of number.
 @article(@t(Error) @link(primordial function))
 
 Blah.
+
+@specimen "ES2015 @aka(ES6)"
+
+Blah. See @link(ES6)
+
+ECMAScript Programming Language Standard, Third Edition [1999].
 
 @specimen "ES3"
 
@@ -238,13 +244,21 @@ An expression is a sequence of tokens that delivers a value. An expression can b
 @link(assignment operator)
 }
 
-A compound expression can be formed by combining one or more expressions with an operator. Expressions can be nested inside of other expressions. The whole expression produces a single value. The order in which the operators are evaluated depends on grouping parentheses and operator precedence.
+A compound expression can be formed by combining one or more expressions with an operator. 
+Expressions can be nested inside of other expressions. 
+The whole expression produces a single value. 
+The order in which the operators are evaluated depends on @link<( ) grouping> and @link(operator precedence).
 
-When an expression provides a value to an operator, it is called an operand.
+When an expression provides a value to an @link(operator), it is called an @link(operand).
 
-When an expression provides a value to a function, it is called an argument.
+When an expression provides a value to a @link(function invocation), 
+it is called an @link(argument).
 
-When an expression occurs on the left side of an assignment infix operator, it is called an lvalue. When an expression occurs on the right side of an assignment infix operator, it is called a value, specifically it is the value to be stored in the lvalue.
+When an expression occurs on the left side of an 
+@link(assignment infix operator), it is called an @link(lvalue). 
+When an expression occurs on the right side of an 
+@link(assignment infix operator), it is called a value, specifically it is the 
+value to be stored in the @link(lvalue).
 
 An expression can produce a value that can control a statement:
 
@@ -256,11 +270,20 @@ An expression can produce a value that can control a statement:
 @link(while statement)
 }
 
-@article(expression statement)
+@article(expression @link(statement))
 
-An expression can be used as a statement. Generally, the only expressions that make sense as statements are assignment and invocations. The other forms of expressions are allowed, but most are useless, or even dangerous in that errors can be masked.
+An @link(expression) can be used as a @link(statement). 
+Generally, the only expressions that make sense as statements are 
 
-An expression statement should end with a ; semicolon.
+@list {
+@link(assignment)
+@link(invocation)
+}
+
+The other forms of expressions are allowed, but most are useless, or even 
+dangerous in that errors can be masked.
+
+An expression statement should end with a @link(;).
 
 @begin(program)
 alert('When my friends need some code who do they call?');
