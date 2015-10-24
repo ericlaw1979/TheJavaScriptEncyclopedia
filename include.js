@@ -1,5 +1,5 @@
 // include.js
-// 2015-10-01
+// 2015-10-23
 
 
 function include(callback, text, get_inclusion) {
@@ -44,7 +44,7 @@ function include(callback, text, get_inclusion) {
 
 // var fs = require('fs');
 
-// function get_inclusion(callback, key, quote) {
+// function get_inclusion(callback, key, ignore) {
 //     fs.readFile(key, 'utf8', function (failure, data) {
 //         return callback(data, failure);
 //     });
