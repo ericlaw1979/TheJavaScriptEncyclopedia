@@ -2,13 +2,14 @@
 
 @specimen(false @reserved@)
 
-The @link(false) value is one of the two immutable boolean values. The @link(false) value is @link(falsy).
+The @link(false) value is one of the two @link(immutable) @link(boolean) values.
+The @link(false) value is one of the @link(falsy) values.
 
 The @link(false) value can be produced by a @link(relational operator).
 
-@article(@t(@link(false)) @link(literal))
+@article(@t(false) @link(literal))
 
-The @link(false) @link(literal) is a convenient way to access the @link(false) value.
+The @t(false) @link(literal) is a convenient way to access the @link(false) value.
 
 @program{var found = false;}
 
@@ -18,7 +19,8 @@ Blah.
 
 @specimen(falsy)
 
-Every value is either @link(truthy) or @link(falsy). These are the only values that are @link(falsy):
+Every value is either @link(truthy) or @link(falsy).
+These are the @link(falsy) values:
 
 @list{
 @link(empty string)
@@ -105,7 +107,7 @@ Blah.)
 
 Blah.
 
-@article(@t(function) @link(invocation))
+@article(function @link(invocation))
 
 Blah.
 

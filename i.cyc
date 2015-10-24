@@ -135,6 +135,10 @@ var wordify = (function () {
 }());
 @end(program)
 
+@specimen "immutable"
+
+Blah.
+
 @specimen "implements @reserved@"
 
 @specimen "implied @link(global)"

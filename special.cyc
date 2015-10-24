@@ -736,7 +736,7 @@ Blah.
 
 In a name, the @link(_) character is treated as a letter. The @link(_) is
 used to improve the readability of names, especially when the name contains
-several words, which as
+several words, such as
 
 @program(calculate_the_total)
 
