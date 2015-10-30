@@ -27,10 +27,9 @@ RQ.sequence([
         fs.readFile('./' + filename + '.cyc', function (error, data) {
             if (error) {
                 console.log(error);
-            } else {
-                data = data.toString();
+                return callback(undefined, error);
             }
-            return callback(data, error);
+            return callback(data.toString());
         });
     },
     function (callback, value) {
