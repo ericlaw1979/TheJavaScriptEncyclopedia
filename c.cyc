@@ -210,6 +210,17 @@ Blah.
 
 Blah.
 
+@specimen "concatenation"
+
+Concatenation is an operation in which a new things is made by joining two or
+more other things. 
+
+@list {
+    @link(+ infix operator)
+    @link(array prototype function)
+    @link(string prototype function)
+}
+
 @specimen(conditional statement)
 
 A conditional statement alters the flow of a program, which normally executes from top to bottom, by selecting one path from two or more possibilities, deciding based on the value of an expression or the occurence of an exception.

@@ -160,6 +160,17 @@ function make_onehtml() {
             name: '',
             gen: wrap("h4")
         },
+        slink: {
+            gen: function (text, structure) {
+                var name = link_text[structure.link.toLowerCase()];
+                if (name !== undefined) {
+                    return "<a href=\"#" + special_encode(structure.link) + 
+                            "\">" + name + "</a>";
+                } else {
+                    return text + " <strong>MISSING LINK</strong>";
+                }
+            }
+        },
         specimen: {
             level: 3,
             link: stuff_link,

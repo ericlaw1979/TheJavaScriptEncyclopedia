@@ -22,78 +22,7 @@ See @link(;).
 
 @article(semicolon insertion)
 
-The rules for placement of @link(;) at the end of a statement are a little complicated because some statements require it and some do not. The language provides a mechanism called semicolon insertion that makes it possible to leave out @link(;) in many (but not all) situations. The semicolon insertion feature was intended to make the language simpler, but it actually makes it more complicated and fragile. There are three cases when semicolons are inserted.
-
-@begin(list)
-    When a break, continue, return or throw is followed by a @link(line terminator), a @link(;) is inserted.
-    When a syntax error is found at the end of a program, a @link(;) is inserted at the end of the program in an attempt to correct the error.
-    When a syntax error is found in the vicinity of a @link(}) or a @link(line terminator) (but not in the control part of a for statement), a @link(;) is inserted in an attempt to correct the error.
-@end(list)
-
-It is necessary that the expression part of a @link(return statement)
-begin on the same line as return. For example,
-
-@begin(program)
-function seconds(day, hour, minute, second) {
-
-// This function will fail in a surprising way.
-
-    return
-        day    * 86400 +
-        hour   *  3600 +
-        minute *    60 +
-        second;
-}
-@end(program)
-
-The value returned by seconds is always undefined, because a @link(;) is inserted between return and day. In this case, that behavior is clearly undesirable, but there is no way to turn semicolon insertion off.
-
-In the next example, a @link(;) is not inserted after c because there is not a syntax error.
-
-@begin(program)
-a = b + c
-(d + e).print()
-@end(program)
-
-It is understood to mean
-
-@begin(program)
-a = b + c(d + e).print();
-@end(program)
-
-which might be quite different than the intention. It is not wise to rely on semicolon insertion. It can mask errors and it can cause errors.
-
-These should always end in @link(;):
-
-@list {
-@link(break statement)
-@link(continue statement)
-@link(debugger statement)
-@link(do statement)
-@link(expression statement)
-@link(return statement)
-@link(throw statement)
-@link(var statement)
-}
-
-Fortunately, it is a short list and is not difficult to remember.
-The situation is made more complicated because some of the other statements,
-such as @link(if statement) and @link(while statement), are compound statements
-that take a @link(block statement) or other @link(statement), and that other
-statement might also end in @link(;). That confusion is easily avoided by always
-using a block.
-
-When assigning a function literal using @link(= assignment infix operator) in an 
-@link(expression statement) or @link(var statement), the statement should end with a @link(;). So this statement should end with @link(;):
-
-@begin(program)
-var double = function (number) {
-    return number * 2;
-};
-@end(program)
-
-It resembles a @link(function statement) that does not end with @link(;),
-but it is a @link(var statement), and a @link(var statement) always ends with @link(;).
+See @link(automatic semicolon insertion)
 
 @specimen "separator"
 
@@ -279,6 +208,10 @@ Blah.
 @specimen "some"
 
 @article(@t(some) @link(Array prototype function))
+
+Blah.
+
+@specimen "space"
 
 Blah.
 

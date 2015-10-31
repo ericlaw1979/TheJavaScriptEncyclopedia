@@ -17,7 +17,9 @@ The @t(!) operator produces @link(false) if its operand is @link(truthy), and @l
 
 @article(@t(!=) @link(infix operator) @aka(coercing not equal))
 
-The @t(!=) operator determines if two operands are not equal. If the operands have different types it may attempt to coerce the types of the operands before comparing them. It produces the opposite of the == infix operator.
+The @t(!=) operator determines if two operands are not equal. If the operands
+have different types it may attempt to coerce the types of the operands before
+comparing them. It produces the opposite of the @link(== infix operator).
 
 The @t(!=) operator produces the same result as this function:
 
@@ -99,9 +101,14 @@ function remainder(left, right) {
             ? dividend
             : NaN;
     } else {
-        return dividend - (divisor * (Math[quotient >= 0)
-            ? 'floor'
-            : 'ceil'](quotient));
+        return dividend - (
+            divisor *
+            (Math[
+                (quotient >= 0)
+                    ? 'floor'
+                    : 'ceil'
+            ](quotient))
+        );
     }
 }
 @end(program)
@@ -248,7 +255,7 @@ variable.
 
 @article(@t[( )] grouping)
 
-In expressions, parentheses can be used to override the precedence of operators,
+In and @link(expression), parentheses can be used to override the precedence of operators,
 or to break up complicated expressions to make them easier to read.
 
 @program {
@@ -257,7 +264,7 @@ or to break up complicated expressions to make them easier to read.
 (3 + 4) * 5    // 35
 }
 
-Parentheses can also be used to improve the readability of an immediate function.
+Parentheses can also be used to improve the readability of an @link(immediate function).
 
 @article (@t[( )] @link(parameter list))
 
@@ -313,7 +320,7 @@ Blah.
 
 @article(@t(+) @link(infix operator) @aka(add or concatenate))
 
-The + operator can either add or concatenate, depending of the types of its
+The + operator can perform either addition or @link(concatenation) depending of the types of its
 operands. If either operand is a string, then it converts both operands to
 strings and concatenates then, producing a new string with all of the characters
 from both operands. Otherwise, it converts both operands to numbers and then
@@ -400,8 +407,8 @@ The @link(, infix operator) should not be used.
 
 @article(@t(,) @aka(separator))
 
-The comma is used to separate operands in the object literal, the array literal,
-the argument list. The comma is used to separate identifiers in the the
+The comma is used to separate operands in the @link(object literal), the @link(array literal),
+the @link(argument list). The comma is used to separate identifiers in the the
 @link(parameter list) and the @link(var statement).
 
 @specimen (@t(-) @aka(minus sign))
@@ -448,7 +455,8 @@ Blah.
 
 The / slash character is also known as the solidus and as the virgule. It is
 used as the division operator, and it is used to form a @link(comment) or
-@link(regexp literal). Be careful to not confuse it with @link(\).
+@link(regexp literal). The overloading of this character is a source of trouble.
+Also be careful to not confuse it with @link(\).
 
 @article(@t(/) @link(infix operator) @aka(divide))
 
@@ -476,7 +484,7 @@ Blah.
 
 See:
 @list {
-@link(? ternary operator).
+@link(? ternary operator)
 @link(object literal)
 @link(statement label)
 @link(switch statement)
@@ -484,7 +492,7 @@ See:
 
 @specimen (@t(;) @aka(semicolon))
 
-The @link(;) is used to terminate a statement. It is required on these statements:
+The @link(;) is used to terminate a @link(statement). It is required on these statements:
 
 @list {
 @link(break statement)
@@ -498,8 +506,8 @@ The @link(;) is used to terminate a statement. It is required on these statement
 @link(var statement)
 }
 
-In some cases a mechanism called automatic semicolon insertion allows for
-leaving off the terminating semicolon. Unfortunately, semicolon insertion has
+In some cases a mechanism called @link(automatic semicolon insertion) allows for
+leaving off the terminating semicolon in some cases. Unfortunately, semicolon insertion has
 some inherent problems and should not be relied upon.
 
 Semicolon is also used to separate the control clauses in a @link(for statement).
@@ -581,7 +589,8 @@ function coercing_equal(left, right) {
 }
 @end(program)
 
-Avoid this operator. Always use the === infix operator instead.
+Avoid this operator. It can produce false positives.
+Always use the @link(=== infix operator) instead.
 
 Examples:
 
@@ -607,12 +616,12 @@ NaN == NaN               // false
 
 The === operator compares two values, producing @link(true) if they are equal and @link(false) if they are not. Two strings are considered equal if they have the same length and contain exactly the same code points in the same sequence. To references to the same object or array are considered equal. Two similar objects or two similar arrays are not considered equal.
 
-The expression x === x will always result in @link(true) except when the value of x is @link(NaN).
+The expression @t(x === x) will always result in @link(true) except when the value of x is @link(NaN).
 Surprisingly, there exist mathematicians that think this was a good idea.
 It presents an obvious programming hazard.
 For example, suppose you need a function that tests that a function returns the correct value.
 Special handling is required for the case where the expected value is @link(NaN).
-Simply using === to compare the expected value and the result will do the wrong
+Simply using @t(===) to compare the expected value and the result will do the wrong
 thing when the expected value is @link(NaN), so much more complicated
 comparisons are required using the @link(typeof prefix operator) and the @link(isNaN primordial function).
 
@@ -702,7 +711,7 @@ function signum(number) {
 
 @article(@t([ ]) @link(array literal))
 
-See array literal.
+See @link(array literal).
 
 @article(@t([ ]) @link(suffix operator) @aka(subscript))
 
@@ -734,13 +743,13 @@ Blah.
 
 @specimen (@t(_) @aka(underbar))
 
-In a name, the @link(_) character is treated as a letter. The @link(_) is
+In a @link(name), the @link(_) character is treated as a letter. The @link(_) is
 used to improve the readability of names, especially when the name contains
 several words, such as
 
 @program(calculate_the_total)
 
-since a name cannot contain a space or hyphen. Another convention is to use @link(camelCase):
+since a name cannot contain a @link(space) or @link(hyphen). Another convention is to use @link(camelCase):
 
 @program(calculateTheTotal)
 

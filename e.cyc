@@ -244,20 +244,21 @@ An expression is a sequence of tokens that delivers a value. An expression can b
 @link(assignment operator)
 }
 
-A compound expression can be formed by combining one or more expressions with an operator. 
-Expressions can be nested inside of other expressions. 
-The whole expression produces a single value. 
-The order in which the operators are evaluated depends on @link<( ) grouping> and @link(operator precedence).
+A compound expression can be formed by combining one or more expressions with an operator.
+Expressions can be nested inside of other expressions.
+The whole expression produces a single value.
+The order in which the operators are evaluated depends on @link<( ) grouping>
+and @link(operator precedence).
 
 When an expression provides a value to an @link(operator), it is called an @link(operand).
 
-When an expression provides a value to a @link(function invocation), 
+When an expression provides a value to a @link(function invocation),
 it is called an @link(argument).
 
-When an expression occurs on the left side of an 
-@link(assignment infix operator), it is called an @link(lvalue). 
-When an expression occurs on the right side of an 
-@link(assignment infix operator), it is called a value, specifically it is the 
+When an expression occurs on the left side of an
+@link(assignment infix operator), it is called an @link(lvalue).
+When an expression occurs on the right side of an
+@link(assignment infix operator), it is called a value, specifically it is the
 value to be stored in the @link(lvalue).
 
 An expression can produce a value that can control a statement:
@@ -272,15 +273,15 @@ An expression can produce a value that can control a statement:
 
 @article(expression @link(statement))
 
-An @link(expression) can be used as a @link(statement). 
-Generally, the only expressions that make sense as statements are 
+An @link(expression) can be used as a @link(statement).
+Generally, the only expressions that make sense as statements are
 
 @list {
 @link(assignment)
 @link(invocation)
 }
 
-The other forms of expressions are allowed, but most are useless, or even 
+The other forms of expressions are allowed, but most are useless, or even
 dangerous in that errors can be masked.
 
 An expression statement should end with a @link(;).
