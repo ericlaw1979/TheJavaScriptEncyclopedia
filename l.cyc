@@ -205,6 +205,16 @@ String.prototype.lastIndexOf = (function () {
 
 Blah.
 
+@speciment "Law of Turns"
+
+@list {
+    Never block.
+    Never wait.
+    Finish fast.
+}
+
+See @link(event loop).
+
 @specimen "length"
 
 @article(@t(length) @link(Array prototype number))

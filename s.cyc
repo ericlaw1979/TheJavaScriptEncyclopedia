@@ -37,7 +37,7 @@ See @link(object).
 
         @es5<
         @list {
-            @link(name Int8ClampedArray string)
+            @link(name set string)
         }>
 
     @article "@t(set) @link(prototype)"
@@ -205,11 +205,11 @@ Blah.
 
 @list{
 @link(<< infix operator)
-@link(<<= infix assignment operator)
+@link(<<= assignment infix operator)
 @link(>> infix operator)
-@link(>>= infix assignment operator)
+@link(>>= assignment infix operator)
 @link(>>> infix operator)
-@link(>>>= infix assignment operator)
+@link(>>>= assignment infix operator)
 }
 
 @specimen "sign"

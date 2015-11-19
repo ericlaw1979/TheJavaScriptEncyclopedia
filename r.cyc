@@ -384,7 +384,7 @@ See @link(% infix operator).
 
 @specimen "repeat"
 
-@specimen "@t(repeat) @link(string prototype function)"
+@article "@t(repeat) @link(string prototype function)"
 
 @es5(Blah.)
 
