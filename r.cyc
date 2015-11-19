@@ -272,6 +272,36 @@ Blah.
 
 Blah.
 
+@specimen "Reflect"
+
+Also see @link(Proxy).
+
+    @article "@t(Reflect) @link(Primordial function)"
+    
+    @es5<Blah.>
+    
+    @article (@t(Reflect) @link(function))
+    
+    @es5<
+        @list {
+            @link(apply Reflect function)
+            @link(construct Reflect function)
+            @link(deleteProperty Reflect function)
+            @link(enumerate Reflect function)
+            @link(get Reflect function)
+            @link(getOwnPropertyDescriptor Reflect function)
+            @link(getPrototypeOf Reflect function)
+            @link(has Reflect function)
+            @link(has Reflect function)
+            @link(has Reflect function)
+            @link(isExtensible Reflect function)
+            @link(ownKeys Reflect function)
+            @link(preventExtensions Reflect function)
+            @link(set Reflect function)
+            @link(setPrototypeOf Reflect function)
+        }
+    >
+    
 @specimen "regexp"
 
 Blah.
