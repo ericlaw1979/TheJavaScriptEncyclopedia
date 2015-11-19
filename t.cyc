@@ -165,7 +165,10 @@ Blah.
 @article(@t(toString) @link(Object prototype function))
 
 Blah. 
-"Arguments", "Array", "Boolean", "Date", "Error", "Function", "JSON", "Math", "Number", "Object", "RegExp", and "String"
+
+@article(@t(toString) @link(String prototype function))
+
+Blah. 
 
 @specimen "toTimeString"
 
@@ -258,6 +261,10 @@ An implementation or environment may add additional types.
 @article(@t(TypeError) @link(primordial function))
 
 Blah.
+
+@specimen "typed array"
+
+@es5{Blah.}
 
 @specimen "typeof @reserved@"
 

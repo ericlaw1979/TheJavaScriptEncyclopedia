@@ -54,9 +54,10 @@ content. The environments are
 @t(@@aka)
 }
 
-A book many contain one or more chapters. A chapter contains one or more 
-specimens, which can be a reserved word, name, concept, or special character. 
-A specimen may contain one or more articles. An article may contain sections.
+A book may contain one or more chapters. A chapter contains one or more 
+specimens, which can each be a reserved word, name, concept, or special 
+character.  A specimen may contain one or more articles. An article may contain 
+sections.
 
 Paragraphs are indicated with a blank line.
 

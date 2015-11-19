@@ -459,6 +459,12 @@ It is possible to add additional methods to Object.prototype, subject to these r
 
 See @link(number literal), @link(parseInt primordial function), and @link(toString Number prototype function).
 
+@specimen(of)
+
+@article(@t(of) @link(array function))
+
+Blah.
+
 @specimen "operand"
 
 An operand is an expression that provides a value to an operator. Also see argument.

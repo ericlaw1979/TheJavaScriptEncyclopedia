@@ -69,6 +69,12 @@ Blah.
 
 Blah.
 
+@specimen "endsWith"
+
+@article(@t(endsWith) @link(String prototype function))
+
+@es5(Blah.)
+
 @specimen "entity"
 
 An entity in HTML is a character sequence that represents a single character.
@@ -78,6 +84,12 @@ and between them there may be a cryptic word or a number.
 JavaScript tolerates HTML entities in strings, but has no knowledge of them.
 
 @program {'&amp;'.length    // 5}
+
+@specimen(entries)
+
+@article(@t(entries) @link(array prototype function))
+
+Blah.
 
 @specimen "enum @reserved@"
 

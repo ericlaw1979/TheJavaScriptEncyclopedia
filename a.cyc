@@ -81,9 +81,17 @@ See @link(+ infix operator).
 
 @article(@t(alert) @link(primordial function))
 
-The alert function is not formally a part of the language. It is a function provided by the browser and other platforms. The alert function can take zero or more arguments. Each argument is converted to a string. All of those strings are concatenated together and shown to the user. It suspends execution of the program. Once the message is dismissed by the user, execution can resume.
+The @t(alert) function is not formally a part of the language. It is a function
+provided by the @link(web browser) and other platforms. The alert function can 
+take zero or more arguments. Each argument is converted to a string. All of 
+those strings are concatenated together and shown to the user. It suspends 
+execution of the program. Once the message is dismissed by the user, execution 
+can resume.
 
-The alert function is often used in debugging to display the partial results of a computation. It generally should not be used in applications because it suspends the program thread. This locks up the browser, which could cause problems with communications, timers, and other activities.
+The @t(alert) function is often used in debugging to display the partial 
+results of a computation. It generally should not be used in applications 
+because it suspends the program thread. This locks up the browser, which could 
+cause problems with communications, timers, and other activities.
 
 @specimen "and"
 
@@ -132,11 +140,19 @@ function sum() {
 }
 @end(program)
 
-The arguments array is not a true array. Its length property is not as magical as a true array's length property. The isArray Array function produces false when its operand is an arguments array. Also, there is a weird linkage between the arguments array and the parameters of the function. Changing one can change the other. The linkage can be broken by freezing the arguments array with Object.freeze(arguments).
+The arguments array is not a true array. Its @link(length) property is not as 
+magical as a true array's length property. The @link(isArray Array function) 
+produces @link(false) when its operand is an arguments array. Also, there can be 
+a weird linkage between the arguments array and the parameters of the function. 
+Changing one can change the other. The linkage can be broken by freezing the 
+arguments array with @t<Object.@link(freeze)(arguments)>.
 
-Every function has its own arguments array, so it is not possible for one function to access the arguments array of another function unless it is explicitly provided access somehow.
+Every function has its own arguments array, so it is not possible for one 
+function to access the arguments array of another function unless it is 
+explicitly provided access somehow.
 
-It inherits from Object.prototype, not Array.prototype. If you want to use an array method such as slice on arguments, then instead of writing
+It inherits from Object.prototype, not Array.prototype. If you want to use an 
+array method such as @link(slice) on arguments, then instead of writing
 
 @begin(program)
 arguments.slice(2)    // get an array containing all but the first two arguments
@@ -167,7 +183,8 @@ The two arithmetic prefix operators are
 @link(- prefix operator)
 }
 
-The other arithmetic operations are implemented as functions. See @link(Number prototype function) and @link(Math function).
+The other arithmetic operations are implemented as functions. 
+See @link(Number prototype function) and @link(Math function).
 
 @specimen "arity"
 
@@ -209,13 +226,20 @@ function eratosthenes(n) {
 
 @article(@t(Array) @link(primordial function))
 
-The Array primordial function is the constructor of arrays. The [] array literal form is perfered. Blah.
+The @t(Array) primordial function is the constructor of arrays. 
+The @link([ ] array literal) form is perfered. Blah.
 
-The Array function contains these methods in Array.prototype:
+The @t(Array) function contains these methods in @t(Array.prototype):
 
-@article(@t(array) @link(function))
+@article(@t(Array) @link(function))
 
-The Array function contains an @link(isArray Array function) that determines if a value is an array.
+The Array function contains 
+
+@list {
+@link(from Array function)
+@link(isArray Array function)
+@link(of Array function)
+}
 
 @article(@t(array) @link(literal))
 
@@ -262,10 +286,7 @@ var roman = (function () {
             }
             n = n.slice(0, -1);
         }
-        for (i = 0; i < n; i += 1) {
-            result = 'M' + result;
-        }
-        return result;
+        return 'M'.repeat(+n) + result;
     };
 }());
 @end(program)
@@ -276,9 +297,15 @@ var roman = (function () {
 
 @list {
 @link(concat array prototype function)
+@link(copyWithin array prototype function)
+@link(entries array prototype function)
 @link(every array prototype function)
+@link(fill array prototype function)
 @link(filter array prototype function)
+@link(find array prototype function)
+@link(findIndex array prototype function)
 @link(forEach array prototype function)
+@link(includes array prototype function)
 @link(indexOf array prototype function)
 @link(join array prototype function)
 @link(lastIndexOf array prototype function)
@@ -295,12 +322,50 @@ var roman = (function () {
 @link(toLocaleString array prototype function)
 @link(toString array prototype function)
 @link(unshift array prototype function)
+@link(values array prototype function)
 }
 
 @article(@t(Array) @link(prototype number))
 
 @list {
 @link(length array prototype number)
+}
+
+@specimen "ArrayBuffer"
+
+@es5(Blah.)
+
+@article "@t(ArrayBuffer) @link(function)"
+
+@list {
+@link(isView arraybuffer function)
+}
+
+@article "@t(ArrayBuffer) @link(primordial function)"
+
+Blah.
+
+@article "@t(ArrayBuffer) @link(prototype function)"
+
+@list {
+@link(slice arraybuffer prototype function)
+}
+
+@article "@t(ArrayBuffer) @link(prototype)"
+
+Blah.
+
+@article "@link(ArrayBuffer prototype) @link(function)"
+
+Blah.
+
+@article "@link(ArrayBuffer prototype) @link(number)"
+
+Blah. 
+
+@list {
+@link(byteLength arraybuffer prototype number)
+@link(length arraybuffer prototype number)
 }
 
 @specimen "ASCII"

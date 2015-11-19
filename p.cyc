@@ -563,7 +563,9 @@ An implementation is allowed to add additional primordial functions.
 
 @list {
 @link(Array primordial function)
+@link(ArrayBuffer primordial function)
 @link(Boolean primordial function)
+@link(DataView primordial function)
 @link(Date primordial function)
 @link(decodeURI primordial function)
 @link(decodeURIComponent primordial function)
@@ -571,20 +573,38 @@ An implementation is allowed to add additional primordial functions.
 @link(encodeURIComponent primordial function)
 @link(Error primordial function)
 @link(eval primordial function)
+@link(EvalError primordial function)
+@link(Float32Array primordial function)
+@link(Float64Array primordial function)
 @link(Function primordial function)
+@link(Generator primordial function)
+@link(Int16Array primordial function)
+@link(Int32Array primordial function)
+@link(Int8Array primordial function)
 @link(isFinite primordial function)
 @link(isNaN primordial function)
+@link(Map primordial function)
 @link(Number primordial function)
 @link(Object primordial function)
 @link(parseFloat primordial function)
 @link(parseInt primordial function)
+@link(Promise primordial function)
+@link(Proxy primordial function)
 @link(RangeError primordial function)
 @link(ReferenceError primordial function)
+@link(Reflect primordial function)
 @link(RegExp primordial function)
+@link(Set primordial function)
 @link(String primordial function)
 @link(SyntaxError primordial function)
 @link(TypeError primordial function)
 @link(URIError primordial function)
+@link(UInt16Array primordial function)
+@link(UInt32Array primordial function)
+@link(UInt8Array primordial function)
+@link(UInt8ClampedArray primordial function)
+@link(WeapMap primordial function)
+@link(WeapSet primordial function)
 }
 
 @article "primordial object"
@@ -592,6 +612,7 @@ An implementation is allowed to add additional primordial functions.
 The primordial context contains these objects:
 
 @list {
+@link(Intl primordial object)
 @link(JSON primordial object)
 @link(Math primordial object)
 }
@@ -619,6 +640,30 @@ A promise is an object that represents a value that may be unknown at the presen
 
 Also see @link(callback).
 
+    @article "@t(Promise) @link(Primordial function)"
+    
+    @es5<Blah.>
+    
+    @article (@t(Promise) @link(function))
+    
+    @es5<
+        @list {
+            @link(all promise function)
+            @link(race promise function)
+            @link(reject promise function)
+            @link(resolve promise function)
+        }
+    >
+    
+    @article (@t(Promise) @link(prototype) @link(function))
+    
+    @es5<
+        @list {
+            @link(catch promise prototype function)
+            @link(then promise prototype function)
+        }
+    >
+    
 @specimen "property"
 
 A property is a component of an @link(object) that is associated with a
@@ -660,7 +705,11 @@ function new_constructor(prototype, initializer) {
 
 @specimen "prototype"
 
-Every object can inherit properties from a prototype object. When fetching a named property of an object using the . suffix operator select or the [] suffix operator subscript, if the object does not own a property with that name, then its prototype is examined. If the prototype object owns a property with that name, then the value of that property is fetched.
+Every object can inherit properties from a prototype object. When fetching a
+named property of an object using the @link(. suffix operator) or the
+@link([ ] suffix operator), if the object does not own a property with that name,
+then its prototype is examined. If the prototype object owns a property with
+that name, then the value of that property is fetched.
 
 Every function contains a @t(prototype) @link(property) that property is usually an object. That object
 
@@ -679,6 +728,44 @@ Blah.
 @article(@t(prototype) @link(Function prototype object))
 
 Blah.
+
+@specimen "proxy"
+
+    @article "@t(Proxy) @link(primoridal object)"
+
+    @es5 <Blah.
+        
+    >
+    
+    @article (@t(Proxy) @link(function))
+    
+    @es5 <Blah.
+        @list {
+            @link(revocable proxy function)
+        }
+    >
+    
+    @article (@t(Proxy) @link (prototype) @link(function))
+    
+    @es5 <Blah.
+        @list {
+            @link(apply proxy prototype function)
+            @link(construct proxy prototype function)
+            @link(defineproperty proxy prototype function)
+            @link(deleteproperty proxy prototype function)
+            @link(enumerate proxy prototype function)
+            @link(get proxy prototype function)
+            @link(getownproperty proxy prototype function)
+            @link(getPrototypeOf proxy prototype function)
+            @link(has proxy prototype function)
+            @link(isExtensible proxy prototype function)
+            @link(ownkeys proxy prototype function)
+            @link(preventextensions proxy prototype function)
+            @link(set proxy prototype function)
+            @link(setPrototypeOf proxy prototype function)
+        }
+    >
+    
 
 @specimen "ps @aka[paragraph separator]"
 

@@ -1,5 +1,11 @@
 @chapter "B"
 
+@specimen "banana"
+
+The problem with object-oriented languages is they’ve got all this implicit 
+environment that they carry around with them. You wanted a banana but what you 
+got was a gorilla holding the banana and the entire jungle. [Joe Armstrong]
+
 @specimen "binary operator"
 
 Blah.
@@ -10,6 +16,15 @@ Blah.
 
 Blah.
 
+@specimen "bit"
+
+Blah.
+
+@specimen "bitbucket"
+
+When a @link(bit) falls out because of a @link(shift operator), it lands in the 
+bitbucket.
+
 @specimen "bitwise"
 
 @article(bitwise operator)
@@ -18,11 +33,17 @@ A bitwise operator treats a number as a 32 bit 2's complement signed integer. Th
 
 @list{
 @link(& infix operator)
-@link(| infix operator)
-@link(^ infix operator)
+@link(&= assignment infix operator)
 @link(<< infix operator)
+@link(<<= assignment infix operator)
 @link(>> infix operator)
+@link(>>= assignment infix operator)
 @link(>>> infix operator)
+@link(>>>= assignment infix operator)
+@link(^ infix operator)
+@link(^= assignment infix operator)
+@link(| infix operator)
+@link(|= assignment infix operator)
 @link(~ prefix operator)
 }
 
@@ -222,5 +243,33 @@ See @link([) and @link(]).
 @specimen "break @reserved@"
 
 @article(@t(break) @link(statement))
+
+Blah.
+
+@specimen "buffer"
+
+Blah.
+
+@article "@t(buffer) @link(dataview prototype arraybuffer)"
+
+@es5(Blah.)
+
+@specimen "byte @aka(octet)"
+
+Eight bits. Blah.
+
+@specimen "byteLength"
+
+@article(@t(byteLength) @link(ArrayBuffer prototype number))
+
+Blah.
+
+@article "@t(byteLength) @link(dataview prototype number)"
+
+@es5(Blah.)
+
+@specimen "byteOffset"
+
+@article "@t(byteOffset) @link(dataview prototype number)"
 
 Blah.

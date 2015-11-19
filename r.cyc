@@ -67,6 +67,12 @@ function shuffle(deck) {
 
 Blah.
 
+@specimen "raw"
+
+@article(@t(raw) @link(String function))
+
+Blah.
+
 @specimen "recursion"
 
 Blah.
@@ -346,6 +352,12 @@ looks like it might be true if a is less than b and if b is also less than c, bu
 
 See @link(% infix operator).
 
+@specimen "repeat"
+
+@specimen "@t(repeat) @link(string prototype function)"
+
+@es5(Blah.)
+
 @specimen "replace"
 
 @article(@t(replace) @link(String prototype function))
@@ -429,6 +441,10 @@ var undefined;    // ok but also very wrong
 @article(@t(return) @link(statement))
 
 Blah.
+
+@specimen "retursion"
+
+Blah. A function returns itself.
 
 @specimen "reverse"
 

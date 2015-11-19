@@ -255,7 +255,7 @@ variable.
 
 @article(@t[( )] grouping)
 
-In and @link(expression), parentheses can be used to override the precedence of operators,
+In an @link(expression), parentheses can be used to override the precedence of operators,
 or to break up complicated expressions to make them easier to read.
 
 @program {
@@ -443,17 +443,19 @@ Blah.
 
 @article(@t(...) @link(prefix operator) @aka(ellipsis))
 
+Blah. Dot dot dot.
+
 @section "rest"
 
-@es5(Blah.)
+@es5(Blah. @link(parameter list))
 
 @section "spread"
 
-@es5(Blah.)
+@es5(Blah. @link(argument list) @link(array literal))
 
 @specimen (@t(/) @aka(slash))
 
-The / slash character is also known as the solidus and as the virgule. It is
+The @t(/) slash character is also known as the solidus and as the virgule. It is
 used as the division operator, and it is used to form a @link(comment) or
 @link(regexp literal). The overloading of this character is a source of trouble.
 Also be careful to not confuse it with @link(\).

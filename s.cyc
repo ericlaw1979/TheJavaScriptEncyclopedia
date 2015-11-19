@@ -32,11 +32,48 @@ Blah.
 
 See @link(object).
 
-@specimen "setDate"
+
+    @article "@t(set) @link(primordial function)"
+
+        @es5<
+        @list {
+            @link(name Int8ClampedArray string)
+        }>
+
+    @article "@t(set) @link(prototype)"
+
+    @article "@t(set) @link(prototype function)"
+    
+        @es5<
+            @list {
+                @link(add set prototoype function)
+                @link(clear set prototoype function)
+                @link(delete set prototoype function)
+                @link(entries set prototoype function)
+                @link(forEach set prototoype function)
+                @link(has set prototoype function)
+                @link(keys set prototoype function)
+                @link(values set prototoype function)
+            }
+        >
+
+    @specimen "setDate"
 
 @article(@t(setDate) @link(Date prototype function))
 
 Blah.
+
+@specimen "setFloat32"
+
+@article(@t(setFloat32) @link(dataview prototype function))
+
+@es5<Blah.>
+
+@specimen "setFloat64"
+
+@article(@t(setFloat64) @link(dataview prototype function))
+
+@es5<Blah.>
 
 @specimen "setFullYear"
 
@@ -49,6 +86,24 @@ Blah.
 @article(@t(setHours) @link(Date prototype function))
 
 Blah.
+
+@specimen "setInt16"
+
+@article(@t(setInt16) @link(dataview prototype function))
+
+@es5<Blah.>
+
+@specimen "setInt32"
+
+@article(@t(setInt32) @link(dataview prototype function))
+
+@es5<Blah.>
+
+@specimen "setInt8"
+
+@article(@t(setInt8) @link(dataview prototype function))
+
+@es5<Blah.>
 
 @specimen "setMilliseconds"
 
@@ -79,6 +134,24 @@ Blah.
 @article(@t(setTime) @link(Date prototype function))
 
 Blah.
+
+@specimen "setUInt16"
+
+@article(@t(setUInt16) @link(dataview prototype function))
+
+@es5<Blah.>
+
+@specimen "setUInt32"
+
+@article(@t(setUInt32) @link(dataview prototype function))
+
+@es5<Blah.>
+
+@specimen "setUInt8"
+
+@article(@t(setUInt8) @link(dataview prototype function))
+
+@es5<Blah.>
 
 @specimen "setUTCDate"
 
@@ -127,6 +200,17 @@ Blah.
 @article(@t(shift) @link(Array prototype function))
 
 Blah.
+
+@article(shift @link(operator))
+
+@list{
+@link(<< infix operator)
+@link(<<= infix assignment operator)
+@link(>> infix operator)
+@link(>>= infix assignment operator)
+@link(>>> infix operator)
+@link(>>>= infix assignment operator)
+}
 
 @specimen "sign"
 
@@ -196,6 +280,10 @@ Blah.
 @specimen "slice"
 
 @article(@t(slice) @link(Array prototype function))
+
+Blah.
+
+@article(@t(slice) @link(arraybuffer prototype function))
 
 Blah.
 
@@ -386,6 +474,12 @@ There is no separate character type. A single character is represented as a stri
 
 @article(@t(String) @link(function))
 
+@list{
+    @link(fromCharCode String function)
+    @link(fromCodePoint String function)
+    @link(raw String function)
+}
+
 @article(string @link(literal))
 
 A @link(string literal) is used to include a string value in a program. There are two forms of string literal: single quote string literal and double quote string literal. They differ only in the character used to wrap the characters.
@@ -458,17 +552,27 @@ Second, when invoked as a constructor with the new prefix operator, takes an ope
 
 Third, it has a prototype property that holds the methods that are inherited by all strings.
 
+@article(@t(String) @link(prototype))
+
+Blah.
+
 @article(@t(String) @link(prototype function))
 
 @list{
 @link(charAt String prototype function)
 @link(charCodeAt String prototype function)
+@link(codePointAt String prototype function)
 @link(compareLocale String prototype function)
 @link(concat String prototype function)
+@link(concat String prototype function)
+@link(endsWith String prototype function)
+@link(includes String prototype function)
 @link(indexOf String prototype function)
 @link(lastIndexOf String prototype function)
 @link(localeCompare String prototype function)
 @link(match String prototype function)
+@link(normalize String prototype function)
+@link(repeat String prototype function)
 @link(replace String prototype function)
 @link(search String prototype function)
 @link(slice String prototype function)

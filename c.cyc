@@ -174,6 +174,20 @@ Blah.
 
 Blah.
 
+@specimen(codePointAt)
+
+Blah.
+
+@article "@t(codePointAt) @link(string prototype function)"
+
+@es5(Blah.)
+
+@specimen(Collator)
+
+@article(@t(Collator) @link(Intl function))
+
+Blah.
+
 @specimen(comment)
 
 A comment is text in a compilation unit that is ignored by the compiler. A comment can be used to document a program, giving information about its construction and operation. There are two forms of comment, the // comment and the /* block comment.
@@ -275,6 +289,12 @@ A constructor is a function that is used to create new objects.
 A constructor should always be invoked with the new prefix operator. If a constructor is invoked without the new prefix operator, then the this parameter will not be bound to a new object. A constructor has a prototype Function prototype object that is used as the prototype of the new object. See invocation.
 
 @specimen(copy)
+
+Blah.
+
+@specimen(copyWithin)
+
+@article(@t(copyWithin) @link(array prototype function))
 
 Blah.
 

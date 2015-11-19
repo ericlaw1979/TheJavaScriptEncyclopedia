@@ -211,6 +211,10 @@ Blah.
 
 Blah.
 
+@article(@t(length) @link(ArrayBuffer prototype number))
+
+Blah.
+
 @article(@t(length) @link(String prototype number))
 
 Blah.

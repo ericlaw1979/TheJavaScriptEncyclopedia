@@ -14,6 +14,18 @@ See @link(object) and @link(object literal).
 
 Blah.
 
+@specimen "getFloat32"
+
+@article(@t(getFloat32) @link(dataview prototype function))
+
+@es5<Blah.>
+
+@specimen "getFloat64"
+
+@article(@t(getFloat64) @link(dataview prototype function))
+
+@es5<Blah.>
+
 @specimen "getFullYear"
 
 @article(@t(getFullYear) @link(date prototype function))
@@ -25,6 +37,24 @@ Blah.
 @article(@t(getHours) @link(date prototype function))
 
 Blah.
+
+@specimen "getInt16"
+
+@article(@t(getInt16) @link(dataview prototype function))
+
+@es5<Blah.>
+
+@specimen "getInt32"
+
+@article(@t(getInt32) @link(dataview prototype function))
+
+@es5<Blah.>
+
+@specimen "getInt8"
+
+@article(@t(getInt8) @link(dataview prototype function))
+
+@es5<Blah.>
 
 @specimen "getMilliseconds"
 
@@ -73,6 +103,24 @@ Blah.
 @article(@t(getTime) @link(date prototype function))
 
 Blah.
+
+@specimen "getUInt16"
+
+@article(@t(getUInt16) @link(dataview prototype function))
+
+@es5<Blah.>
+
+@specimen "getUInt32"
+
+@article(@t(getUInt32) @link(dataview prototype function))
+
+@es5<Blah.>
+
+@specimen "getUInt8"
+
+@article(@t(getUInt8) @link(dataview prototype function))
+
+@es5<Blah.>
 
 @specimen "getUTCDate"
 

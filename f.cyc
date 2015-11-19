@@ -44,6 +44,12 @@ in the first operand of the @link(? ternary operator), the result is the value o
 in a @link(bitwise operator), a @link(falsy) operand is treated the same as @link(zero)
 }
 
+@specimen(fill)
+
+@article(@t(fill) @link(array prototype function))
+
+Blah.
+
 @specimen(filter)
 
 @article(@t(filter) @link(array prototype function))
@@ -53,6 +59,210 @@ Blah.
 @specimen(finally @reserved@)
 
 See @link(try statement).
+
+@specimen(find)
+
+@article(@t(find) @link(array prototype function))
+
+Blah.
+
+@specimen(findIndex)
+
+@article(@t(findIndex) @link(array prototype function))
+
+Blah.
+
+@specimen "Float32Array"
+
+    @article "@t(Float32Array) @link(primordial function)"
+
+        @es5<
+        @list {
+            @t<new Float32Array(>length@t<);>
+            @t<new Float32Array(>typedArray@t<);>
+            @t<new Float32Array(>object@t<);>
+            @t<new Float32Array(>buffer@t<,> byteOffset@t<,> length@t<);>
+        }>
+
+    @article "@t(Float32Array) @link(function)"
+
+        @es5<
+        @list {
+            @link(from float32array function)
+            @link(of float32array function)
+        }>
+
+    @article "@t(Float32Array) @link(number)"
+
+        @es5<
+        @list {
+            @link(BYTES_PER_ELEMENT float32array number)
+            @link(length float32array number)
+        }>
+
+    @article "@t(Float32Array) @link(prototype)"
+
+        @es5<
+        @list {
+            @link(name float32array prototype arraybuffer)
+            @link(name float32array prototype function)
+            @link(name float32array prototype number)
+        }>
+
+    @article "@link(Float32Array prototype) @link(arraybuffer)"
+
+        @es5<
+        @list {
+            @link(buffer float32array prototype arraybuffer)
+        }>
+
+    @article "@link(Float32Array prototype) @link(function)"
+
+        @es5<
+        @list {
+            @link(copyWithin float32array prototype function)
+            @link(entries float32array prototype function)
+            @link(every float32array prototype function)
+            @link(fill float32array prototype function)
+            @link(filter float32array prototype function)
+            @link(find float32array prototype function)
+            @link(findIndex float32array prototype function)
+            @link(forEach float32array prototype function)
+            @link(indexOf float32array prototype function)
+            @link(join float32array prototype function)
+            @link(lastIndexOf float32array prototype function)
+            @link(map float32array prototype function)
+            @link(reduce float32array prototype function)
+            @link(reduceRight float32array prototype function)
+            @link(reverse float32array prototype function)
+            @link(set float32array prototype function)
+            @link(slice float32array prototype function)
+            @link(some float32array prototype function)
+            @link(subarray float32array prototype function)
+            @link(values float32array prototype function)
+            @link(toLocaleString float32array prototype function)
+            @link(toString float32array prototype function)
+        }>
+
+    @article "@link(Float32Array prototype) @link(number)"
+
+        @es5<
+        @list {
+            @link(byteLength float32array prototype number)
+            @link(byteOffset float32array prototype number)
+            @link(length float32array prototype number)
+        }>
+
+    @article "@link(Float32Array) @link(number)"
+
+        @es5<
+        @list {
+            @link(BYTES_PER_ELEMENT float32array number)
+            @link(length float32array number)
+        }>
+
+    @article "@t(Float32Array) @link(string)"
+
+        @es5<
+        @list {
+            @link(name float32array string)
+        }>
+
+@specimen "Float64Array"
+
+    @article "@t(Float64Array) @link(primordial function)"
+
+        @es5<
+        @list {
+            @t<new Float64Array(>length@t<);>
+            @t<new Float64Array(>typedArray@t<);>
+            @t<new Float64Array(>object@t<);>
+            @t<new Float64Array(>buffer@t<,> byteOffset@t<,> length@t<);>
+        }>
+
+    @article "@t(Float64Array) @link(function)"
+
+        @es5<
+        @list {
+            @link(from Float64Array function)
+            @link(of Float64Array function)
+        }>
+
+    @article "@t(Float64Array) @link(number)"
+
+        @es5<
+        @list {
+            @link(BYTES_PER_ELEMENT Float64Array number)
+            @link(length Float64Array number)
+        }>
+
+    @article "@t(Float64Array) @link(prototype)"
+
+        @es5<
+        @list {
+            @link(name Float64Array prototype arraybuffer)
+            @link(name Float64Array prototype function)
+            @link(name Float64Array prototype number)
+        }>
+
+    @article "@link(Float64Array prototype) @link(arraybuffer)"
+
+        @es5<
+        @list {
+            @link(buffer Float64Array prototype arraybuffer)
+        }>
+
+    @article "@link(Float64Array prototype) @link(function)"
+
+        @es5<
+        @list {
+            @link(copyWithin Float64Array prototype function)
+            @link(entries Float64Array prototype function)
+            @link(every Float64Array prototype function)
+            @link(fill Float64Array prototype function)
+            @link(filter Float64Array prototype function)
+            @link(find Float64Array prototype function)
+            @link(findIndex Float64Array prototype function)
+            @link(forEach Float64Array prototype function)
+            @link(indexOf Float64Array prototype function)
+            @link(join Float64Array prototype function)
+            @link(lastIndexOf Float64Array prototype function)
+            @link(map Float64Array prototype function)
+            @link(reduce Float64Array prototype function)
+            @link(reduceRight Float64Array prototype function)
+            @link(reverse Float64Array prototype function)
+            @link(set Float64Array prototype function)
+            @link(slice Float64Array prototype function)
+            @link(some Float64Array prototype function)
+            @link(subarray Float64Array prototype function)
+            @link(values Float64Array prototype function)
+            @link(toLocaleString Float64Array prototype function)
+            @link(toString Float64Array prototype function)
+        }>
+
+    @article "@link(Float64Array prototype) @link(number)"
+
+        @es5<
+        @list {
+            @link(byteLength Float64Array prototype number)
+            @link(byteOffset Float64Array prototype number)
+            @link(length Float64Array prototype number)
+        }>
+
+    @article "@t(Float64Array) @link(number)"
+
+        @es5<
+        @list {
+            @link(BYTES_PER_ELEMENT Float64Array number)
+            @link(length Float64Array number)
+        }>
+
+    @article "@t(Float64Array) @link(string)"
+
+        @es5<
+        @list {
+            @link(name Float64Array string)
+        }>
 
 @specimen(floor)
 
@@ -77,6 +287,24 @@ Blah.
 Blah.
 
 Example:
+
+@specimen(from)
+
+@article(@t(from) @link(array function))
+
+Blah.
+
+@specimen(fromCharCode)
+
+@article"@t(fromCharCode) @link(String function)"
+
+@es5(Blah.)
+
+@specimen(fromCodePoint)
+
+@article"@t(fromCodePoint) @link(String function)"
+
+@es5(Blah.)
 
 @specimen(free variable)
 

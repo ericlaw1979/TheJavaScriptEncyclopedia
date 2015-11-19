@@ -197,6 +197,12 @@ function new(func, arguments) {
 }
 >
 
+@specimen "normalize"
+
+@article(@t(normalize) @link(String prototype function))
+
+@es5(Blah.)
+
 @specimen "now"
 
 @article(@t(now) @link(Date function))
@@ -301,3 +307,10 @@ The @link(Number primordial function) is also the container of a set of constant
 }
 
 Only Number.MAX_VALUE and Number.MIN_VALUE are useful. The other three are redundant. 
+
+@specimen(NumberFormat)
+
+@article(@t(NumberFormat) @link(Intl function))
+
+Blah.
+

@@ -1,5 +1,11 @@
 @chapter "V"
 
+@specimen "values"
+
+@article(@t(values) @link(array prototype function))
+
+Blah.
+
 @specimen "valueOf"
 
 @article (@t 'valueOf' @link(Boolean prototype function))
