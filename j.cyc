@@ -2,39 +2,47 @@
 
 @specimen "Java"
 
-Blah.
+    Blah.
 
 @specimen "JavaScript"
 
-Blah.
+    Blah.
 
 @specimen "join"
 
-@article (@t "join" @link(array prototype function))
+    @article (@t "join" @link(array prototype function))
 
-Blah.
+    Blah.
+
+@specimen "JSDev"
+
+    Blah.
 
 @specimen "JScript"
 
-Blah.
+    Blah.
 
 @specimen "JSLint"
 
-Blah. @url<http://www.JSLint.com/>
+    Blah. @url<http://www.JSLint.com/>
+
+@specimen "JSMin"
+
+    Blah.
 
 @specimen "JSON"
 
-The world's best loved data interchange format.
+    The world's best loved data interchange format.
 
-Blah. @url<http://www.JSON.org/>
+    Blah. @url<http://www.JSON.org/>
 
-@article (@t "JSON" @link (function)
-)
-@article (@t "JSON" @link (primordial object))
+    @article (@t "JSON" @link (function)
+    )
+    @article (@t "JSON" @link (primordial object))
 
-@list{
-@link(parse JSON function)
-@link(stringify JSON function)
-}
+    @list{
+    @link(parse JSON function)
+    @link(stringify JSON function)
+    }
 
-Blah.
+    Blah.

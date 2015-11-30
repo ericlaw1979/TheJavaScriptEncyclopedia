@@ -2,16 +2,16 @@
 
 @specimen "quality"
 
-Blah.
+    Blah.
 
 @specimen "queue"
 
-Blah.
+    Blah.
 
 @specimen "quotation marks"
 
-See @link <'> and @link <"> and @link <string literal>.
+    See @link <'> and @link <"> and @link <string literal>.
 
 @specimen "quotient"
 
-The result of a division. See @link</ infix operator> and @link</= assignment infix operator>.
+    The result of a division. See @link</ infix operator> and @link</= assignment infix operator>.

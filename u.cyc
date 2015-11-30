@@ -1,7 +1,7 @@
 @chapter "U"
 
 @specimen "\u"
-See @link <Unicode escape sequence>.
+    See @link <Unicode escape sequence>.
 
 @specimen "Uint16Array"
 
@@ -293,33 +293,36 @@ See @link <Unicode escape sequence>.
 
 @specimen "unary @link(operator)"
 
-An operator that takes one operand. See @link(prefix operator) and @link(suffix operator).
+    An operator that takes one operand. See @link(prefix operator) and @link(suffix operator).
 
 @specimen "undefined"
-@@Blah.
+    @@Blah.
 
-@article "@t(undefined) @link <literal>"
-Blah.
+    @article "@t(undefined) @link <literal>"
+    Blah.
 
 @specimen "Unicode"
-Blah.
+    Blah.
 
-@article "Unicode escape sequence"
-Blah.
+    @article "Unicode escape sequence"
+    Blah.
+
+@specimen "unreachable code"
+    Blah.
 
 @specimen "unshift"
-@article "@t(unshift) @link <Array prototype function>"
-Blah.
+    @article "@t(unshift) @link <Array prototype function>"
+    Blah.
 
 @specimen "upper case"
-See @link <case>.
+    See @link <case>.
 
 @specimen "URIError"
-@article "@t(URIError) @link <primordial function>"
-Blah.
+    @article "@t(URIError) @link <primordial function>"
+    Blah.
 
 @specimen "use @reserved@"
 
-@article "use strict"
+    @article "use strict"
 
-See @link<strict>.
+    See @link<strict>.

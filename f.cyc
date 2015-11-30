@@ -2,75 +2,75 @@
 
 @specimen(false @reserved@)
 
-The @link(false) value is one of the two @link(immutable) @link(boolean) values.
-The @link(false) value is one of the @link(falsy) values.
+    The @link(false) value is one of the two @link(immutable) @link(boolean) values.
+    The @link(false) value is one of the @link(falsy) values.
 
-The @link(false) value can be produced by a @link(relational operator).
+    The @link(false) value can be produced by a @link(relational operator).
 
-@article(@t(false) @link(literal))
+    @article(@t(false) @link(literal))
 
-The @t(false) @link(literal) is a convenient way to access the @link(false) value.
+    The @t(false) @link(literal) is a convenient way to access the @link(false) value.
 
-@program{var found = false;}
+    @program{var found = false;}
 
-@article "false positive"
+    @article "false positive"
 
-Blah.
+    Blah.
 
 @specimen(falsy)
 
-Every value is either @link(truthy) or @link(falsy).
-These are the @link(falsy) values:
+    Every value is either @link(truthy) or @link(falsy).
+    These are the @link(falsy) values:
 
-@list{
-@link(empty string)
-@link(false)
-@link(NaN)
-@link(null)
-@link(undefined)
-@link(zero)
-}
+    @list{
+    @link(empty string)
+    @link(false)
+    @link(NaN)
+    @link(null)
+    @link(undefined)
+    @link(zero)
+    }
 
-All other values, including empty objects and empty arrays, are @link(truthy).
+    All other values, including empty objects and empty arrays, are @link(truthy).
 
-A @link(falsy) value can have consequences:
+    A @link(falsy) value can have consequences:
 
-@list {
-in the condition part of an @link(if statement), the @link(else) branch is taken
-in the condition part of a @link(loop statement), @link(break) out of the loop
-in the first operand of the @link(&& infix operator), the result is the @link(falsy) value of the first operand
-in the first operand of the @link(|| infix operator), the result is the value of the second operand
-in the first operand of the @link(? ternary operator), the result is the value of the third operand
-in a @link(bitwise operator), a @link(falsy) operand is treated the same as @link(zero)
-}
+    @list {
+    in the condition part of an @link(if statement), the @link(else) branch is taken
+    in the condition part of a @link(loop statement), @link(break) out of the loop
+    in the first operand of the @link(&& infix operator), the result is the @link(falsy) value of the first operand
+    in the first operand of the @link(|| infix operator), the result is the value of the second operand
+    in the first operand of the @link(? ternary operator), the result is the value of the third operand
+    in a @link(bitwise operator), a @link(falsy) operand is treated the same as @link(zero)
+    }
 
 @specimen(fill)
 
-@article(@t(fill) @link(array prototype function))
+    @article(@t(fill) @link(array prototype function))
 
-Blah.
+    Blah.
 
 @specimen(filter)
 
-@article(@t(filter) @link(array prototype function))
+    @article(@t(filter) @link(array prototype function))
 
-Blah.
+    Blah.
 
 @specimen(finally @reserved@)
 
-See @link(try statement).
+    See @link(try statement).
 
 @specimen(find)
 
-@article(@t(find) @link(array prototype function))
+    @article(@t(find) @link(array prototype function))
 
-Blah.
+    Blah.
 
 @specimen(findIndex)
 
-@article(@t(findIndex) @link(array prototype function))
+    @article(@t(findIndex) @link(array prototype function))
 
-Blah.
+    Blah.
 
 @specimen "Float32Array"
 
@@ -266,95 +266,95 @@ Blah.
 
 @specimen(floor)
 
-@article(@t(floor) @link(Math function))
+    @article(@t(floor) @link(Math function))
 
-Blah.
+    Blah.
 
 @specimen(for @reserved@)
 
-@article(@t(for) @t(in) @link(statement))
+    @article(@t(for) @t(in) @link(statement))
 
-Blah.
+    Blah.
 
-@article(@t(for) @link(statement))
+    @article(@t(for) @link(statement))
 
-Blah.
+    Blah.
 
 @specimen(forEach)
 
-@article(@t(forEach) @link(array prototype function))
+    @article(@t(forEach) @link(array prototype function))
 
-Blah.
+    Blah.
 
-Example:
+    Example:
 
 @specimen(from)
 
-@article(@t(from) @link(array function))
+    @article(@t(from) @link(array function))
 
-Blah.
+    Blah.
 
 @specimen(fromCharCode)
 
-@article"@t(fromCharCode) @link(String function)"
+    @article"@t(fromCharCode) @link(String function)"
 
-@es5(Blah.)
+    @es5(Blah.)
 
 @specimen(fromCodePoint)
 
-@article"@t(fromCodePoint) @link(String function)"
+    @article"@t(fromCodePoint) @link(String function)"
 
-@es5(Blah.)
+    @es5(Blah.)
 
 @specimen(free variable)
 
-Blah.
+    Blah.
 
 @specimen(freeze)
 
-@article(@t(freeze) @link(Object function))
+    @article(@t(freeze) @link(Object function))
 
-Blah.
+    Blah.
 
 @specimen(fromCharCode)
 
-@article(@t(fromCharCode) @link(String function))
+    @article(@t(fromCharCode) @link(String function))
 
-Blah.
+    Blah.
 
 @specimen(function @reserved@)
 
-Blah.
+    Blah.
 
-@article(@t(function) @t(*))
+    @article(@t(function) @t(*))
 
-@es5(There is a special form of function that returns an object instead of a function.
-Blah.)
+    @es5(There is a special form of function that returns an object instead of a function.
+    Blah.)
 
-@article(function body)
+    @article(function body)
 
-Blah.
+    Blah.
 
-@article(function @link(invocation))
+    @article(function @link(invocation))
 
-Blah.
+    Blah.
 
-@article(@t(function) literal)
+    @article(@t(function) literal)
 
-Blah.
+    Blah.
 
-@article(@t(Function) @link(primordial function))
+    @article(@t(Function) @link(primordial function))
 
-Blah.
+    Blah.
 
-@article(@t(Function) @link(prototype function))
+    @article(@t(Function) @link(prototype function))
 
-Blah.
+    Blah.
 
-@article(@t(Function) @link(prototype object))
+    @article(@t(Function) @link(prototype object))
 
-Blah.
+    Blah.
 
-@article(@t(function) @link(statement))
+    @article(@t(function) @link(statement))
 
-Blah.
+    Blah.

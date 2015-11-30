@@ -2,13 +2,13 @@
 
 @specimen "y"
 
-@article "@t(y) @link 'regexp flag'"
+    @article "@t(y) @link 'regexp flag'"
 
-@es5(Blah.)
+    @es5(Blah.)
 
 @specimen "y combinator"
 
-Blah.
+    Blah.
 
 @begin(program)
 function y(e) {
@@ -23,8 +23,8 @@ function y(e) {
 
 var factorial = y(function (recur) {
     return function (n) {
-        return (n <= 2) 
-            ? n 
+        return (n <= 2)
+            ? n
             : n * recur(n - 1);
     };
 });
@@ -34,8 +34,8 @@ var number120 = factorial(5);
 
 @specimen "yield @reserved@"
 
-@article "yield @link(operator)"
+    @article "yield @link(operator)"
 
-@begin(es5) 
-Blah. See @link <function *>.
-@end(es5)
+    @begin(es5)
+    Blah. See @link <function *>.
+    @end(es5)
