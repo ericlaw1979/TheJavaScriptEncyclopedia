@@ -1,25 +1,26 @@
 // onehtml.js
-// 2015-10-15
+// 2016-01-13
 
 // These Cyc rules produce a single HTML file.
 
 /*jslint
-    devel: true
+    devel: true, node
 */
 
 /*property
-    $, aka, appendix, article, b, book, chapter, charCodeAt, create, end, es5,
-    gen, i, level, link, name, program, replace, reserved, section, specimen,
-    t, table, toLowerCase, toString, toUpperCase, url
+    $, aka, appendix, article, b, book, chapter, charCodeAt, comment, concat,
+    create, es5, exports, forEach, gen, i, isArray, join, level, link, list,
+    name, parse, program, push, replace, reserved, section, slice, slink,
+    specimen, split, sub, super, t, table, toLowerCase, toString, toUpperCase,
+    together, trim, url
 */
 
 function make_onehtml() {
     'use strict';
-    var h_bit = false,
-        link_text = Object.create(null),
-        nx = /\n|\r\n?/,
-        sx = /[!-@\[-\^`{-~]/g,     // special characters & digits
-        title = '';
+    var link_text = Object.create(null);
+    var nx = /\n|\r\n?/;
+    var sx = /[!-@\[-\^`{-~]/g;     // special characters & digits
+    var title = '';
 
 
     function entityify(text) {
@@ -57,7 +58,7 @@ function make_onehtml() {
 
     function wrap(tag) {
         return function (text, structure) {
-            return '\n<' + tag + ' id="' + special_encode(structure.link) + 
+            return '\n<' + tag + ' id="' + special_encode(structure.link) +
                     '">' + text + '</' + tag + '>';
         };
     }
@@ -130,7 +131,7 @@ function make_onehtml() {
             gen: function (ignore, structure) {
                 var name = link_text[structure.link.toLowerCase()];
                 if (name !== undefined) {
-                    return "<a href=\"#" + special_encode(structure.link) + 
+                    return "<a href=\"#" + special_encode(structure.link) +
                             "\">" + name + "</a>";
                 } else {
                     return structure.link + " <strong>MISSING LINK</strong>";
@@ -164,7 +165,7 @@ function make_onehtml() {
             gen: function (text, structure) {
                 var name = link_text[structure.link.toLowerCase()];
                 if (name !== undefined) {
-                    return "<a href=\"#" + special_encode(structure.link) + 
+                    return "<a href=\"#" + special_encode(structure.link) +
                             "\">" + name + "</a>";
                 } else {
                     return text + " <strong>MISSING LINK</strong>";
@@ -194,12 +195,12 @@ function make_onehtml() {
             name: '',
             gen: ["<table><tbody>", "</tbody></table>"],
             parse: function (structure) {
-                var itemcont = [],
-                    item = ['-td', itemcont],
-                    rowcont = [item],
-                    row = ['-tr', rowcont],
-                    tablecont = [row],
-                    table = ['table', tablecont];
+                var itemcont = [];
+                var item = ['-td', itemcont];
+                var rowcont = [item];
+                var row = ['-tr', rowcont];
+                var tablecont = [row];
+                var table = ['table', tablecont];
                 structure.slice(1).forEach(function (rowrow) {
                     rowrow.forEach(function (thing) {
                         if (Array.isArray(thing)) {

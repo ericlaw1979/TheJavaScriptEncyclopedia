@@ -1,5 +1,5 @@
 // cyc.js
-// 2015-10-15
+// 2016-01-13
 
 /*jslint devel: true */
 
@@ -8,17 +8,17 @@ var cyc = (function () {
     'use strict';
 
     var pair = {
-            '(': ')',
-            '[': ']',
-            '{': '}',
-            '<': '>',
-            '"': '"',
-            '\'': '\'',
-            '`': '`',
-            '@': '@'
-        },
-        lx = /\n|\r\n?/g,                           // line end
-        tx = /@[!#-&*-/:;=?@\\^_`\|~]?|["'{}()<>\[\]]|[^@"'{}()<>\[\]]+/g;  // text or some special
+        '(': ')',
+        '[': ']',
+        '{': '}',
+        '<': '>',
+        '"': '"',
+        '\'': '\'',
+        '`': '`',
+        '@': '@'
+    };
+    var lx = /\n|\r\n?/g;                           // line end
+    var tx = /@[!#-&*-\/:;=?@\\\^_`\|~]?|["'{}()<>\[\]]|[^@"'{}()<>\[\]]+/g;  // text or some special
 
 
     function error(message) {
@@ -36,16 +36,16 @@ var cyc = (function () {
 // Other functions will consume this structure.
 // The set of rules is used to make sure that the tags have meaningful names.
 
-        var closer,
-            line_nr = 0,
-            lines = [],
-            name,
-            part_nr = 0,
-            stack = [],
-            structure,
-            temp,
-            token,
-            top;
+        var closer;
+        var line_nr = 0;
+        var lines = [];
+        var name;
+        var part_nr = 0;
+        var stack = [];
+        var structure;
+        var temp;
+        var token;
+        var top;
 
         function deposit(thing) {
 
@@ -268,13 +268,12 @@ var cyc = (function () {
 // The optional rule named '@' is a function that receives the products and
 // returns the final result.
 
-        var course,         // The current meta nesting.
-            course_level,   // The associated level numbering.
-            pass,           // The current pass from rules['*'].
-            product,        // The product of the passes.
-            stack,          // The current nesting.
-            structure = parse(text, rules);
-
+        var course;         // The current meta nesting.
+        var course_level;   // The associated level numbering.
+        var pass;           // The current pass from rules['*'].
+        var product;        // The product of the passes.
+        var stack;          // The current nesting.
+        var structure = parse(text, rules);
 
         function apply(name, text, structure) {
             var rule = rules[name][pass];
@@ -289,11 +288,11 @@ var cyc = (function () {
 // piece of structure, and the result of processing the structure's children.
 // If the rule yields a string, then that string is used as the value.
 
-            return typeof rule === 'function'
+            return (typeof rule === 'function')
                 ? rule(text, structure)
-                : typeof rule === 'string'
+                : (typeof rule === 'string')
                     ? rule
-                    : Array.isArray(rule)
+                    : (Array.isArray(rule))
                         ? (rule[0] || '') + text + (rule[1] || '')
                         : text;
         }
@@ -305,9 +304,12 @@ var cyc = (function () {
 // method that will receive the text of that course, which it can modify
 // or replace.
 
-            var closer, result = '';
-            while (course_level.length > 0 &&
-                    course_level[course_level.length - 1] >= level) {
+            var closer;
+            var result = '';
+            while (
+                course_level.length > 0 &&
+                course_level[course_level.length - 1] >= level
+            ) {
                 closer = rules[course.pop()][pass + '_close'];
                 course_level.pop();
                 if (typeof closer === 'function') {
@@ -324,11 +326,11 @@ var cyc = (function () {
 
 // The process function takes a structure. It will walk through the structure.
 
-            var level,
-                name = structure[0],
-                para_result = '',
-                result = '',
-                rule = rules[name];
+            var level;
+            var name = structure[0];
+            var para_result = '';
+            var result = '';
+            var rule = rules[name];
 
             level = rule.level;
             stack.push(name);
@@ -426,7 +428,7 @@ var cyc = (function () {
 
 // If there is an @ rule, then return its result. Otherwise, return the product.
 
-        return rules['@'] !== undefined
+        return (rules['@'] !== undefined)
             ? rules['@'](product)
             : product;
     };

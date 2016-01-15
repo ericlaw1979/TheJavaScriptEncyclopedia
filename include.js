@@ -1,5 +1,7 @@
 // include.js
-// 2015-10-23
+// 2016-01-13
+
+/*jslint node */
 
 
 function include(callback, text, get_inclusion) {
@@ -50,21 +52,20 @@ function include(callback, text, get_inclusion) {
 //     });
 // }
 
-    var at_include = '@include',
-        head = 0,   // head marks the beginning of the '@include' substring.
+    var at_include = '@include';
+    var head = 0;   // head marks the beginning of the '@include' substring.
                     // head is kept in the outer scope so indexOf does not
                     // need to ever rescan material that previously didn't
                     // match.
-        middle,     // middle will eventually mark the beginning of the key
-        pair = {    // We allow the key to be wrapped by any of these pairs.
-            '"': '"',
-            '\'': '\'',
-            '<': '>',
-            '(': ')',
-            '[': ']',
-            '{': '}'
-        },
-        slash = '/';
+    var middle;     // middle will eventually mark the beginning of the key
+    var pair = {    // We allow the key to be wrapped by any of these pairs.
+        '"': '"',
+        '\'': '\'',
+        '<': '>',
+        '(': ')',
+        '[': ']',
+        '{': '}'
+    };
 
     function back(data, failure) {
 
@@ -88,13 +89,12 @@ function include(callback, text, get_inclusion) {
 // The minion function does include's work. It will cause itself to call itself
 // until all of the @include specifications have been replaced.
 
-        var c,      // a character
-            close,  // a close quote
-            count,  // the number of excess @ prefixes
-            fore,   // the position before the head of excess @ prefixes
-            key,
-            open,   // an open quote
-            tail;   // tail will mark the remainder of the text.
+        var close;  // a close quote
+        var count;  // the number of excess @ prefixes
+        var fore;   // the position before the head of excess @ prefixes
+        var key;
+        var open;   // an open quote
+        var tail;   // tail will mark the remainder of the text.
 
 // Search for the next occurrence of '@include'. If it isn't found, then there
 // is no more work to do. Give the text to the callback. This is the successful
@@ -150,25 +150,25 @@ function include(callback, text, get_inclusion) {
 
 // Process the @include. Read the inclusion, providing another callback function.
 
-            return get_inclusion(
-                function (data, failure) {
+        return get_inclusion(
+            function (data, failure) {
 
 // This is the callback function that is passed to get_inclusion.
 // If the get failed for any reason, pass the error to the original callback.
 
-                    if (failure) {
-                        return back(undefined, failure);
-                    }
+                if (failure) {
+                    return back(undefined, failure);
+                }
 
 // If the get succeeded, insert the inclusion into the text. Then, to
 // process any additional includes, call minion.
 
-                    text = text.slice(0, head) + data + text.slice(tail + 1);
-                    return minion();
-                },
-                key,
-                open
-            );
+                text = text.slice(0, head) + data + text.slice(tail + 1);
+                return minion();
+            },
+            key,
+            open
+        );
     }
     try {
         return minion();
