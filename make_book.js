@@ -1,9 +1,11 @@
 // make_book.js
-// 2015-10-02
+// 2016-01-27
 
-// Make a book as a single HTML file. 
+// Make a book as a single HTML file.
 
 //      node make_book
+
+'use strict';
 
 var RQ = require('./rq.js');
 var cyc = require('./cyc.js');
@@ -16,7 +18,7 @@ if (filename.slice(-4) === '.cyc') {
     filename = filename.slice(0, -4);
 }
 
-function get_inclusion(callback, key, quote) {
+function get_inclusion(callback, key, ignore) {
     fs.readFile(key, 'utf8', function (failure, data) {
         return callback(data, failure);
     });
